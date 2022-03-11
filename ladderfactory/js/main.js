@@ -197,7 +197,6 @@ chart.on("created", function () {
 //=================================================================================================
 
 // YOUTUBE VIDEO ==================================================================================
-// находим все блоки с классом видео
 function findVideos() {
   var videos = document.querySelectorAll(".video");
 
@@ -206,32 +205,25 @@ function findVideos() {
   }
 }
 
-// настройки видео
 function setupVideo(video) {
   var link = video.querySelector(".video-link");
   var videoPlayer = video.querySelector(".video-player");
   var id = parseVideoURL(link);
 
-  // слушаем клик по блоку .video
   video.addEventListener("click", function () {
     var iframe = createIframe(id);
 
-    // при клике на новое видео - закрываются предыдущие
     var videoPlayers = document.querySelectorAll(".video-player");
     for (var j = 0; j < videoPlayers.length; j++) {
       videoPlayers[j].innerHTML = "";
     }
 
-    // создаем текущий iFrame
     videoPlayer.appendChild(iframe);
   });
 
-  // добавляем для правильного z-index если JS активен у пользователя
-  // если JS выключен будет открывать видео напрямую с YouTube в новой вкладке
   video.classList.add("video--enabled");
 }
 
-// получаем ID нужного видео из атрибута HREF элемента с классом .video-link
 function parseVideoURL(link) {
   var regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/i;
   var url = link.href;
@@ -240,7 +232,6 @@ function parseVideoURL(link) {
   return match[1];
 }
 
-// создаем iFrame с опеределенными атрибутами
 function createIframe(id) {
   var iframe = document.createElement("iframe");
 
@@ -252,14 +243,12 @@ function createIframe(id) {
   return iframe;
 }
 
-// создаем ссылку на определенное видео для iFrame
 function generateURL(id) {
   var query = "?start=28&rel=0&showinfo=0&autoplay=1";
 
   return "https://www.youtube.com/embed/" + id + query;
 }
 
-// запускаем функцию поиска .video
 findVideos();
 //=================================================================================================
 
@@ -312,15 +301,15 @@ $(window).on("resize", function () {
   }
 });
 //=================================================================================================
+
 // POPUP ==========================================================================================
 var body = $("body");
-var bodyLockPadding = $(".body-lock-padding"); //присваеваем этот класс всем элементам с position: fixed;
+var bodyLockPadding = $(".body-lock-padding");
 var popupLink = $(".popup-link");
 
 var timeout = 800; // должен совпадать с длительностью анимации закрытия/открытия поп-апап в CSS
 var unlock = true;
 
-// отслеживаем клик по ссылке
 popupLink.on("click", function (e) {
   e.preventDefault();
   var currentPopup = $(this).attr("href");
@@ -328,17 +317,15 @@ popupLink.on("click", function (e) {
   popupOpen(currentPopup);
 });
 
-// открываем поп-ап
 function popupOpen(currentPopup) {
   if (currentPopup && unlock) {
-    $(".popup.open").removeClass("open"); // если поп-ап в поп-апе - закрываем 1й
+    $(".popup.open").removeClass("open");
 
     $(currentPopup).addClass("open");
     bodyLockPopup();
   }
 }
 
-// закрываем при клике по документу
 $(".popup").on("mouseup", function (e) {
   var popupContent = $(this).find(".popup-content");
 
@@ -347,19 +334,16 @@ $(".popup").on("mouseup", function (e) {
   }
 });
 
-// закрываем при клике на крестик
 $(".popup-close").on("click", function () {
   popupClose();
 });
 
-// закрываем при клике на ESC
 $(document).on("keydown", function (e) {
   if (e.which == 27) {
     popupClose();
   }
 });
 
-// функция закрытия поп-апа
 function popupClose() {
   if (unlock) {
     $(".popup.open").removeClass("open");
@@ -404,4 +388,3 @@ function bodyUnlockPopup() {
   }, timeout);
   $("html, body").animate({ scrollTop: parseInt(body.attr("data-scroll")) }, 10);
 }
-//=================================================================================================
