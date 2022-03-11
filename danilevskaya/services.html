@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Title & Icon ===== -->
+    <title>Irina Danilevskaya</title>
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+
+    <!-- Meta ===== -->
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS ===== -->
+    <link rel="stylesheet" href="css/vendor/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="css/vendor/simplebar.min.css" />
+    <link rel="stylesheet" href="css/vendor/swiper.min.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- MENU ===== -->
+      <div class="menu-wrapper">
+        <nav class="menu">
+          <div class="menu-top">
+            <button class="menu-back__btn" type="button">
+              <svg>
+                <use xlink:href="images/iconssprite.svg#arr-back"></use>
+              </svg>
+            </button>
+            <button class="menu-close__btn" type="button">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+
+          <ul class="menu-list">
+            <li class="has-submenu">
+              <a href="#" data-goto="#price">Услуги и цены</a>
+              <ul class="submenu">
+                <li><a href="#">Ведущий на мероприятие 13</a></li>
+                <li><a href="#">Диджей на мероприятие</a></li>
+                <li><a href="#">Музыка на мероприятие</a></li>
+                <li><a href="#">Оформление мероприятия</a></li>
+                <li><a href="#">Подбор площадок для мероприятия</a></li>
+                <li><a href="#">Кейтеринг на мероприятие</a></li>
+                <li><a href="#">Фотосъемка мероприятия</a></li>
+                <li><a href="#">Организация трансфера</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Блог</a>
+            </li>
+            <li>
+              <a href="#">Портфолио</a>
+            </li>
+            <li>
+              <a href="#" data-goto="#about">Обо мне</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="menu-bottom">
+            <li>
+              <a href="tel:+79167621066" class="menu-phone">
+                <svg>
+                  <use xlink:href="images/iconssprite.svg#phone"></use>
+                </svg>
+                +7 916 762 10 66
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@irinadanilevskaya.ru" class="menu-email">info@irinadanilevskaya.ru</a>
+            </li>
+            <li>
+              <button class="organization-btn btn popup-open-btn" data-popup-id="popup-order">Связаться со мной</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- HEADER ===== -->
+      <header class="header body-lock-padding">
+        <div class="container">
+          <div class="header-inner">
+            <button type="button" class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <a href="tel:+79167621066" class="header-phone">
+              <svg>
+                <use xlink:href="images/iconssprite.svg#phone"></use>
+              </svg>
+              <span>+7 916 762 10 66</span>
+            </a>
+            <a href="#" class="header-logo">
+              <picture>
+                <source srcset="images/logo.webp" type="image/webp" />
+                <img src="images/logo.png" alt="логотип" />
+              </picture>
+              <span>организатор мероприятий</span>
+            </a>
+            <a href="mailto:info@irinadanilevskaya.ru" class="header-email">info@irinadanilevskaya.ru</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN ===== -->
+      <main id="fullpage" class="main main--services">
+        <!-- SERVICES-SECTION ===== -->
+        <section class="services-section fp-block">
+          <div class="container">
+            <h2 class="services-section__title title">Услуги</h2>
+
+            <div class="services-section__inner" data-simplebar data-simplebar-auto-hide="false">
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/01.webp" type="image/webp" />
+                    <img src="images/services/01.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Ведущий на&nbsp;мероприятие </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/02.webp" type="image/webp" />
+                    <img src="images/services/02.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Диджей на&nbsp;мероприятие </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/03.webp" type="image/webp" />
+                    <img src="images/services/03.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Музыка на&nbsp;мероприятие </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/04.webp" type="image/webp" />
+                    <img src="images/services/04.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Оформление мероприятия </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/05.webp" type="image/webp" />
+                    <img src="images/services/05.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Подбор площадок для&nbsp;мероприятия </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/06.webp" type="image/webp" />
+                    <img src="images/services/06.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Кейтеринг на&nbsp;мероприятие </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/07.webp" type="image/webp" />
+                    <img src="images/services/07.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Фотосъемка мероприятия </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="services-section__item">
+                <a href="#" class="services-section__img">
+                  <picture>
+                    <source srcset="images/services/08.webp" type="image/webp" />
+                    <img src="images/services/08.jpg" alt="картинка" />
+                  </picture>
+                </a>
+
+                <a href="#" class="services-section__bottom">
+                  <span class="services-section__item-title"> Организация трансфера </span>
+
+                  <span class="circle-arrow">
+                    <svg>
+                      <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PORTFOLIO ===== -->
+        <section id="portfolio" class="portfolio fp-block" data-anchor="#portfolio-anc">
+          <div class="container">
+            <h2 class="portfolio-title title">Портфолио</h2>
+
+            <div class="portfolio-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="portfolio-item swiper-slide">
+                  <a href="#" class="portfolio-item__img">
+                    <picture>
+                      <source srcset="images/portfolio/01.webp" type="image/webp" />
+                      <img src="images/portfolio/01.jpg" alt="картинка" />
+                    </picture>
+                  </a>
+                  <a href="#" class="portfolio-item__title">
+                    Открытие творческого пространства
+                    <span class="circle-arrow">
+                      <svg>
+                        <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="portfolio-item__txt">Выбран премиальный клуб Imperia Lounge, приглашены ключевые клиенты компании, проведено награждение лучших сотрудников.</p>
+                </div>
+
+                <div class="portfolio-item swiper-slide">
+                  <a href="#" class="portfolio-item__img">
+                    <picture>
+                      <source srcset="images/portfolio/02.webp" type="image/webp" />
+                      <img src="images/portfolio/02.jpg" alt="картинка" />
+                    </picture>
+                  </a>
+                  <a href="#" class="portfolio-item__title">
+                    Презентация новой площадки
+                    <span class="circle-arrow">
+                      <svg>
+                        <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="portfolio-item__txt">Организация выставочного стенда, проведение активностей для вовлечения аудитории. Проинформировать посетителей о представленных новинках.</p>
+                </div>
+
+                <div class="portfolio-item swiper-slide">
+                  <a href="#" class="portfolio-item__img">
+                    <picture>
+                      <source srcset="images/portfolio/03.webp" type="image/webp" />
+                      <img src="images/portfolio/03.jpg" alt="картинка" />
+                    </picture>
+                  </a>
+                  <a href="#" class="portfolio-item__title">
+                    Организация мужзского юбилея
+                    <span class="circle-arrow">
+                      <svg>
+                        <use xlink:href="images/iconssprite.svg#arr-diag"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="portfolio-item__txt">Выбран премиальный клуб Imperia Lounge, приглашены ключевые клиенты компании, проведено награждение лучших сотрудников.</p>
+                </div>
+              </div>
+
+              <div class="portfolio-slider__nav swiper-nav">
+                <button class="swiper-arr swiper-arr--prev">
+                  <svg>
+                    <use xlink:href="images/iconssprite.svg#arr-left"></use>
+                  </svg>
+                </button>
+                <div class="swiper-pages"></div>
+                <button class="swiper-arr swiper-arr--next">
+                  <svg>
+                    <use xlink:href="images/iconssprite.svg#arr-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER ===== -->
+        <footer class="footer fp-block fp-block--db fp-auto-height" data-anchor="#footer-anc">
+          <div class="container">
+            <div class="footer-inner">
+              <nav class="footer-nav">
+                <ul class="footer-menu">
+                  <li><a href="#" data-goto="#about">О компании</a></li>
+                  <li><a href="#">Клиенты</a></li>
+                  <li><a href="#" data-goto="#team">Команда</a></li>
+                  <li><a href="#" data-goto="#instagram">Презентации</a></li>
+                  <li><a href="#" data-goto="#blog-section">Блог</a></li>
+                </ul>
+
+                <ul class="footer-menu">
+                  <li><a href="#" data-goto="#organization">Мероприятия</a></li>
+                  <li><a href="#">Свадьбы</a></li>
+                  <li><a href="#">Дни рождения</a></li>
+                  <li><a href="#">Юбилеи</a></li>
+                  <li><a href="#">Корпоративы</a></li>
+                </ul>
+
+                <ul class="footer-menu">
+                  <li><a href="#" data-goto="#process">Клиентам</a></li>
+                  <li><a href="#" data-goto="#portfolio">Портфолио</a></li>
+                  <li><a href="#" data-goto="#price">Цены</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#" data-goto="#reviews">Отзывы</a></li>
+                </ul>
+              </nav>
+
+              <div class="footer-info">
+                <div class="footer-logo">
+                  <picture>
+                    <source srcset="images/logo.webp" type="image/webp" />
+                    <img src="images/logo.png" alt="логотип" />
+                  </picture>
+                </div>
+
+                <div class="footer-txt">
+                  <p>У вас есть 10 рук, чтобы справиться с мероприятием?</p>
+
+                  <p>А у меня есть!</p>
+                </div>
+
+                <ul class="footer-contacts">
+                  <li>
+                    <a href="tel:+79167621066" class="footer-phone">
+                      <svg>
+                        <use xlink:href="images/iconssprite.svg#phone"></use>
+                      </svg>
+                      <span>+7 916 762 10 66</span>
+                    </a>
+                  </li>
+                  <li><a href="mailto:info@irinadanilevskaya.ru" class="footer-email">info@irinadanilevskaya.ru</a></li>
+                </ul>
+
+                <button class="footer-btn btn popup-open-btn" data-popup-id="popup-order" type="button">Связаться</button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- POPUP ===== -->
+    <div id="popup-order" class="popup">
+      <div class="popup-body">
+        <div class="popup-content">
+          <button class="popup-close btn-close" type="button">
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="popup__title">Заявка на проведение мероприятия</div>
+
+          <div class="popup__txt">Планируете мероприятие? Расскажите о нем, а мы предложим потрясающие едеи и идеальную организацию</div>
+
+          <form class="popup-form">
+            <div class="popup-form__inputs">
+              <input class="form-input" autocomplete="off" type="text" name="name" placeholder="Ваше имя" />
+              <input class="form-input form-input--phone" autocomplete="off" type="tel" name="phone" placeholder="Ваш телефон" />
+            </div>
+
+            <button type="submit" class="popup-form__btn form-btn btn">Заказать</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS ===== -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery.fullpage.min.js"></script>
+    <script src="js/vendor/simplebar.min.js"></script>
+    <script src="js/vendor/swiper.min.js"></script>
+    <script src="js/vendor/inputmask.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
