@@ -729,7 +729,7 @@ window.onload = function () {
 
 	if (instagramBlock) {
 		var instagram = new Instafeed({
-			accessToken: 'IGQVJVUDdJa2M5Qy11bmM4NE50cjlXY1ZAZAem1BM1J0RXpRZA0dEV2VzdERrRTdhYlVFVkhFbUNIREdnWDVGZADlRbFl5aWxQTkMyV2dfaEpOMUJOS2gzZAGwzVG55enhMSVNKU1ZAGUk9XT3F1U1JCc25tWQZDZD', // ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН
+			accessToken: 'IGQVJYX1NYdFI1c3ltXzllcVZAUU2xsRFFkdWlWRVJSWXZABZAWd2TERkSmRmT0MxQnlxOEIzZAVFnNk9CWFg1STd4cWtadHZAvb1FKNTBHQWNlMWdPeG42eGJmR1pnQ2xrOHJ6NnJpSTkzTlFVbW5UcDdtcQZDZD', // ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН
 			limit: 5,
 			template: '<a href="{{link}}" class="instagram-item" target="_blank"><img src="{{image}}" alt="{{caption}}"></a>'
 		});
