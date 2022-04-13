@@ -1,0 +1,467 @@
+<html lang="ru">
+  <head>
+    <!-- Title & Icon
+  ====================================================================== -->
+    <title>Front-End «Roof and Facade». Page list.</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+
+    <!-- Meta
+  ====================================================================== -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0" />
+
+    <!-- CSS
+  ====================================================================== -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+      * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      :focus,
+      :active {
+        outline: none;
+      }
+
+      a:focus,
+      a:active {
+        outline: none;
+      }
+
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        min-width: 320px;
+        position: relative;
+      }
+
+      body {
+        font-size: 100%;
+        line-height: 1;
+        -ms-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      a,
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      img {
+        vertical-align: top;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+
+      body {
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+      }
+
+      .wrapper {
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+      }
+
+      .preview {
+        position: relative;
+        min-height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background: url("bg.jpg") center/cover no-repeat;
+      }
+
+      .preview:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(17, 17, 17, 0.9);
+      }
+
+      .preview-content {
+        z-index: 2;
+        padding: 70px 70px 20px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+      }
+
+      .preview-content h1 {
+        margin: 0px 0px 50px 0px;
+        color: #fff;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.2em;
+      }
+
+      .preview-content h1 span {
+        color: #bd000c;
+      }
+
+      .preview-content h2 {
+        margin: 0px 0px 20px 0px;
+        color: #bd000c;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .preview-content p {
+        margin: 0px 0px 50px 0px;
+        width: 50%;
+        font-size: 16px;
+        line-height: 1.5em;
+      }
+
+      .preview-content ul {
+        margin: 0px 0px 50px 0px;
+      }
+
+      .preview-content ul li {
+        padding: 0px 0px 0px 35px;
+        margin: 0px 0px 20px 0px;
+        position: relative;
+      }
+
+      .preview-content ul li:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 19px;
+        height: 19px;
+        border: 1px solid #bd000c;
+        background-color: transparent;
+      }
+
+      .preview-content ul li:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 7px;
+        height: 7px;
+        background-color: #bd000c;
+      }
+
+      .preview-content ul li a {
+        position: relative;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .preview-content ul li a:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 0;
+        height: 1px;
+        background-color: #bd000c;
+        -webkit-transition: width 0.3s linear, left 0.3s linear;
+        -o-transition: width 0.3s linear, left 0.3s linear;
+        transition: width 0.3s linear, left 0.3s linear;
+      }
+
+      .preview-content ul li a:hover:before {
+        width: 100%;
+        left: 0;
+      }
+
+      .preview-footer {
+        z-index: 2;
+        padding: 15px 70px;
+        color: #111;
+        background-color: #fff;
+      }
+
+      .preview-footer__socials {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .preview-footer__socials-item {
+        padding: 8px 0;
+        margin: 0px 30px 0px 0px;
+      }
+
+      .preview-footer__socials-item:last-child {
+        margin: 0;
+      }
+
+      .preview-footer__socials-link {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #111;
+      }
+
+      .preview-footer__socials-link:hover .preview-footer__socials-link-txt:before {
+        width: 100%;
+        left: 0;
+      }
+
+      .preview-footer__socials-link:hover .preview-footer__socials-link-icon {
+        background-color: #bd000c;
+      }
+
+      .preview-footer__socials-link-icon {
+        margin: 0px 5px 0px 0px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25px;
+        flex: 0 0 25px;
+        width: 25px;
+        height: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-color: #111;
+        -webkit-transition: background-color 0.3s linear;
+        -o-transition: background-color 0.3s linear;
+        transition: background-color 0.3s linear;
+      }
+
+      .preview-footer__socials-link-icon svg {
+        width: 60%;
+        height: 60%;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+
+      .preview-footer__socials-link-txt {
+        position: relative;
+      }
+
+      .preview-footer__socials-link-txt:before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        right: 0;
+        width: 0;
+        height: 1px;
+        background-color: #bd000c;
+        -webkit-transition: width 0.3s linear, left 0.3s linear;
+        -o-transition: width 0.3s linear, left 0.3s linear;
+        transition: width 0.3s linear, left 0.3s linear;
+      }
+
+      .preview-footer__copy {
+        line-height: 1.3em;
+      }
+
+      .preview-footer__copy a {
+        color: #bd000c;
+        font-weight: 700;
+      }
+
+      .preview-footer__copy a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 1150px) {
+        .preview-content p {
+          width: 70%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .preview-content {
+          padding: 70px 50px 20px;
+        }
+
+        .preview-content h1 {
+          font-size: 38px;
+        }
+
+        .preview-content p {
+          width: 90%;
+        }
+
+        .preview-footer {
+          padding: 25px 50px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .preview-content {
+          padding: 35px 25px 10px;
+        }
+
+        .preview-content h1 {
+          font-size: 34px;
+          text-align: center;
+        }
+
+        .preview-content p {
+          width: 100%;
+          text-align: center;
+        }
+
+        .preview-content h2 {
+          font-size: 22px;
+        }
+
+        .preview-content ul li a {
+          font-size: 18px;
+        }
+
+        .preview-footer {
+          padding: 25px;
+        }
+
+        .preview-footer__socials {
+          display: block;
+        }
+
+        .preview-footer__socials-item {
+          margin: 0px 0px 15px 0px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .preview-content h1 {
+          font-size: 28px;
+        }
+
+        .preview-content h2 {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="preview">
+        <div class="preview-content">
+          <h1>Front-End <span>«Roof&nbsp;and&nbsp;Facade»</span></h1>
+
+          <h2>Pages list:</h2>
+          <ul>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/">Homepage</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/catalog.html">Catalog</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/card.html">Product card</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/cart.html">Cart</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/services.html">Services</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/delivery.html">Shipping and payment</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/news-list.html">Articles</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/news.html">Article</a></li>
+            <li><a target="_blank" href="https://sphinxik.github.io/portfolio/roofandfacade/contacts.html">Contacts</a></li>
+          </ul>
+        </div>
+
+        <div class="preview-footer">
+          <ul class="preview-footer__socials">
+            <li class="preview-footer__socials-item">
+              <a class="preview-footer__socials-link" href="https://t.me/ig_khoruzhenko" target="_blank">
+                <span class="preview-footer__socials-link-icon">
+                  <svg viewBox="0 0 448 512">
+                    <path
+                      fill="#fff"
+                      d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
+                    ></path>
+                  </svg>
+                </span>
+
+                <span class="preview-footer__socials-link-txt">@ig_khoruzhenko</span>
+              </a>
+            </li>
+
+            <li class="preview-footer__socials-item">
+              <a class="preview-footer__socials-link" href="mailto:ig.khoruzhenko@gmail.com">
+                <span class="preview-footer__socials-link-icon">
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      fill="#fff"
+                      d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"
+                    ></path>
+                  </svg>
+                </span>
+
+                <span class="preview-footer__socials-link-txt">ig.khoruzhenko@gmail.com</span>
+              </a>
+            </li>
+
+            <li class="preview-footer__socials-item">
+              <a class="preview-footer__socials-link" href="skype:ig.khoruzhenko@gmail.com?chat">
+                <span class="preview-footer__socials-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                      fill="#fff"
+                      d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z"
+                    />
+                  </svg>
+                </span>
+
+                <span class="preview-footer__socials-link-txt">ig.khoruzhenko@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
