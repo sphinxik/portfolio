@@ -1232,6 +1232,7 @@ input:focus {
   width: 180px;
   height: 45px;
   position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
