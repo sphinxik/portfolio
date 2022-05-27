@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <!-- Title & Icon ===== -->
+  <title>Income Calculator</title>
+
+  <!-- Meta ===== -->
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS ===== -->
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="header-logo d-flex align-items-center col-6 col-lg-2">LOGO</div>
+
+          <nav class="header-nav d-lg-flex align-items-center justify-content-center col-12 col-lg-6">
+            <ul class="header-nav__list d-lg-flex align-items-center">
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Консультация</a></li>
+              <li><a href="#">Поддержка</a></li>
+            </ul>
+
+            <div class="mobile-header-btns"></div>
+          </nav>
+
+          <div class="header-btns d-flex align-items-center justify-content-end col-6 col-lg-4 col-xl-3">
+            <button class="header-btn__log" type="button" data-da="mobile-header-btns,1,767.98">Вход</button>
+            <button class="header-btn__reg" type="button" data-da="mobile-header-btns,2,767.98">Регистрация</button>
+
+            <button type="button" class="burger">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="calc">
+        <div class="container">
+          <div class="row">
+            <h2 class="calc-title col-12">Калькулятор дохода</h2>
+          </div>
+
+          <div class="calc-body">
+            <div class="calc-top">
+              <div class="row g-2 g-lg-4">
+                <div class="col-12 col-lg-6">
+                  <div class="calc-item">
+                    <h3 class="calc-item__title">Введите данные</h3>
+
+                    <div class="calc-item__inputs">
+                      <div class="row g-2">
+                        <div class="col-12 col-sm-6">
+                          <div class="calc-input__wrapper">
+                            <input id="calcInvestment" type="text" placeholder="Сумма инвестиции" autocomplete="off">
+                            <label class="calc-input__label" for="calcInvestment">USD</label>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                          <div class="calc-input__wrapper">
+                            <input id="calcDuration" type="text" placeholder="Длительность вклада" autocomplete="off">
+                            <div class="calc-input__label">
+                              <select id="calcPeriod" class="select" name="select-box" data-custom-select>
+                                <option value="day" selected>Дней</option>
+                                <option value="month">Месяцев</option>
+                                <option value="year">Лет</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button id="calcStart" class="calc-btn" type="button">Активировать</button>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <div class="calc-item calc-item--v2">
+                    <h3 class="calc-item__title">Годовая ставка</h3>
+                    <div id="calcRate" class="calc-rate">18%</div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <div class="calc-item calc-item--v2">
+                    <h3 class="calc-item__title">Общий доход</h3>
+
+                    <div id="calcTotal" class="calc-counter">
+                      <div class="calc-counter__body"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-bottom">
+              <div class="row row-cols-auto g-2 g-lg-4">
+                <div class="col-12 col-md-6">
+                  <div class="calc-item">
+                    <h3 class="calc-item__title">За день</h3>
+
+                    <div id="calcPerDay" class="calc-counter calc-counter--big">
+                      <div class="calc-counter__body"></div>
+                      <div class="calc-counter__label">$/d</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="calc-item">
+                    <h3 class="calc-item__title">За час</h3>
+                    <div id="calcPerHour" class="calc-counter calc-counter--big">
+                      <div class="calc-counter__body"></div>
+                      <div class="calc-counter__label">$/h</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="calc-item">
+                    <h3 class="calc-item__title">За минуту</h3>
+                    <div id="calcPerMinute" class="calc-counter calc-counter--big">
+                      <div class="calc-counter__body"></div>
+                      <div class="calc-counter__label">$/m</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="calc-item">
+                    <h3 class="calc-item__title">За секунду</h3>
+                    <div id="calcPerSecond" class="calc-counter calc-counter--big">
+                      <div class="calc-counter__body"></div>
+                      <div class="calc-counter__label">$/s</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- SCRIPTS ===== -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
