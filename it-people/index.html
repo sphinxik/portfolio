@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Title & Icon ===== -->
+    <title>IT-People</title>
+
+    <!-- Meta ===== -->
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS ===== -->
+    <style>
+      .preloader {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9999;
+        background-color: #030405;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+
+      .preloader-body {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 200px;
+        width: 200px;
+        -ms-transform: translate(-50%, -50%) rotate(-135deg) scale(1.5);
+        -webkit-transform: translate(-50%, -50%) rotate(-135deg) scale(1.5);
+        transform: translate(-50%, -50%) rotate(-135deg) scale(1.5);
+      }
+
+      .preloader-item {
+        -moz-border-radius: 50% 50% 50% 50%;
+        -webkit-border-radius: 50% 50% 50% 50%;
+        border-radius: 50% 50% 50% 50%;
+        position: absolute;
+        border-top: 5px solid rgba(255, 0, 214, 0.5);
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid rgba(255, 0, 214, 0.5);
+        border-right: 5px solid transparent;
+        -webkit-animation: preloaderAnimate 2s infinite;
+        animation: preloaderAnimate 2s infinite;
+      }
+
+      .preloader-item:nth-child(1) {
+        left: 75px;
+        top: 75px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .preloader-item:nth-child(2) {
+        left: 65px;
+        top: 65px;
+        width: 70px;
+        height: 70px;
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+      }
+
+      .preloader-item:nth-child(3) {
+        left: 55px;
+        top: 55px;
+        width: 90px;
+        height: 90px;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+
+      .preloader-item:nth-child(4) {
+        left: 45px;
+        top: 45px;
+        width: 110px;
+        height: 110px;
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+      }
+
+      @-webkit-keyframes preloaderAnimate {
+        50% {
+          -ms-transform: rotate(360deg) scale(0.8);
+          -webkit-transform: rotate(360deg) scale(0.8);
+          transform: rotate(360deg) scale(0.8);
+        }
+      }
+
+      @keyframes preloaderAnimate {
+        50% {
+          -ms-transform: rotate(360deg) scale(0.8);
+          -webkit-transform: rotate(360deg) scale(0.8);
+          transform: rotate(360deg) scale(0.8);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/libs.min.css?_v=20220811140018" type="text/css" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20220811140018" type="text/css" />
+  </head>
+
+  <body>
+    <!-- PRELOADER ===== -->
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="preloader-item"></div>
+        <div class="preloader-item"></div>
+        <div class="preloader-item"></div>
+        <div class="preloader-item"></div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <!-- BG-ANIMATION ===== -->
+      <div class="bg-animation _normal"></div>
+
+      <!-- HEADER ===== -->
+      <header class="header" data-simplebar>
+        <div class="header-inner">
+          <div class="header-logo">
+            <img src="images/logo.svg" alt="логотип" />
+          </div>
+
+          <nav class="header-menu">
+            <ul id="header-menu__list" class="header-menu__list">
+              <li data-menuanchor="intro"><a href="#intro" data-goto="#introSection">Главная</a></li>
+              <li data-menuanchor="services"><a href="#services" data-goto="#servicesSection">Услуги</a></li>
+              <li data-menuanchor="portfolio"><a href="#portfolio" data-goto="#portfolioSection">Портфолио</a></li>
+              <li data-menuanchor="contacts"><a href="#contacts" data-goto="#contactsSection">Контакты</a></li>
+              <li data-menuanchor="begin"><a href="#begin" data-goto="#beginSection">Начать проект</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-socials">
+            <a href="#" class="header-socials__link">
+              <svg>
+                <use xlink:href="images/icons/iconssprite.svg#facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="header-socials__link">
+              <svg>
+                <use xlink:href="images/icons/iconssprite.svg#instagram"></use>
+              </svg>
+            </a>
+            <a href="#" class="header-socials__link">
+              <svg>
+                <use xlink:href="images/icons/iconssprite.svg#twitter"></use>
+              </svg>
+            </a>
+            <a href="#" class="header-socials__link">
+              <svg>
+                <use xlink:href="images/icons/iconssprite.svg#tiktok"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN ===== -->
+      <main id="fullPage" class="main">
+        <!-- INTRO ===== -->
+        <section id="introSection" class="section intro" data-animation="normal" data-fullscreen>
+          <div class="intro-bg _gsap-box" data-gsap-effect="fadeInRight">
+            <img src="images/bg-human.svg" alt="бегущий человек" />
+          </div>
+
+          <div class="container">
+            <div class="section-inner">
+              <div class="intro-content">
+                <h1 class="intro-title _gsap-box">ITpeople</h1>
+                <p class="intro-txt _gsap-box">Смотрите больше о нашей компании</p>
+
+                <div id="video" class="video _gsap-box" data-gsap-effect="fadeInLeft">
+                  <a href="https://youtu.be/s9X0_Vb-4zc" class="video-link" target="_blank">
+                    <picture>
+                      <source srcset="images/video-bg.webp" type="image/webp" />
+                      <img class="video-preview" src="images/video-bg.jpg" alt="первью" />
+                    </picture>
+
+                    <span class="video-btn">
+                      <svg>
+                        <use xlink:href="images/icons/iconssprite.svg#play"></use>
+                      </svg>
+                    </span>
+                  </a>
+
+                  <div class="video-player"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES ===== -->
+        <section id="servicesSection" class="section services" data-animation="reverse" data-fullscreen>
+          <div class="services-bg _gsap-box" data-gsap-effect="fadeInLeft">
+            <picture>
+              <source srcset="images/bg-map.webp" type="image/webp" />
+              <img src="images/bg-map.png" alt="карта" />
+            </picture>
+          </div>
+
+          <div class="container">
+            <div class="section-inner">
+              <div class="services-content">
+                <div class="services-content__inner">
+                  <div class="services-nav__slider swiper">
+                    <div class="swiper-wrapper">
+                      <a href="#" class="services-nav__link swiper-slide _gsap-box">
+                        <span class="services-nav__link-icon">
+                          <img src="images/services/01.svg" alt="иконка" />
+                        </span>
+                        <span class="services-nav__link-title"> Разработка програмного обеспечения </span>
+                        <span class="services-nav__link-txt">
+                          Создаем всевозможные программы, веб приложения, онлайн сервисы любой сложности. Автоматизируем бизнес процессы, разрабатываем ботов, парсеры, десктоптные программы для
+                          Windows, Linux, MacOS и др.
+                        </span>
+                      </a>
+
+                      <a href="#" class="services-nav__link swiper-slide _gsap-box">
+                        <span class="services-nav__link-icon">
+                          <img src="images/services/02.svg" alt="иконка" />
+                        </span>
+                        <span class="services-nav__link-title"> Разработка мобильных приложений </span>
+                        <span class="services-nav__link-txt">
+                          Разрабатываем мобильные приложения/игры под iOS и Android любой сложности! Вам срочно нужно работающие мобильное приложение к уже существующему бизнесу? Мы его создадим!
+                        </span>
+                      </a>
+
+                      <a href="#" class="services-nav__link swiper-slide _gsap-box">
+                        <span class="services-nav__link-icon">
+                          <img src="images/services/03.svg" alt="иконка" />
+                        </span>
+                        <span class="services-nav__link-title"> Сопровождение программного обеспечения </span>
+                        <span class="services-nav__link-txt">
+                          Сопровождение программного обеспечения — у вас уже есть программное обеспечение, но оно требует исправлений, изменений и улучшений? Мы предлагаем его оптимизацию и устранение
+                          недостатков, с последующим обслуживанием
+                        </span>
+                      </a>
+
+                      <a href="#" class="services-nav__link swiper-slide _gsap-box">
+                        <span class="services-nav__link-icon">
+                          <img src="images/services/04.svg" alt="иконка" />
+                        </span>
+                        <span class="services-nav__link-title"> Веб-сайты и дизайн </span>
+                        <span class="services-nav__link-txt">
+                          Создадим без сайт с нуля под ключ с уникальным дизайном и любой сложности ! Лендинги продуктов или услуг, сайты-визитки, корпоративные сайты, интернет-магазины,
+                          веб-приложения, а также дизайн визиток, логотипов, упаковок, товаров и прочего
+                        </span>
+                      </a>
+                    </div>
+                    <div class="services-nav__slider-navigation">
+                      <button class="swiper-button-prev" type="button">
+                        <svg>
+                          <use xlink:href="images/icons/iconssprite.svg#arr-l"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper-pagination"></div>
+                      <button class="swiper-button-next" type="button">
+                        <svg>
+                          <use xlink:href="images/icons/iconssprite.svg#arr-r"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="services-content__body">
+                    <article class="services-content__item is-active">
+                      <div class="services-content__item-top">
+                        <div class="services-content__item-icon">
+                          <img src="images/services/01.svg" alt="иконка" />
+                        </div>
+
+                        <div class="services-content__item-top-info">
+                          <h3 class="services-content__item-title">Разработка програмного обеспечения</h3>
+                          <p class="services-content__item-txt">Предоставляем создание дизайна и разработку ПО</p>
+                        </div>
+                      </div>
+
+                      <div class="services-content__item-content" data-simplebar data-simplebar-auto-hide="false">
+                        <table>
+                          <tr>
+                            <th>Услуги</th>
+                            <th>Время работы</th>
+                            <th>Цена</th>
+                          </tr>
+                          <tr>
+                            <td>Разработка дизайна ПО</td>
+                            <td>1.5 недели</td>
+                            <td>200$</td>
+                          </tr>
+                          <tr>
+                            <td>Разработка ПО</td>
+                            <td>4 недели</td>
+                            <td>2500$</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </article>
+
+                    <article class="services-content__item">
+                      <div class="services-content__item-top">
+                        <div class="services-content__item-icon">
+                          <img src="images/services/02.svg" alt="иконка" />
+                        </div>
+
+                        <div class="services-content__item-top-info">
+                          <h3 class="services-content__item-title">Разработка мобильных приложений</h3>
+                          <p class="services-content__item-txt">Предоставляем создание дизайна и рабочего прототипа Вашего мобильного приложения</p>
+                        </div>
+                      </div>
+
+                      <div class="services-content__item-content" data-simplebar data-simplebar-auto-hide="false">
+                        <table>
+                          <tr>
+                            <th>Услуги</th>
+                            <th>Время работы</th>
+                            <th>Цена</th>
+                          </tr>
+                          <tr>
+                            <td>Разработка логотипа</td>
+                            <td>1 неделя</td>
+                            <td>70$</td>
+                          </tr>
+                          <tr>
+                            <td>Разработка дизайна приложения</td>
+                            <td>1.5 недели</td>
+                            <td>200$</td>
+                          </tr>
+                          <tr>
+                            <td>Разработка приложения</td>
+                            <td>2 недели</td>
+                            <td>500$</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </article>
+
+                    <article class="services-content__item">
+                      <div class="services-content__item-top">
+                        <div class="services-content__item-icon">
+                          <img src="images/services/03.svg" alt="иконка" />
+                        </div>
+
+                        <div class="services-content__item-top-info">
+                          <h3 class="services-content__item-title">Сопровождение программного обеспечения</h3>
+                        </div>
+                      </div>
+
+                      <div class="services-content__item-content" data-simplebar data-simplebar-auto-hide="false">
+                        <p>
+                          Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Прямо вскоре путь строчка страна обеспечивает. Рукопись, собрал грустный
+                          парадигматическая что маленький снова путь рыбного это прямо свой маленькая повстречался выйти текстов. Коварных парадигматическая родного рукописи выйти океана дал вопроса
+                          вопрос рекламных, своих всеми свою моей мир она знаках обеспечивает запятых ipsum, использовало рукопись он реторический диких? По всей языкового толку свое. По всей они
+                          возвращайся раз речью переписывается мир обеспечивает предупреждал до предложения имеет диких lorem использовало моей дорогу, переписали от всех над которой знаках своего
+                          всемогущая не коварный текстов? Прямо последний решила пустился предложения приставка но ipsum снова букв собрал страну.
+                        </p>
+                        <p>
+                          Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Вдали которое журчит выйти свое. Скатился пунктуация даль снова рот меня, курсивных
+                          оксмокс речью которой взгляд, даже осталось если возвращайся своего сбить о, ipsum страна своих безорфографичный над. Жизни, по всей необходимыми. Безопасную, толку они
+                          скатился он речью буквенных города ты?
+                        </p>
+                      </div>
+                    </article>
+
+                    <article class="services-content__item">
+                      <div class="services-content__item-top">
+                        <div class="services-content__item-icon">
+                          <img src="images/services/04.svg" alt="иконка" />
+                        </div>
+
+                        <div class="services-content__item-top-info">
+                          <h3 class="services-content__item-title">Веб-сайты и дизайн</h3>
+                          <p class="services-content__item-txt">Предоставляем создание дизайна и рабочего прототипа Вашего сайта</p>
+                        </div>
+                      </div>
+
+                      <div class="services-content__item-content" data-simplebar data-simplebar-auto-hide="false">
+                        <table>
+                          <tr>
+                            <th>Услуги</th>
+                            <th>Время работы</th>
+                            <th>Цена</th>
+                          </tr>
+                          <tr>
+                            <td>Разработка логотипа</td>
+                            <td>1 неделя</td>
+                            <td>70$</td>
+                          </tr>
+                          <tr>
+                            <td>Разработка дизайна сайта</td>
+                            <td>1.5 недели</td>
+                            <td>200$</td>
+                          </tr>
+                          <tr>
+                            <td>Верстка сайта</td>
+                            <td>от 1 месяца</td>
+                            <td>1500$</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </article>
+
+                    <div class="services-content__body-bottom">
+                      <button class="services-content__back-btn btn" type="button">Назад</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PORTFOLIO ===== -->
+        <section id="portfolioSection" class="section portfolio" data-animation="normal" data-fullscreen>
+          <div class="container">
+            <div class="section-inner">
+              <div class="portfolio-content">
+                <div class="portfolio-slider swiper _gsap-box">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide portfolio-item" data-slide-name="Project 1">
+                      <div class="portfolio-item__img">
+                        <picture>
+                          <source srcset="images/portfolio/01.webp" type="image/webp" />
+                          <img src="images/portfolio/01.jpg" alt="изображение" />
+                        </picture>
+                      </div>
+
+                      <h3 class="portfolio-item__title">COMPANY 1</h3>
+
+                      <h4 class="portfolio-item__subtitle">Web design</h4>
+
+                      <p class="portfolio-item__txt">Для компании “COMPANY” разработали уникальный дизайн мобильного приложения который решит любую задачу с которой приходит клиент</p>
+                    </div>
+
+                    <div class="swiper-slide portfolio-item" data-slide-name="Project 2">
+                      <div class="portfolio-item__img">
+                        <picture>
+                          <source srcset="images/portfolio/01.webp" type="image/webp" />
+                          <img src="images/portfolio/01.jpg" alt="изображение" />
+                        </picture>
+                      </div>
+
+                      <h3 class="portfolio-item__title">COMPANY 2</h3>
+
+                      <h4 class="portfolio-item__subtitle">Web design</h4>
+
+                      <p class="portfolio-item__txt">Для компании “COMPANY” разработали уникальный дизайн мобильного приложения который решит любую задачу с которой приходит клиент</p>
+                    </div>
+
+                    <div class="swiper-slide portfolio-item" data-slide-name="Project 3">
+                      <div class="portfolio-item__img">
+                        <picture>
+                          <source srcset="images/portfolio/01.webp" type="image/webp" />
+                          <img src="images/portfolio/01.jpg" alt="изображение" />
+                        </picture>
+                      </div>
+
+                      <h3 class="portfolio-item__title">COMPANY 3</h3>
+
+                      <h4 class="portfolio-item__subtitle">Web design</h4>
+
+                      <p class="portfolio-item__txt">Для компании “COMPANY” разработали уникальный дизайн мобильного приложения который решит любую задачу с которой приходит клиент</p>
+                    </div>
+
+                    <div class="swiper-slide portfolio-item" data-slide-name="Project 4">
+                      <div class="portfolio-item__img">
+                        <picture>
+                          <source srcset="images/portfolio/01.webp" type="image/webp" />
+                          <img src="images/portfolio/01.jpg" alt="изображение" />
+                        </picture>
+                      </div>
+
+                      <h3 class="portfolio-item__title">COMPANY 4</h3>
+
+                      <h4 class="portfolio-item__subtitle">Web design</h4>
+
+                      <p class="portfolio-item__txt">Для компании “COMPANY” разработали уникальный дизайн мобильного приложения который решит любую задачу с которой приходит клиент</p>
+                    </div>
+
+                    <div class="swiper-slide portfolio-item" data-slide-name="Project 5">
+                      <div class="portfolio-item__img">
+                        <picture>
+                          <source srcset="images/portfolio/01.webp" type="image/webp" />
+                          <img src="images/portfolio/01.jpg" alt="изображение" />
+                        </picture>
+                      </div>
+
+                      <h3 class="portfolio-item__title">COMPANY 5</h3>
+
+                      <h4 class="portfolio-item__subtitle">Web design</h4>
+
+                      <p class="portfolio-item__txt">Для компании “COMPANY” разработали уникальный дизайн мобильного приложения который решит любую задачу с которой приходит клиент</p>
+                    </div>
+
+                    <div class="swiper-slide portfolio-item" data-slide-name="Project 6">
+                      <div class="portfolio-item__img">
+                        <picture>
+                          <source srcset="images/portfolio/01.webp" type="image/webp" />
+                          <img src="images/portfolio/01.jpg" alt="изображение" />
+                        </picture>
+                      </div>
+
+                      <h3 class="portfolio-item__title">COMPANY 6</h3>
+
+                      <h4 class="portfolio-item__subtitle">Web design</h4>
+
+                      <p class="portfolio-item__txt">Для компании “COMPANY” разработали уникальный дизайн мобильного приложения который решит любую задачу с которой приходит клиент</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-slider__nav _gsap-box" data-gsap-effect="fadeInLeft" data-simplebar data-simplebar-auto-hide="false">
+                  <button class="swiper-button-prev" type="button">
+                    <svg>
+                      <use xlink:href="images/icons/iconssprite.svg#arr-l"></use>
+                    </svg>
+                  </button>
+                  <div class="portfolio-slider__pagination"></div>
+                  <button class="swiper-button-next" type="button">
+                    <svg>
+                      <use xlink:href="images/icons/iconssprite.svg#arr-r"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACTS ===== -->
+        <section id="contactsSection" class="section contacts" data-animation="reverse" data-fullscreen>
+          <div class="contacts-bg__left">
+            <img src="images/bg-hand-l.svg" alt="фоновое изображение руки" />
+          </div>
+
+          <div class="contacts-bg__right">
+            <img src="images/bg-hand-r.svg" alt="фоновое изображение руки" />
+          </div>
+
+          <div class="ticker">
+            <div class="ticker-body">
+              <div class="ticker-item">Напишите и мы сами свяжемся с Вами</div>
+              <div class="ticker-item">Напишите и мы сами свяжемся с Вами</div>
+              <div class="ticker-item">Напишите и мы сами свяжемся с Вами</div>
+              <div class="ticker-item">Напишите и мы сами свяжемся с Вами</div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="section-inner">
+              <div class="contacts-content">
+                <h3 class="contacts-title _gsap-box">Напишите и мы сами свяжемся с Вами</h3>
+
+                <div class="contacts-content__inner">
+                  <form class="contacts-form _gsap-box">
+                    <div class="form-item">
+                      <input class="form-input" type="text" name="name" placeholder="Имя" autocomplete="off" />
+                    </div>
+                    <div class="form-item">
+                      <input class="form-input _required" type="tel" placeholder="Номер телефона" name="phone" autocomplete="off" />
+                    </div>
+                    <div class="form-item">
+                      <textarea class="form-input" name="message" placeholder="Сообщение"></textarea>
+                    </div>
+
+                    <button class="form-btn btn">Отправить</button>
+                  </form>
+
+                  <div class="contacts-lists">
+                    <ul class="contacts-list _gsap-box" data-gsap-effect="fadeInLeft">
+                      <li class="contacts-list__item">
+                        <span class="contacts-list__item-icon">
+                          <svg>
+                            <use xlink:href="images/icons/iconssprite.svg#phone"></use>
+                          </svg>
+                        </span>
+                        <a href="tel:+380950000000" class="contacts-list__item-link">+38 (095) 000-00-00</a>
+                      </li>
+                      <li class="contacts-list__item">
+                        <span class="contacts-list__item-icon">
+                          <svg>
+                            <use xlink:href="images/icons/iconssprite.svg#phone"></use>
+                          </svg>
+                        </span>
+                        <a href="tel:+380950000000" class="contacts-list__item-link">+38 (095) 000-00-00</a>
+                      </li>
+                    </ul>
+
+                    <ul class="contacts-list _gsap-box" data-gsap-effect="fadeInLeft">
+                      <li class="contacts-list__item">
+                        <span class="contacts-list__item-icon">
+                          <svg>
+                            <use xlink:href="images/icons/iconssprite.svg#telegram"></use>
+                          </svg>
+                        </span>
+                        <a href="#" class="contacts-list__item-link">Telegram</a>
+                      </li>
+                      <li class="contacts-list__item">
+                        <span class="contacts-list__item-icon">
+                          <svg>
+                            <use xlink:href="images/icons/iconssprite.svg#viber"></use>
+                          </svg>
+                        </span>
+                        <a href="#" class="contacts-list__item-link">Viber</a>
+                      </li>
+                      <li class="contacts-list__item">
+                        <span class="contacts-list__item-icon">
+                          <svg>
+                            <use xlink:href="images/icons/iconssprite.svg#whatsapp"></use>
+                          </svg>
+                        </span>
+                        <a href="#" class="contacts-list__item-link">WhatsApp</a>
+                      </li>
+                    </ul>
+
+                    <ul class="contacts-list _gsap-box" data-gsap-effect="fadeInLeft">
+                      <li class="contacts-list__item">
+                        <span class="contacts-list__item-icon">
+                          <svg>
+                            <use xlink:href="images/icons/iconssprite.svg#email"></use>
+                          </svg>
+                        </span>
+                        <a href="mailto:itpeople@gmail.com" class="contacts-list__item-link">itpeople@gmail.com</a>
+                      </li>
+                      <li class="contacts-list__item">
+                        <span class="contacts-list__item-icon">
+                          <svg>
+                            <use xlink:href="images/icons/iconssprite.svg#location"></use>
+                          </svg>
+                        </span>
+                        <span class="contacts-list__item-txt">USA, New-York, st 99</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BEGIN ===== -->
+        <section id="beginSection" class="section begin" data-animation="reverse" data-fullscreen>
+          <div class="begin-bg__left">
+            <img src="images/bg-hand-l.svg" alt="фоновое изображение руки" />
+          </div>
+
+          <div class="ticker">
+            <div class="ticker-body">
+              <div class="ticker-item">Начнем? Начнем? Начнем?</div>
+              <div class="ticker-item">Начнем? Начнем? Начнем?</div>
+              <div class="ticker-item">Начнем? Начнем? Начнем?</div>
+              <div class="ticker-item">Начнем? Начнем? Начнем?</div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="section-inner">
+              <div class="begin-content">
+                <div class="begin-content__info _gsap-box">
+                  <h3 class="begin-title">Начнем?</h3>
+
+                  <p class="begin-txt">
+                    Опишите свой проект, мы проведем экспресс-аудит совершенно бесплатно, свяжемся с Вами и подробно расскажем, как именно реализовать Ваш проект и примерную стоимость
+                  </p>
+                </div>
+
+                <form class="begin-form _gsap-box" data-gsap-effect="fadeInLeft">
+                  <div class="form-item">
+                    <input class="form-input" type="text" name="name" placeholder="Имя" autocomplete="off" />
+                  </div>
+                  <div class="form-item">
+                    <input class="form-input _required" type="tel" name="phone" placeholder="Номер телефона" autocomplete="off" />
+                  </div>
+                  <div class="form-item">
+                    <input class="form-input _required" type="email" name="email" placeholder="Почта" autocomplete="off" />
+                  </div>
+                  <div class="form-item">
+                    <textarea class="form-input" name="message" placeholder="Сообщение"></textarea>
+                  </div>
+
+                  <div class="form-item form-item--row">
+                    <label class="radio-label">
+                      <input class="radio-input" type="radio" name="messenger" value="Telegram" checked />
+                      <span class="radio-custom"></span>
+                      <span class="radio-txt">Telegram</span>
+                    </label>
+
+                    <label class="radio-label">
+                      <input class="radio-input" type="radio" name="messenger" value="Viber" />
+                      <span class="radio-custom"></span>
+                      <span class="radio-txt">Viber</span>
+                    </label>
+                  </div>
+
+                  <button class="form-btn btn">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- SCRIPTS ===== -->
+    <script src="js/libs.min.js?_v=20220811140018"></script>
+    <script src="js/main.min.js?_v=20220811140018"></script>
+  </body>
+</html>
