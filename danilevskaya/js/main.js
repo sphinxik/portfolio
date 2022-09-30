@@ -725,17 +725,17 @@ window.onload = function () {
 	//=================================================================================================
 
 	// INSTAFEED ======================================================================================
-	var instagramBlock = document.querySelector('.instagram');
+	// var instagramBlock = document.querySelector('.instagram');
 
-	if (instagramBlock) {
-		var instagram = new Instafeed({
-			accessToken: 'IGQVJYX1NYdFI1c3ltXzllcVZAUU2xsRFFkdWlWRVJSWXZABZAWd2TERkSmRmT0MxQnlxOEIzZAVFnNk9CWFg1STd4cWtadHZAvb1FKNTBHQWNlMWdPeG42eGJmR1pnQ2xrOHJ6NnJpSTkzTlFVbW5UcDdtcQZDZD', // ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН
-			limit: 5,
-			template: '<a href="{{link}}" class="instagram-item" target="_blank"><img src="{{image}}" alt="{{caption}}"></a>'
-		});
+	// if (instagramBlock) {
+	// 	var instagram = new Instafeed({
+	// 		accessToken: 'IGQVJYX1NYdFI1c3ltXzllcVZAUU2xsRFFkdWlWRVJSWXZABZAWd2TERkSmRmT0MxQnlxOEIzZAVFnNk9CWFg1STd4cWtadHZAvb1FKNTBHQWNlMWdPeG42eGJmR1pnQ2xrOHJ6NnJpSTkzTlFVbW5UcDdtcQZDZD', // ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН ТОКЕН
+	// 		limit: 5,
+	// 		template: '<a href="{{link}}" class="instagram-item" target="_blank"><img src="{{image}}" alt="{{caption}}"></a>'
+	// 	});
 
-		instagram.run();
-	}
+	// 	instagram.run();
+	// }
 	//=================================================================================================
 
 	// GOTO - плавная прокурутка к якорю ==============================================================

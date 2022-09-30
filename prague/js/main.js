@@ -662,40 +662,45 @@ function bodyUnlockPopup() {
 
 // GSAP ANIMATION =================================================================================
 // HEADER
-var headerTimeline = gsap.timeline({
-  delay: 1,
-  onComplete: headerMapDotsPulse,
-});
-headerTimeline.from(".header-title", {
-  x: -100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "none",
-});
-headerTimeline.from(".header-txt", {
-  x: -100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "none",
-});
-headerTimeline.from(".header-top", {
-  y: -100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "none",
-});
-headerTimeline.from(
-  ".header-bottom",
-  { y: 100, opacity: 0, duration: 0.5, ease: "none" },
-  1.0
-);
-headerTimeline.from(".header-map__mark", {
-  scale: 0,
-  opacity: 0,
-  duration: 0.5,
-  stagger: 0.3,
-  ease: "none",
-});
+window.onload = function() {
+  $('.preloader').addClass('hidden');
+
+  var headerTimeline = gsap.timeline({
+    delay: 1,
+    onComplete: headerMapDotsPulse,
+  });
+  headerTimeline.from(".header-title", {
+    x: -100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "none",
+  });
+  headerTimeline.from(".header-txt", {
+    x: -100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "none",
+  });
+  headerTimeline.from(".header-top", {
+    y: -100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "none",
+  });
+  headerTimeline.from(
+    ".header-bottom",
+    { y: 100, opacity: 0, duration: 0.5, ease: "none" },
+    1.0
+  );
+  headerTimeline.from(".header-map__mark", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.3,
+    ease: "none",
+  });
+  
+}
 
 function headerMapDotsPulse() {
   $(".header-map__mark .dot").each(function () {

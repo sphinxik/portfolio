@@ -3,8 +3,7 @@
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -12,8 +11,7 @@
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -21,8 +19,7 @@
 @font-face {
   font-family: "NotoSans";
   font-display: swap;
-  src: url("../fonts/NotoSans-Regular.woff2") format("woff2"),
-    url("../fonts/NotoSans-Regular.woff") format("woff");
+  src: url("../fonts/NotoSans-Regular.woff2") format("woff2"), url("../fonts/NotoSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -30,8 +27,7 @@
 @font-face {
   font-family: "NotoSans";
   font-display: swap;
-  src: url("../fonts/NotoSans-Regular-Italic.woff2") format("woff2"),
-    url("../fonts/NotoSans-Regular-Italic.woff") format("woff");
+  src: url("../fonts/NotoSans-Regular-Italic.woff2") format("woff2"), url("../fonts/NotoSans-Regular-Italic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
@@ -39,8 +35,7 @@
 @font-face {
   font-family: "NotoSans";
   font-display: swap;
-  src: url("../fonts/NotoSans-Bold.woff2") format("woff2"),
-    url("../fonts/NotoSans-Bold.woff") format("woff");
+  src: url("../fonts/NotoSans-Bold.woff2") format("woff2"), url("../fonts/NotoSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -48,8 +43,7 @@
 @font-face {
   font-family: "Raleway";
   font-display: swap;
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"),
-    url("../fonts/Raleway-Regular.woff") format("woff");
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -181,6 +175,88 @@ body.lock {
 }
 
 /***************************************************************************/
+/* PRELOADER */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: #232323;
+  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
+  -o-transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-body {
+  position: absolute;
+  top: calc(50% - 120px);
+  left: calc(50% - 120px);
+  width: 240px;
+  height: 240px;
+  border-right: 8px solid #c0a378;
+  border-radius: 100%;
+  -webkit-animation: preloaderAnimate 800ms linear infinite;
+  animation: preloaderAnimate 800ms linear infinite;
+}
+
+.preloader-body::before,
+.preloader-body::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  border-left: 8px solid #c0a378;
+  border-radius: 100%;
+  animation: preloaderAnimate 400ms linear infinite reverse;
+}
+
+.preloader-body::after {
+  width: 150px;
+  height: 150px;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  border: 0;
+  border-right: 6px solid #c0a378;
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes preloaderAnimate {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes preloaderAnimate {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+/***************************************************************************/
 /* WRAPPER */
 .wrapper {
   width: 100%;
@@ -207,15 +283,11 @@ body.lock {
   -ms-transform: translate(0, 120px);
   transform: translate(0, 120px);
   will-change: transform, opacity, visibility;
-  -webkit-transition: opacity 0.5s linear, visibility 0.5s linear,
-    -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, visibility 0.5s linear,
-    -webkit-transform 0.5s linear;
-  -o-transition: transform 0.5s linear, opacity 0.5s linear,
-    visibility 0.5s linear;
+  -webkit-transition: opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear, visibility 0.5s linear;
   transition: transform 0.5s linear, opacity 0.5s linear, visibility 0.5s linear;
-  transition: transform 0.5s linear, opacity 0.5s linear, visibility 0.5s linear,
-    -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear, opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.5s linear;
 }
 
 .gs-animate--fromRight,
@@ -320,8 +392,7 @@ section {
   background-color: transparent !important;
   border: 2px solid #c0a378 !important;
   border-radius: 50% !important;
-  -webkit-transition: color 0.3s ease, background-color 0.3s ease,
-    opacity 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
   -o-transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
   transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 }
@@ -1043,31 +1114,23 @@ body._desktop .sidebar-home:hover > span {
 
 @-webkit-keyframes dot-pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3),
-      0 0 0 0px rgba(192, 163, 120, 0.1);
-    box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3),
-      0 0 0 0px rgba(192, 163, 120, 0.1);
+    -webkit-box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3), 0 0 0 0px rgba(192, 163, 120, 0.1);
+    box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3), 0 0 0 0px rgba(192, 163, 120, 0.1);
   }
   100% {
-    -webkit-box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3),
-      0 0 0 22px rgba(192, 163, 120, 0.1);
-    box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3),
-      0 0 0 22px rgba(192, 163, 120, 0.1);
+    -webkit-box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3), 0 0 0 22px rgba(192, 163, 120, 0.1);
+    box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3), 0 0 0 22px rgba(192, 163, 120, 0.1);
   }
 }
 
 @keyframes dot-pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3),
-      0 0 0 0px rgba(192, 163, 120, 0.1);
-    box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3),
-      0 0 0 0px rgba(192, 163, 120, 0.1);
+    -webkit-box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3), 0 0 0 0px rgba(192, 163, 120, 0.1);
+    box-shadow: 0 0 0 0px rgba(192, 163, 120, 0.3), 0 0 0 0px rgba(192, 163, 120, 0.1);
   }
   100% {
-    -webkit-box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3),
-      0 0 0 22px rgba(192, 163, 120, 0.1);
-    box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3),
-      0 0 0 22px rgba(192, 163, 120, 0.1);
+    -webkit-box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3), 0 0 0 22px rgba(192, 163, 120, 0.1);
+    box-shadow: 0 0 0 9px rgba(192, 163, 120, 0.3), 0 0 0 22px rgba(192, 163, 120, 0.1);
   }
 }
 
@@ -2901,8 +2964,7 @@ body._desktop .footer-call__order:hover {
   transition: opacity 0.4s linear, -webkit-transform 0.4s linear;
   -o-transition: opacity 0.4s linear, transform 0.4s linear;
   transition: opacity 0.4s linear, transform 0.4s linear;
-  transition: opacity 0.4s linear, transform 0.4s linear,
-    -webkit-transform 0.4s linear;
+  transition: opacity 0.4s linear, transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
 .popup-close {
