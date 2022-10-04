@@ -1,917 +1,939 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <!-- Title & Icon
+
+<head>
+  <!-- Title & Icon
   ====================================================================== -->
-    <title>Ярмарка Недвижимости</title>
-    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+  <title>Ярмарка Недвижимости</title>
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
 
-    <!-- Meta
+  <!-- Meta
   ====================================================================== -->
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0" />
 
-    <!-- CSS
+  <!-- CSS
   ====================================================================== -->
-    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
-  </head>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
 
-  <body>
-    <div class="wrapper">
-      <!-- HEADER
+<body>
+  <div class="wrapper">
+    <!-- HEADER
     ====================================================================== -->
-      <header class="header body-lock-padding">
-        <div class="container">
-          <div class="header-inner">
-            <div class="header-logo">
-              <picture>
-                <source srcset="images/logo.webp" type="image/webp" />
-                <img src="images/logo.png" alt="логотип" />
-              </picture>
-            </div>
+    <header class="header body-lock-padding">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo _gsap-animate">
+            <picture>
+              <source srcset="images/logo.webp" type="image/webp" />
+              <img src="images/logo.png" alt="логотип" />
+            </picture>
+          </div>
 
-            <div class="header-title">
-              Агентство<br />
-              «Ярмарка недвижимости»
-            </div>
+          <div class="header-title _gsap-animate">
+            Агентство<br />
+            «Ярмарка недвижимости»
+          </div>
 
-            <div class="header-contacts">
-              <a href="tel:+88314133326" class="header-phone">8 (831) 413-33-26</a>
-              <div class="header-address">
-                г. Нижний Новгород,<br />
-                ул. Ильинская, 104/59
-              </div>
+          <div class="header-contacts _gsap-animate">
+            <a href="tel:+88314133326" class="header-phone">8 (831) 413-33-26</a>
+            <div class="header-address">
+              г. Нижний Новгород,<br />
+              ул. Ильинская, 104/59
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <!-- INTRO
+    <!-- INTRO
     ====================================================================== -->
-      <section class="intro">
-        <div class="intro-bg ibg">
-          <picture>
-            <source srcset="images/intro/bg.webp" type="image/webp" />
-            <img src="images/intro/bg.jpg" alt="фоновая картинка" />
-          </picture>
-        </div>
+    <section class="intro">
+      <div class="intro-bg ibg">
+        <picture>
+          <source srcset="images/intro/bg.webp" type="image/webp" />
+          <img src="images/intro/bg.jpg" alt="фоновая картинка" />
+        </picture>
+      </div>
 
-        <div class="container">
-          <div class="intro-inner">
-            <h1 class="intro-title">
-              Вы хотите продать квартиру
-              <span class="orange-txt">БЫСТРО</span> или <span class="orange-txt">ДОРОЖЕ?</span>
-            </h1>
+      <div class="container">
+        <div class="intro-inner">
+          <h1 class="intro-title _gsap-animate">
+            Вы хотите продать квартиру
+            <span class="orange-txt">БЫСТРО</span> или <span class="orange-txt">ДОРОЖЕ?</span>
+          </h1>
 
-            <div class="intro-txt">Хотите знать как? Оставьте заявку прямо сейчас или позвоните!</div>
+          <div class="intro-txt _gsap-animate">Хотите знать как? Оставьте заявку прямо сейчас или позвоните!</div>
 
-            <div class="intro-row">
-              <div class="intro-item">
-                <div class="intro-item__icon">
-                  <img src="images/intro/ico01.svg" alt="деньги" />
-                </div>
-                <div class="intro-item__txt">
-                  <span class="orange-txt">Бесплатная оценка</span>
-                  объекта недвижимости о параметрам
-                </div>
+          <div class="intro-row _gsap-animate">
+            <div class="intro-item">
+              <div class="intro-item__icon">
+                <img src="images/intro/ico01.svg" alt="деньги" />
               </div>
-
-              <div class="intro-item">
-                <div class="intro-item__icon">
-                  <img src="images/intro/ico02.svg" alt="здание" />
-                </div>
-                <div class="intro-item__txt">
-                  <span class="orange-txt">Объективная оценка</span>
-                  цены продажи аналогичных квартир
-                </div>
-              </div>
-
-              <div class="intro-item">
-                <div class="intro-item__icon">
-                  <img src="images/intro/ico03.svg" alt="планшет" />
-                </div>
-                <div class="intro-item__txt">
-                  Составление
-                  <span class="orange-txt"> индивидуального плана продаж </span>
-                </div>
-              </div>
-            </div>
-            <!-- /intro-row -->
-
-            <a href="#popup-order" class="intro-btn btn popup-link">
-              <span> 10 Рекомендаций «Как продать квартиру Быстро и Дорого» </span>
-            </a>
-          </div>
-          <!-- /intro-inner -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /intro -->
-
-      <!-- GUARANTEE
-    ====================================================================== -->
-      <section class="guarantee">
-        <div class="container">
-          <h2 class="title">Почему <span class="orange-txt">мы гарантируем на 99,9%</span> продажу квартиры в минимальные сроки ли по максимальной цене?</h2>
-
-          <div class="guarantee-inner">
-            <div class="guarantee-col">
-              <div class="guarantee-col__top">
-                <div class="guarantee-col__top-icon">
-                  <img src="images/guarantee/icon.svg" alt="график" />
-                </div>
-
-                <div class="guarantee-col__top-txt">
-                  Статистика – вещь упрямая. Мы посчитали свою производительность и выяснили, что <span>80% квартир мы продаем в среднем за 45 дней.</span> Из них больше 60% – по максимальной цене.
-                </div>
-              </div>
-
-              <p>
-                <span class="orange-txt">Стоимость квартиры зависит от многих факторов:</span>
-                места расположения, состояния, а также вашего желания продать как можно быстрее или дороже. Мы рекомендуем – вы выбираете!
-              </p>
-
-              <p>
-                Мы знаем, сколько и в каком районе стоит квадратный метр жилплощади, поэтому не фантазируем, а
-                <span class="orange-txt">реально оцениваем свои возможности.</span>
-              </p>
-
-              <div class="guarantee-col__bottom">
-                <div class="guarantee-col__bottom-img">
-                  <picture>
-                    <source srcset="images/guarantee/paper.webp" type="image/webp" />
-                    <img src="images/guarantee/paper.png" alt="документ" />
-                  </picture>
-                </div>
-                <div class="guarantee-col__bottom-content">
-                  <div class="guarantee-col__bottom-title">Мы отвечаем за результат.</div>
-                  <div class="guarantee-col__bottom-txt">Заключая договор на оказание услуг, мы прописываем там все условия.</div>
-                </div>
+              <div class="intro-item__txt">
+                <span class="orange-txt">Бесплатная оценка</span>
+                объекта недвижимости о параметрам
               </div>
             </div>
 
-            <div class="guarantee-col guarantee-col--video">
-              <div class="guarantee-video video">
-                <a href="https://youtu.be/lK2nUoT5gpo" class="video-link" target="_blank">
-                  <picture>
-                    <source class="video-preview" srcset="images/guarantee/preview.webp" type="image/webp" />
-                    <img class="video-preview" src="images/guarantee/preview.jpg" alt="alt" />
-                  </picture>
-
-                  <span class="video-btn">
-                    <img src="images/icons/play-btn.svg" alt="кнопка плей" />
-                  </span>
-                </a>
-                <div class="video-player"></div>
+            <div class="intro-item">
+              <div class="intro-item__icon">
+                <img src="images/intro/ico02.svg" alt="здание" />
               </div>
+              <div class="intro-item__txt">
+                <span class="orange-txt">Объективная оценка</span>
+                цены продажи аналогичных квартир
+              </div>
+            </div>
 
-              <div class="guarantee-undervideo">
-                <div class="guarantee-undervideo__name">Светлана Никольская</div>
-                <div class="guarantee-undervideo__txt">
-                  Руководитель агентства<br />
-                  «Ярмарка Недвижимости»
-                </div>
+            <div class="intro-item">
+              <div class="intro-item__icon">
+                <img src="images/intro/ico03.svg" alt="планшет" />
+              </div>
+              <div class="intro-item__txt">
+                Составление
+                <span class="orange-txt"> индивидуального плана продаж </span>
               </div>
             </div>
           </div>
-          <!-- /guarantee-inner -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /guarantee -->
+          <!-- /intro-row -->
 
-      <!-- SELL
+          <a href="#popup-order" class="intro-btn btn popup-link _gsap-animate">
+            <span> 10 Рекомендаций «Как продать квартиру Быстро и Дорого» </span>
+          </a>
+        </div>
+        <!-- /intro-inner -->
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- /intro -->
+
+    <!-- GUARANTEE
     ====================================================================== -->
-      <section class="sell">
-        <div class="sell-bg ibg">
-          <picture>
-            <source srcset="images/sell/bg.webp" type="image/webp" />
-            <img src="images/sell/bg.jpg" alt="фоновая картинка" />
-          </picture>
-        </div>
+    <section class="guarantee">
+      <div class="container">
+        <h2 class="title _gsap-animate _gsap-animate-fadeUp">Почему <span class="orange-txt">мы гарантируем на 99,9%</span> продажу квартиры в минимальные
+          сроки ли по максимальной цене?</h2>
 
-        <div class="container">
-          <div class="sell-top">
-            <h2 class="title">
-              Вы хотите продать квартиру в Нижнем Новгороде
-              <span class="orange-txt">БЫСТРО</span> или <span class="orange-txt">ДОРОЖЕ?</span>
-            </h2>
-
-            <div class="sell-top__buttons">
-              <div class="sell-top__buttons-item">
-                <a href="#popup-order" class="sell-top__btn btn popup-link">
-                  <span>Продать быстро</span>
-                </a>
+        <div class="guarantee-inner">
+          <div class="guarantee-col _gsap-animate _gsap-animate-fadeRight">
+            <div class="guarantee-col__top">
+              <div class="guarantee-col__top-icon">
+                <img src="images/guarantee/icon.svg" alt="график" />
               </div>
 
-              <div class="sell-top__buttons-break">или</div>
-
-              <div class="sell-top__buttons-item">
-                <a href="#popup-order" class="sell-top__btn btn popup-link">
-                  <span>Продать дорого</span>
-                </a>
+              <div class="guarantee-col__top-txt">
+                Статистика – вещь упрямая. Мы посчитали свою производительность и выяснили, что <span>80% квартир мы
+                  продаем в среднем за 45 дней.</span> Из них больше 60% – по максимальной цене.
               </div>
             </div>
 
-            <div class="sell-top__content">
-              <p><span class="orange-txt">Сэкономьте до 90% своего времени</span> на продажу квартиры.</p>
+            <p>
+              <span class="orange-txt">Стоимость квартиры зависит от многих факторов:</span>
+              места расположения, состояния, а также вашего желания продать как можно быстрее или дороже. Мы рекомендуем
+              – вы выбираете!
+            </p>
 
-              <p>
-                Ответьте на несколько вопросов и получите скидку на комиссионные услуги или
-                <span>10 рекомендаций «Как продавать квартиру Быстро и Дорого».</span>
-              </p>
-            </div>
-          </div>
+            <p>
+              Мы знаем, сколько и в каком районе стоит квадратный метр жилплощади, поэтому не фантазируем, а
+              <span class="orange-txt">реально оцениваем свои возможности.</span>
+            </p>
 
-          <div class="sell-bottom">
-            <h2 class="title"><span class="orange-txt">Что нужно сделать,</span> чтобы продать квартиру в Нижнем Новгороде быстро или дорого?</h2>
-
-            <ol class="sell-bottom__list">
-              <li class="sell-bottom__list-item">
-                <span> Оставить заявку на нашем сайте или позвонить нам </span>
-              </li>
-
-              <li class="sell-bottom__list-item">
-                <span> Заказать расчет стоимости квартиры <span class="orange-txt">бесплатно</span> </span>
-              </li>
-
-              <li class="sell-bottom__list-item">
-                <span> Подписать договор и выполнять свои обязательства, прописанные в нем </span>
-              </li>
-
-              <li class="sell-bottom__list-item">
-                <span> Получить деньги за квартиру </span>
-              </li>
-            </ol>
-
-            <div class="sell-bottom__btn-wrapper">
-              <a href="#popup-order" class="sell-bottom__btn btn popup-link">
-                <span>Оставить заявку</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /sell -->
-
-      <!-- DOWNLOAD
-    ====================================================================== -->
-      <section class="download">
-        <div class="container">
-          <div class="download-inner">
-            <div class="download-img">
-              <picture>
-                <source srcset="images/download/01.png" type="image/webp" />
-                <img src="images/download/01.png" alt="брошюра" />
-              </picture>
-            </div>
-
-            <div class="dowload-content">
-              <h2 class="download-content__title title">Скачайте 10 рекомендаций</h2>
-
-              <h3 class="download-content__subtitle">«Как продать квартиру Быстро и Дорого»</h3>
-
-              <a href="#popup-order" class="download-content__btn btn popup-link">
-                <span>Скачать (1.23 Мб)</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT
-    ====================================================================== -->
-      <section class="about">
-        <div class="container">
-          <h2 class="title">
-            <span class="orange-txt">Думаете, это невозможно?</span>
-          </h2>
-
-          <div class="about-txt">Прочитайте отзывы, которые оставили нам клиенты… и не пропустите случая, ведь следующий положительный отзыв наверняка будет ваш!</div>
-
-          <div class="about-slider__wrapper">
-            <div class="about-slider__navigation"></div>
-
-            <div class="about-slider">
-              <div class="about-slide">
-                <div class="about-slide__media ibg">
-                  <picture>
-                    <source srcset="images/about/01.webp" type="image/webp" />
-                    <img src="images/about/01.jpg" alt="картинка" />
-                  </picture>
-                </div>
-
-                <div class="about-slide__date">19 марта 2020</div>
-
-                <div class="about-slide__content">
-                  <div class="about-slide__name">Павел Иванов</div>
-
-                  <div class="about-slide__message">
-                    В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
-                    продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень довольны.
-                  </div>
-                </div>
-              </div>
-
-              <div class="about-slide">
-                <div class="about-slide__media ibg">
-                  <picture>
-                    <source srcset="images/about/02.webp" type="image/webp" />
-                    <img src="images/about/02.jpg" alt="картинка" />
-                  </picture>
-                </div>
-
-                <div class="about-slide__date">19 марта 2020</div>
-
-                <div class="about-slide__content">
-                  <div class="about-slide__name">Кирилл Сезонов</div>
-
-                  <div class="about-slide__message">
-                    В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
-                    продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень довольны.
-                  </div>
-                </div>
-              </div>
-
-              <div class="about-slide">
-                <div class="about-slide__media ibg">
-                  <picture>
-                    <source srcset="images/about/01.webp" type="image/webp" />
-                    <img src="images/about/01.jpg" alt="картинка" />
-                  </picture>
-                </div>
-
-                <div class="about-slide__date">19 марта 2020</div>
-
-                <div class="about-slide__content">
-                  <div class="about-slide__name">Павел Иванов</div>
-
-                  <div class="about-slide__message">
-                    В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
-                    продаст
-                  </div>
-                </div>
-              </div>
-
-              <div class="about-slide">
-                <div class="about-slide__media ibg">
-                  <picture>
-                    <source srcset="images/about/02.webp" type="image/webp" />
-                    <img src="images/about/02.jpg" alt="картинка" />
-                  </picture>
-                </div>
-
-                <div class="about-slide__date">19 марта 2020</div>
-
-                <div class="about-slide__content">
-                  <div class="about-slide__name">Кирилл Сезонов</div>
-
-                  <div class="about-slide__message">
-                    В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
-                    продаст
-                  </div>
-                </div>
-              </div>
-
-              <div class="about-slide">
-                <div class="about-slide__media ibg">
-                  <picture>
-                    <source srcset="images/about/01.webp" type="image/webp" />
-                    <img src="images/about/01.jpg" alt="картинка" />
-                  </picture>
-                </div>
-
-                <div class="about-slide__date">19 марта 2020</div>
-
-                <div class="about-slide__content">
-                  <div class="about-slide__name">Павел Иванов</div>
-
-                  <div class="about-slide__message">
-                    В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
-                    продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень довольны.
-                  </div>
-                </div>
-              </div>
-
-              <div class="about-slide">
-                <div class="about-slide__media ibg">
-                  <picture>
-                    <source srcset="images/about/02.webp" type="image/webp" />
-                    <img src="images/about/02.jpg" alt="картинка" />
-                  </picture>
-                </div>
-
-                <div class="about-slide__date">19 марта 2020</div>
-
-                <div class="about-slide__content">
-                  <div class="about-slide__name">Кирилл Сезонов</div>
-
-                  <div class="about-slide__message">
-                    В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
-                    продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень довольны.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /about-slider -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /about -->
-
-      <!-- CALCULATOR
-    ====================================================================== -->
-      <section class="calc">
-        <div class="calc-bg ibg">
-          <picture>
-            <source srcset="images/calc/bg.webp" type="image/webp" />
-            <img src="images/calc/bg.jpg" alt="фоновая картинка" />
-          </picture>
-        </div>
-
-        <div class="container">
-          <div class="calc-inner">
-            <h2 class="title"><span class="orange-txt">Посчитайте</span> сколько максимально может стоить ваша квартира</h2>
-
-            <div class="calc-top">
-              <div class="calc-top__img">
+            <div class="guarantee-col__bottom">
+              <div class="guarantee-col__bottom-img">
                 <picture>
-                  <source srcset="images/calc/01.webp" type="image/webp" />
-                  <img src="images/calc/01.png" alt="брошюра" />
+                  <source srcset="images/guarantee/paper.webp" type="image/webp" />
+                  <img src="images/guarantee/paper.png" alt="документ" />
                 </picture>
               </div>
-              <div class="calc-top__txt">
-                Пройдите тест до конца и получите: <span>скидка 5000 руб.</span> на услуги по продаже квартиры +
-                <span>материал (10 рекомендаций)</span>
+              <div class="guarantee-col__bottom-content">
+                <div class="guarantee-col__bottom-title">Мы отвечаем за результат.</div>
+                <div class="guarantee-col__bottom-txt">Заключая договор на оказание услуг, мы прописываем там все
+                  условия.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guarantee-col guarantee-col--video _gsap-animate _gsap-animate-fadeLeft">
+            <div class="guarantee-video video">
+              <a href="https://youtu.be/lK2nUoT5gpo" class="video-link" target="_blank">
+                <picture>
+                  <source class="video-preview" srcset="images/guarantee/preview.webp" type="image/webp" />
+                  <img class="video-preview" src="images/guarantee/preview.jpg" alt="alt" />
+                </picture>
+
+                <span class="video-btn">
+                  <img src="images/icons/play-btn.svg" alt="кнопка плей" />
+                </span>
+              </a>
+              <div class="video-player"></div>
+            </div>
+
+            <div class="guarantee-undervideo">
+              <div class="guarantee-undervideo__name">Светлана Никольская</div>
+              <div class="guarantee-undervideo__txt">
+                Руководитель агентства<br />
+                «Ярмарка Недвижимости»
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /guarantee-inner -->
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- /guarantee -->
+
+    <!-- SELL
+    ====================================================================== -->
+    <section class="sell">
+      <div class="sell-bg ibg">
+        <picture>
+          <source srcset="images/sell/bg.webp" type="image/webp" />
+          <img src="images/sell/bg.jpg" alt="фоновая картинка" />
+        </picture>
+      </div>
+
+      <div class="container">
+        <div class="sell-top">
+          <h2 class="title _gsap-animate-fadeUp">
+            Вы хотите продать квартиру в Нижнем Новгороде
+            <span class="orange-txt">БЫСТРО</span> или <span class="orange-txt">ДОРОЖЕ?</span>
+          </h2>
+
+          <div class="sell-top__buttons">
+            <div class="sell-top__buttons-item _gsap-animate-fadeRight">
+              <a href="#popup-order" class="sell-top__btn btn popup-link">
+                <span>Продать быстро</span>
+              </a>
+            </div>
+
+            <div class="sell-top__buttons-break _gsap-animate-scaleIn">или</div>
+
+            <div class="sell-top__buttons-item _gsap-animate-fadeLeft">
+              <a href="#popup-order" class="sell-top__btn btn popup-link">
+                <span>Продать дорого</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="sell-top__content _gsap-animate-fadeUp">
+            <p><span class="orange-txt">Сэкономьте до 90% своего времени</span> на продажу квартиры.</p>
+
+            <p>
+              Ответьте на несколько вопросов и получите скидку на комиссионные услуги или
+              <span>10 рекомендаций «Как продавать квартиру Быстро и Дорого».</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="sell-bottom">
+          <h2 class="title _gsap-animate-fadeUp"><span class="orange-txt">Что нужно сделать,</span> чтобы продать квартиру в Нижнем Новгороде
+            быстро или дорого?</h2>
+
+          <ol class="sell-bottom__list  _gsap-animate-fadeUp-row">
+            <li class="sell-bottom__list-item">
+              <span> Оставить заявку на нашем сайте или позвонить нам </span>
+            </li>
+
+            <li class="sell-bottom__list-item">
+              <span> Заказать расчет стоимости квартиры <span class="orange-txt">бесплатно</span> </span>
+            </li>
+
+            <li class="sell-bottom__list-item">
+              <span> Подписать договор и выполнять свои обязательства, прописанные в нем </span>
+            </li>
+
+            <li class="sell-bottom__list-item">
+              <span> Получить деньги за квартиру </span>
+            </li>
+          </ol>
+
+          <div class="sell-bottom__btn-wrapper _gsap-animate-fadeUp">
+            <a href="#popup-order" class="sell-bottom__btn btn popup-link">
+              <span>Оставить заявку</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- /sell -->
+
+    <!-- DOWNLOAD
+    ====================================================================== -->
+    <section class="download">
+      <div class="container">
+        <div class="download-inner">
+          <div class="download-img">
+            <picture>
+              <source srcset="images/download/01.png" type="image/webp" />
+              <img class="_gsap-animate _gsap-animate-scaleIn" src="images/download/01.png" alt="брошюра" />
+            </picture>
+          </div>
+
+          <div class="dowload-content">
+            <h2 class="download-content__title title _gsap-animate _gsap-animate-fadeUp">Скачайте 10 рекомендаций</h2>
+
+            <h3 class="download-content__subtitle _gsap-animate _gsap-animate-fadeUp">«Как продать квартиру Быстро и Дорого»</h3>
+
+            <a href="#popup-order" class="download-content__btn btn popup-link _gsap-animate _gsap-animate-fadeUp">
+              <span>Скачать (1.23 Мб)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT
+    ====================================================================== -->
+    <section class="about">
+      <div class="container">
+        <h2 class="title _gsap-animate _gsap-animate-fadeUp">
+          <span class="orange-txt">Думаете, это невозможно?</span>
+        </h2>
+
+        <div class="about-txt _gsap-animate _gsap-animate-fadeUp">Прочитайте отзывы, которые оставили нам клиенты… и не пропустите случая, ведь следующий
+          положительный отзыв наверняка будет ваш!</div>
+
+        <div class="about-slider__wrapper _gsap-animate _gsap-animate-scaleIn">
+          <div class="about-slider__navigation"></div>
+
+          <div class="about-slider">
+            <div class="about-slide">
+              <div class="about-slide__media ibg">
+                <picture>
+                  <source srcset="images/about/01.webp" type="image/webp" />
+                  <img src="images/about/01.jpg" alt="картинка" />
+                </picture>
+              </div>
+
+              <div class="about-slide__date">19 марта 2020</div>
+
+              <div class="about-slide__content">
+                <div class="about-slide__name">Павел Иванов</div>
+
+                <div class="about-slide__message">
+                  В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно
+                  удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
+                  продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень
+                  довольны.
+                </div>
               </div>
             </div>
 
-            <div class="calc-body">
-              <form action="GET" class="calc-form">
-                <div class="calc-steps">
-                  <div class="calc-steps__top">
-                    <div class="calc-steps__top-title">
-                      ОСТАЛОСЬ:
-                      <span class="calc__steps-left orange-txt"></span>
-                      ИЗ
-                      <span class="calc__total-steps"></span>
-                    </div>
+            <div class="about-slide">
+              <div class="about-slide__media ibg">
+                <picture>
+                  <source srcset="images/about/02.webp" type="image/webp" />
+                  <img src="images/about/02.jpg" alt="картинка" />
+                </picture>
+              </div>
 
-                    <div class="calc-progressbar">
-                      <div class="calc-progressbar__line"></div>
-                    </div>
-                  </div>
+              <div class="about-slide__date">19 марта 2020</div>
 
-                  <!-- STEP 1 -->
-                  <div class="calc-step calc-step--current">
-                    <div class="calc-step__question">
-                      <div class="calc-step__question-number"></div>
-                      <div class="calc-step__question-txt">Какая у вас квартира?</div>
-                    </div>
+              <div class="about-slide__content">
+                <div class="about-slide__name">Кирилл Сезонов</div>
 
-                    <div class="calc-step__options">
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step1" checked />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Студия</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step1" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">1-комнатная</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step1" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">2-комнатная</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step1" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">3-комнатная</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step1" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">4-комнатная</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step1" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Другая</span>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- /calc-step__options -->
-                  </div>
-                  <!-- /calc-step -->
-
-                  <!-- STEP 2 -->
-                  <div class="calc-step">
-                    <div class="calc-step__question">
-                      <div class="calc-step__question-number"></div>
-                      <div class="calc-step__question-txt">Укажите площадь квартиры</div>
-                    </div>
-
-                    <div class="calc-step__options">
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step2" checked />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">до 25 м<sup>2</sup></span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step2" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">25-40 м<sup>2</sup></span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step2" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">40-60 м<sup>2</sup></span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step2" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">60-80 м<sup>2</sup></span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step2" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">80-100 м<sup>2</sup></span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step2" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">больше 100 м<sup>2</sup></span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step2" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">не знаю</span>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- /calc-step__options -->
-                  </div>
-                  <!-- /calc-step -->
-
-                  <!-- STEP 3 -->
-                  <div class="calc-step">
-                    <div class="calc-step__question">
-                      <div class="calc-step__question-number"></div>
-                      <div class="calc-step__question-txt">На каком этаже находиться квартира?</div>
-                    </div>
-
-                    <div class="calc-step__options">
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step3" checked />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">1-2</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step3" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">3-4</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step3" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">5-8</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step3" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">9-11</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step3" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">12-15</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step3" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">выше 15</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step3" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Другое</span>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- /calc-step__options -->
-                  </div>
-                  <!-- /calc-step -->
-
-                  <!-- STEP 4 -->
-                  <div class="calc-step">
-                    <div class="calc-step__question">
-                      <div class="calc-step__question-number"></div>
-                      <div class="calc-step__question-txt">В каком районе квартира?</div>
-                    </div>
-
-                    <div class="calc-step__options">
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" checked />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Автозаводский</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Канавинский</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Ленинский</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Московский</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Нижегородский</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Приокский</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Советский</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step4" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Сормовский</span>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- /calc-step__options -->
-                  </div>
-                  <!-- /calc-step -->
-
-                  <!-- STEP 5 -->
-                  <div class="calc-step">
-                    <div class="calc-step__question">
-                      <div class="calc-step__question-number"></div>
-                      <div class="calc-step__question-txt">Укажите Как вы хотите получить информацию о стоимости продажи вашей квартиры? квартиры</div>
-                    </div>
-
-                    <div class="calc-step__options">
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step5" checked />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">Звонок на телефон</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step5" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">SMS на телефон</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step5" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">На Whatsapp</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step5" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">На Viber</span>
-                        </label>
-                      </div>
-
-                      <div class="calc-step__options-item">
-                        <label class="calc-step__options-item-label">
-                          <input class="radio-input" type="radio" name="step5" />
-                          <span class="calc-step__options-item-check"></span>
-                          <span class="calc-step__options-item-txt">На Telegram</span>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- /calc-step__options -->
-                  </div>
-                  <!-- /calc-step -->
-
-                  <div class="calc-btn__wrapper">
-                    <button class="calc-btn__nextstep btn" type="button">
-                      <span>Далее</span>
-                    </button>
-                    <!-- <button class="calc-btn__prevstep" type="button">Назад</button> -->
-                  </div>
+                <div class="about-slide__message">
+                  В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно
+                  удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
+                  продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень
+                  довольны.
                 </div>
-                <!-- /calc-steps -->
-
-                <!-- CALC FINAL -->
-                <div class="calc-final">
-                  <div class="calc-final__title">Спасибо за ответы!</div>
-
-                  <div class="calc-final__txt">
-                    <p>Наш менеджер уже оценил вашу квартиру и <span class="orange-txt">начал поиск покупателей.</span></p>
-                    <p>Чтобы связаться с Вами и закрепить персональную скидку в размере <span class="orange-txt">5 000 рублей</span> на нашу услугу введите ваш номер телефона:</p>
-                  </div>
-
-                  <div class="calc-final__inputs">
-                    <div class="calc-final__inputs-item">
-                      <input type="tel" name="phone" class="form-input phone" placeholder="Телефон" />
-                    </div>
-                    <div class="calc-final__inputs-item">
-                      <input type="text" name="email" class="form-input" placeholder="E-mail" />
-                    </div>
-                  </div>
-
-                  <div class="calc-final__btn-wrapper">
-                    <button class="calc-final__btn btn" type="submit">
-                      <span>Узнать стоимость квартьиры</span>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="calc-body__bottom">Нажимая на кнопку я соглашаюсь с <a href="#">Политикой конфиденциальности сайта</a></div>
-              </form>
-              <!-- /calc-form -->
+              </div>
             </div>
-            <!-- /calc-body -->
-          </div>
-          <!-- /calc-inner -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /calc -->
 
-      <!-- FOOTER
+            <div class="about-slide">
+              <div class="about-slide__media ibg">
+                <picture>
+                  <source srcset="images/about/01.webp" type="image/webp" />
+                  <img src="images/about/01.jpg" alt="картинка" />
+                </picture>
+              </div>
+
+              <div class="about-slide__date">19 марта 2020</div>
+
+              <div class="about-slide__content">
+                <div class="about-slide__name">Павел Иванов</div>
+
+                <div class="about-slide__message">
+                  В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно
+                  удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
+                  продаст
+                </div>
+              </div>
+            </div>
+
+            <div class="about-slide">
+              <div class="about-slide__media ibg">
+                <picture>
+                  <source srcset="images/about/02.webp" type="image/webp" />
+                  <img src="images/about/02.jpg" alt="картинка" />
+                </picture>
+              </div>
+
+              <div class="about-slide__date">19 марта 2020</div>
+
+              <div class="about-slide__content">
+                <div class="about-slide__name">Кирилл Сезонов</div>
+
+                <div class="about-slide__message">
+                  В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно
+                  удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
+                  продаст
+                </div>
+              </div>
+            </div>
+
+            <div class="about-slide">
+              <div class="about-slide__media ibg">
+                <picture>
+                  <source srcset="images/about/01.webp" type="image/webp" />
+                  <img src="images/about/01.jpg" alt="картинка" />
+                </picture>
+              </div>
+
+              <div class="about-slide__date">19 марта 2020</div>
+
+              <div class="about-slide__content">
+                <div class="about-slide__name">Павел Иванов</div>
+
+                <div class="about-slide__message">
+                  В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно
+                  удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
+                  продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень
+                  довольны.
+                </div>
+              </div>
+            </div>
+
+            <div class="about-slide">
+              <div class="about-slide__media ibg">
+                <picture>
+                  <source srcset="images/about/02.webp" type="image/webp" />
+                  <img src="images/about/02.jpg" alt="картинка" />
+                </picture>
+              </div>
+
+              <div class="about-slide__date">19 марта 2020</div>
+
+              <div class="about-slide__content">
+                <div class="about-slide__name">Кирилл Сезонов</div>
+
+                <div class="about-slide__message">
+                  В январе обратился в компанию с просьбой продать нашу трёшку по 40 лет победы, и оказался приятно
+                  удивлён. Пришёл молодой человек Ярослав, все доходчиво изложил, сказал, что
+                  продаст за 60 суток. Деньги мы получили на 52 день после обращения. Мы с супругой остались очень
+                  довольны.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /about-slider -->
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- /about -->
+
+    <!-- CALCULATOR
     ====================================================================== -->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-inner">
-            <div class="footer-logo">
+    <section class="calc">
+      <div class="calc-bg ibg">
+        <picture>
+          <source srcset="images/calc/bg.webp" type="image/webp" />
+          <img src="images/calc/bg.jpg" alt="фоновая картинка" />
+        </picture>
+      </div>
+
+      <div class="container">
+        <div class="calc-inner">
+          <h2 class="title _gsap-animate _gsap-animate-fadeUp"><span class="orange-txt">Посчитайте</span> сколько максимально может стоить ваша квартира
+          </h2>
+
+          <div class="calc-top _gsap-animate _gsap-animate-fadeUp">
+            <div class="calc-top__img">
               <picture>
-                <source srcset="images/logo.webp" type="image/webp" />
-                <img src="images/logo.png" alt="логотип" />
+                <source srcset="images/calc/01.webp" type="image/webp" />
+                <img src="images/calc/01.png" alt="брошюра" />
               </picture>
             </div>
-
-            <div class="footer-txt">
-              © Все права защищены 2018<br />
-              ООО «Ярмарка Недвижимости»<br />
-              ИНН 2308145348
+            <div class="calc-top__txt">
+              Пройдите тест до конца и получите: <span>скидка 5000 руб.</span> на услуги по продаже квартиры +
+              <span>материал (10 рекомендаций)</span>
             </div>
+          </div>
 
-            <div class="footer-contacts">
-              <a href="tel:+88314133326" class="footer-phone">8 (831) 413-33-26</a>
-              <div class="footer-address">
-                г. Нижний Новгород,<br />
-                ул. Ильинская, 104/59
+          <div class="calc-body _gsap-animate _gsap-animate-scaleIn">
+            <form action="GET" class="calc-form">
+              <div class="calc-steps">
+                <div class="calc-steps__top">
+                  <div class="calc-steps__top-title">
+                    ОСТАЛОСЬ:
+                    <span class="calc__steps-left orange-txt"></span>
+                    ИЗ
+                    <span class="calc__total-steps"></span>
+                  </div>
+
+                  <div class="calc-progressbar">
+                    <div class="calc-progressbar__line"></div>
+                  </div>
+                </div>
+
+                <!-- STEP 1 -->
+                <div class="calc-step calc-step--current">
+                  <div class="calc-step__question">
+                    <div class="calc-step__question-number"></div>
+                    <div class="calc-step__question-txt">Какая у вас квартира?</div>
+                  </div>
+
+                  <div class="calc-step__options">
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step1" checked />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Студия</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step1" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">1-комнатная</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step1" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">2-комнатная</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step1" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">3-комнатная</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step1" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">4-комнатная</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step1" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Другая</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /calc-step__options -->
+                </div>
+                <!-- /calc-step -->
+
+                <!-- STEP 2 -->
+                <div class="calc-step">
+                  <div class="calc-step__question">
+                    <div class="calc-step__question-number"></div>
+                    <div class="calc-step__question-txt">Укажите площадь квартиры</div>
+                  </div>
+
+                  <div class="calc-step__options">
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step2" checked />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">до 25 м<sup>2</sup></span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step2" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">25-40 м<sup>2</sup></span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step2" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">40-60 м<sup>2</sup></span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step2" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">60-80 м<sup>2</sup></span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step2" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">80-100 м<sup>2</sup></span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step2" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">больше 100 м<sup>2</sup></span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step2" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">не знаю</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /calc-step__options -->
+                </div>
+                <!-- /calc-step -->
+
+                <!-- STEP 3 -->
+                <div class="calc-step">
+                  <div class="calc-step__question">
+                    <div class="calc-step__question-number"></div>
+                    <div class="calc-step__question-txt">На каком этаже находиться квартира?</div>
+                  </div>
+
+                  <div class="calc-step__options">
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step3" checked />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">1-2</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step3" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">3-4</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step3" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">5-8</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step3" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">9-11</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step3" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">12-15</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step3" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">выше 15</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step3" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Другое</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /calc-step__options -->
+                </div>
+                <!-- /calc-step -->
+
+                <!-- STEP 4 -->
+                <div class="calc-step">
+                  <div class="calc-step__question">
+                    <div class="calc-step__question-number"></div>
+                    <div class="calc-step__question-txt">В каком районе квартира?</div>
+                  </div>
+
+                  <div class="calc-step__options">
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" checked />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Автозаводский</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Канавинский</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Ленинский</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Московский</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Нижегородский</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Приокский</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Советский</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step4" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Сормовский</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /calc-step__options -->
+                </div>
+                <!-- /calc-step -->
+
+                <!-- STEP 5 -->
+                <div class="calc-step">
+                  <div class="calc-step__question">
+                    <div class="calc-step__question-number"></div>
+                    <div class="calc-step__question-txt">Укажите Как вы хотите получить информацию о стоимости продажи
+                      вашей квартиры? квартиры</div>
+                  </div>
+
+                  <div class="calc-step__options">
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step5" checked />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">Звонок на телефон</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step5" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">SMS на телефон</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step5" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">На Whatsapp</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step5" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">На Viber</span>
+                      </label>
+                    </div>
+
+                    <div class="calc-step__options-item">
+                      <label class="calc-step__options-item-label">
+                        <input class="radio-input" type="radio" name="step5" />
+                        <span class="calc-step__options-item-check"></span>
+                        <span class="calc-step__options-item-txt">На Telegram</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /calc-step__options -->
+                </div>
+                <!-- /calc-step -->
+
+                <div class="calc-btn__wrapper">
+                  <button class="calc-btn__nextstep btn" type="button">
+                    <span>Далее</span>
+                  </button>
+                  <!-- <button class="calc-btn__prevstep" type="button">Назад</button> -->
+                </div>
               </div>
+              <!-- /calc-steps -->
+
+              <!-- CALC FINAL -->
+              <div class="calc-final">
+                <div class="calc-final__title">Спасибо за ответы!</div>
+
+                <div class="calc-final__txt">
+                  <p>Наш менеджер уже оценил вашу квартиру и <span class="orange-txt">начал поиск покупателей.</span>
+                  </p>
+                  <p>Чтобы связаться с Вами и закрепить персональную скидку в размере <span class="orange-txt">5 000
+                      рублей</span> на нашу услугу введите ваш номер телефона:</p>
+                </div>
+
+                <div class="calc-final__inputs">
+                  <div class="calc-final__inputs-item">
+                    <input type="tel" name="phone" class="form-input phone" placeholder="Телефон" />
+                  </div>
+                  <div class="calc-final__inputs-item">
+                    <input type="text" name="email" class="form-input" placeholder="E-mail" />
+                  </div>
+                </div>
+
+                <div class="calc-final__btn-wrapper">
+                  <button class="calc-final__btn btn" type="submit">
+                    <span>Узнать стоимость квартьиры</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="calc-body__bottom">Нажимая на кнопку я соглашаюсь с <a href="#">Политикой конфиденциальности
+                  сайта</a></div>
+            </form>
+            <!-- /calc-form -->
+          </div>
+          <!-- /calc-body -->
+        </div>
+        <!-- /calc-inner -->
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- /calc -->
+
+    <!-- FOOTER
+    ====================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner _gsap-animate _gsap-animate-footer">
+          <div class="footer-logo">
+            <picture>
+              <source srcset="images/logo.webp" type="image/webp" />
+              <img src="images/logo.png" alt="логотип" />
+            </picture>
+          </div>
+
+          <div class="footer-txt">
+            © Все права защищены 2018<br />
+            ООО «Ярмарка Недвижимости»<br />
+            ИНН 2308145348
+          </div>
+
+          <div class="footer-contacts">
+            <a href="tel:+88314133326" class="footer-phone">8 (831) 413-33-26</a>
+            <div class="footer-address">
+              г. Нижний Новгород,<br />
+              ул. Ильинская, 104/59
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-
-    <!-- POPUP
-  ====================================================================== -->
-    <div id="popup-order" class="popup">
-      <div class="popup-body">
-        <div class="popup-content">
-          <a href="#" class="popup-close">
-            <span></span>
-            <span></span>
-          </a>
-
-          <div class="popup-title">Форма заявки</div>
-
-          <form class="popup-form form">
-            <div class="popup-form__item">
-              <input type="text" name="name" class="form-input" placeholder="Ваше имя" />
-            </div>
-
-            <div class="popup-form__item">
-              <input type="tel" name="phone" class="form-input phone" placeholder="Телефон" />
-            </div>
-
-            <div class="popup-form__item">
-              <input type="text" name="email" class="form-input" placeholder="E-mail" />
-            </div>
-
-            <div class="popup-form__btn-wrapper">
-              <button type="submit" class="from-btn btn">
-                <span>Отправить заявку</span>
-              </button>
-            </div>
-
-            <div class="popup-form__bottom">Нажимая на кнопку я соглашаюсь с <a href="#">Политикой конфиденциальности сайта</a></div>
-          </form>
-        </div>
-        <!-- /popup-content -->
       </div>
-      <!-- /popup-body -->
-    </div>
-    <!-- /popup -->
-    <!-- /popup -->
+    </footer>
+  </div>
 
-    <!-- SCRIPTS
+  <!-- POPUP
   ====================================================================== -->
-    <script src="js/libs/jquery-3.4.1.min.js"></script>
-    <script src="js/libs/jquery.maskedinput.min.js"></script>
-    <script src="js/libs/jquery.slick.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <div id="popup-order" class="popup">
+    <div class="popup-body">
+      <div class="popup-content">
+        <a href="#" class="popup-close">
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="popup-title">Форма заявки</div>
+
+        <form class="popup-form form">
+          <div class="popup-form__item">
+            <input type="text" name="name" class="form-input" placeholder="Ваше имя" />
+          </div>
+
+          <div class="popup-form__item">
+            <input type="tel" name="phone" class="form-input phone" placeholder="Телефон" />
+          </div>
+
+          <div class="popup-form__item">
+            <input type="text" name="email" class="form-input" placeholder="E-mail" />
+          </div>
+
+          <div class="popup-form__btn-wrapper">
+            <button type="submit" class="from-btn btn">
+              <span>Отправить заявку</span>
+            </button>
+          </div>
+
+          <div class="popup-form__bottom">Нажимая на кнопку я соглашаюсь с <a href="#">Политикой конфиденциальности
+              сайта</a></div>
+        </form>
+      </div>
+      <!-- /popup-content -->
+    </div>
+    <!-- /popup-body -->
+  </div>
+  <!-- /popup -->
+  <!-- /popup -->
+
+  <!-- SCRIPTS
+  ====================================================================== -->
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

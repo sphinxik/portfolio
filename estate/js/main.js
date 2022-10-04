@@ -260,3 +260,158 @@ $(document).ready(function () {
   });
 });
 //=================================================================================================
+
+// GSAP ===========================================================================================
+// onload
+window.onload = function () {
+  const gsapAnimateElements = document.querySelectorAll("._gsap-animate");
+  gsapAnimateElements.forEach((el) => {
+    el.classList.add("_visible");
+  });
+
+  if (window.innerWidth >= 768) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1st screen
+    gsap.from(".header-logo", {
+      x: -200,
+      opacity: 0,
+      duration: 0.6,
+      ease: "none",
+    });
+
+    gsap.from(".header-title", {
+      y: -50,
+      opacity: 0,
+      duration: 0.6,
+      ease: "none",
+    });
+
+    gsap.from(".header-contacts", {
+      x: 200,
+      opacity: 0,
+      duration: 0.6,
+      ease: "none",
+    });
+
+    gsap.from(".intro-title", {
+      scale: 0.2,
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.6,
+      ease: "none",
+    });
+
+    gsap.from(".intro-txt", {
+      scale: 0.2,
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.6,
+      ease: "none",
+    });
+
+    const introRowTimeline = gsap.timeline({ delay: 1.2 });
+    introRowTimeline.from(".intro-item", {
+      y: 50,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.3,
+      ease: "none",
+    });
+
+    gsap.from(".intro-btn", {
+      y: 100,
+      opacity: 0,
+      duration: 0.6,
+      delay: 1.8,
+      ease: "none",
+    });
+
+    // other elements
+    const gsapAnimateFadeUp = document.querySelectorAll("._gsap-animate-fadeUp");
+    const gsapAnimateFadeLeft = document.querySelectorAll("._gsap-animate-fadeLeft");
+    const gsapAnimateFadeRight = document.querySelectorAll("._gsap-animate-fadeRight");
+    const gsapAnimateScaleIn = document.querySelectorAll("._gsap-animate-scaleIn");
+    const gsapAnimateFadeUpRow = document.querySelectorAll("._gsap-animate-fadeUp-row");
+    const gsapAnimateFooter = document.querySelectorAll("._gsap-animate-footer");
+
+    setGSAPAnimate(gsapAnimateFadeUp, "y", 100);
+    setGSAPAnimate(gsapAnimateFadeLeft, "x", 200);
+    setGSAPAnimate(gsapAnimateFadeRight, "x", -200);
+    setGSAPAnimate(gsapAnimateScaleIn, "scale", 0, 1);
+
+    function setGSAPAnimate(elements, property, propertyStartValue, propertyEndValue = 0) {
+      if (elements) {
+        elements.forEach((element) => {
+          gsap.fromTo(
+            element,
+            {
+              [property]: propertyStartValue,
+              opacity: 0,
+            },
+            {
+              [property]: propertyEndValue,
+              opacity: 1,
+              duration: 1.2,
+              ease: "none",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 75%",
+                end: "center 70%",
+                scrub: 1.4, // поэтапная анимация, зависит от прокручивания скролла
+              },
+            }
+          );
+        });
+      }
+    }
+
+    if (gsapAnimateFadeUpRow) {
+      gsapAnimateFadeUpRow.forEach((el) => {
+        gsap.fromTo(
+          el.children,
+          {
+            y: 100,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "none",
+            stagger: 0.6,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+              end: "bottom 80%",
+              scrub: 1.4,
+            },
+          }
+        );
+      });
+    }
+
+    if (gsapAnimateFooter) {
+      gsapAnimateFooter.forEach((el) => {
+        gsap.fromTo(
+          el.children,
+          {
+            scale: 0,
+            opacity: 0,
+          },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.4,
+            ease: "none",
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 100%",
+            },
+          }
+        );
+      });
+    }
+  }
+};

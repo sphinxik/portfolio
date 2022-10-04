@@ -162,6 +162,15 @@ body.lock {
 }
 
 /***************************************************************************/
+/* GSAP-ANIMATION */
+._gsap-animate {
+  opacity: 0;
+}
+._gsap-animate._visible {
+  opacity: 1;
+}
+
+/***************************************************************************/
 /* GLOBAL CLASSES */
 /* TITLE */
 .title {
@@ -202,9 +211,6 @@ body.lock {
   text-align: center;
   background-color: #e37611;
   border-radius: 20px;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
 }
 
 .btn:before {
@@ -530,7 +536,6 @@ input[type='tel'] {
 }
 
 .header-title {
-  margin: 15px 0px 0px 0px;
   color: #7e7e7e;
   font-size: 18px;
   line-height: 22px;
