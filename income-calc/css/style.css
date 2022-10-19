@@ -1508,6 +1508,11 @@ input:focus {
   transition: height 0.3s ease;
 }
 
+.custom-select__list._toTop {
+  top: auto;
+  bottom: 100%;
+}
+
 .custom-select__option {
   padding: 4px 0;
   display: block;
