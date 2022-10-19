@@ -54,7 +54,7 @@
     // COUNTER ========================================================================================
     const animationTime = 45;
     const calcCounterItemHTML =
-      '\n    <div class="calc-counter__item">\n      <ul>\n        <li class="pre-active"><span>9</span></li>\n        <li class="active"><span>0</span></li>\n        <li class="pre-active"><span>1</span></li>\n        <li><span>2</span></li>\n        <li><span>3</span></li>\n        <li><span>4</span></li>\n        <li><span>5</span></li>\n        <li><span>6</span></li>\n        <li><span>7</span></li>\n        <li><span>8</span></li>\n        <li><span>9</span></li>\n        <li><span>0</span></li>\n      </ul>\n    </div>\n  ';
+      '\n<div class="calc-counter__item">\n<ul>\n<li class="pre-active"><span>9</span></li>\n<li class="active"><span>0</span></li>\n<li class="pre-active"><span>1</span></li>\n<li><span>2</span></li>\n<li><span>3</span></li>\n<li><span>4</span></li>\n<li><span>5</span></li>\n<li><span>6</span></li>\n<li><span>7</span></li>\n<li><span>8</span></li>\n<li><span>9</span></li>\n<li><span>0</span></li>\n</ul>\n</div>\n';
 
     const calcCounterBodyBreakHTML = '<div class="break">,</div>';
 
@@ -116,7 +116,7 @@
         }
       }
 
-      // по порядку - РАБОЧИЙ 100%
+      // по порядку
       // currentCounterLists.forEach( (list, i) => {
       //   const finalIndex = +numbersArr[i] + 1;
       //   let startIndex = 0;
@@ -199,19 +199,6 @@
     const calcRate = document.querySelector("#calcRate");
     const calcPeriod = document.querySelector("#calcPeriod");
 
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        calcStart.click();
-      }
-    });
-
-    calcDuration.addEventListener("focus", function () {
-      const customSelect = this.nextElementSibling.querySelector(".custom-select");
-      if (!customSelect.classList.contains("on")) {
-        customSelect.click();
-      }
-    });
-
     calcStart.addEventListener("click", function () {
       const calcInvestmentVal = calcInvestment.value;
       const calcDurationVal = calcDuration.value;
@@ -264,88 +251,178 @@
     const selects = document.querySelectorAll("select[data-custom-select]");
 
     if (selects.length > 0) {
-      initCustomSelect();
+      createCustomSelect();
 
       document.addEventListener("click", function (e) {
         const target = e.target;
 
-        if (target && target.closest("#calcDuration")) {
-          return;
-        }
-
         if (target && target.closest(".custom-select")) {
           const currentCustomSelect = target.closest(".custom-select");
+          const activeCustomOption = currentCustomSelect.querySelector(".custom-select__option._active");
 
-          if (currentCustomSelect.classList.contains("on")) {
+          if (currentCustomSelect.classList.contains("is-open")) {
+            if (target.closest(".custom-select__option")) {
+              const currentCustomOption = target.closest(".custom-select__option");
+              const parent = currentCustomOption.closest(".custom-select__wrapper");
+              const currentRealSelect = parent.querySelector("select");
+              const currentCustomLabel = parent.querySelector(".custom-select__label");
+
+              if (activeCustomOption) {
+                activeCustomOption.classList.remove("_active");
+                activeCustomOption.classList.remove("_focus");
+              }
+              currentCustomOption.classList.add("_active");
+              currentCustomOption.classList.add("_focus");
+
+              currentRealSelect.value = currentCustomOption.dataset.value;
+              currentCustomLabel.textContent = currentCustomOption.textContent;
+              console.log(currentRealSelect.value);
+              console.log(currentCustomOption.textContent);
+              
+              
+            }
+
             customSelectClose(currentCustomSelect);
           } else {
             customSelectOpen(currentCustomSelect);
+            if (activeCustomOption) {
+              currentCustomSelect.querySelector(".custom-select__list").scrollTo({
+                top: activeCustomOption.offsetTop,
+              });
+              activeCustomOption.focus();
+            }
           }
-        } else if (target && target.closest(".custom-select__option > span")) {
-          const currentCustomOption = target.closest(".custom-select__option > span");
-          const parent = currentCustomOption.closest(".custom-select__wrapper");
-          const currentCustomSelect = parent.querySelector(".custom-select");
-          const currentRealSelect = parent.querySelector("select");
-          const currentCustomLabel = parent.querySelector(".custom-select__label");
-
-          currentRealSelect.value = currentCustomOption.parentElement.dataset.value;
-          currentCustomLabel.textContent = currentCustomOption.textContent;
-
-          customSelectClose(currentCustomSelect);
         } else {
-          const activeCustomSelect = document.querySelector(".custom-select.on");
+          const activeCustomSelect = document.querySelectorAll(".custom-select.is-open");
 
-          if (activeCustomSelect) {
-            customSelectClose(activeCustomSelect);
+          if (activeCustomSelect.length) {
+            for (let i = 0; i < activeCustomSelect.length; i++) {
+              customSelectClose(activeCustomSelect[i]);
+            }
+          }
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        const openCustomSelect = document.querySelector(".custom-select.is-open");
+        if (openCustomSelect) {
+          const key = e.key;
+          const focusedCustomOption = openCustomSelect.querySelector(".custom-select__option._focus");
+
+          if (key === "ArrowUp") {
+            e.preventDefault();
+            if (focusedCustomOption.previousElementSibling) {
+              focusedCustomOption.classList.remove("_focus");
+              focusedCustomOption.previousElementSibling.classList.add("_focus");
+              focusedCustomOption.previousElementSibling.focus();
+            }
+          }
+
+          if (key === "ArrowDown") {
+            e.preventDefault();
+            if (focusedCustomOption.nextElementSibling) {
+              focusedCustomOption.classList.remove("_focus");
+              focusedCustomOption.nextElementSibling.classList.add("_focus");
+              focusedCustomOption.nextElementSibling.focus();
+            }
+          }
+
+          if (key === "Enter") {
+            focusedCustomOption.click();
+          }
+
+          if (key === "Escape" || key === "Tab") {
+            if (!focusedCustomOption.classList.contains("_active")) {
+              focusedCustomOption.classList.remove("_focus");
+              openCustomSelect.querySelector(".custom-select__option._active").classList.add("_focus");
+            }
+            customSelectClose(openCustomSelect);
           }
         }
       });
     }
 
-    function initCustomSelect() {
+    function createCustomSelect() {
       for (var i = 0; i < selects.length; i++) {
         const currentSelect = selects[i];
         const selectedOptionName = currentSelect.querySelector("option[selected]").textContent;
         const selectOptions = currentSelect.querySelectorAll("option");
 
+        // прячем настоящий SELECT
         currentSelect.style.display = "none";
 
+        // создаем обертку для SELECT
         var selectWrapper = document.createElement("div");
         selectWrapper.className = "custom-select__wrapper";
         currentSelect.after(selectWrapper);
         selectWrapper.appendChild(currentSelect);
 
+        // создаем кастомный SELECT с тайтлом
         var customSelect = document.createElement("div");
         customSelect.className = "custom-select";
-        customSelect.insertAdjacentHTML("afterbegin", '<span class="custom-select__label">' + selectedOptionName + "</span>");
+        customSelect.insertAdjacentHTML("afterbegin", '<button class="custom-select__label" type="button">' + selectedOptionName + "</button>");
         selectWrapper.appendChild(customSelect);
 
+        // создаем кастомный список опций SELECT
         var customSelectList = document.createElement("ul");
         customSelectList.className = "custom-select__list";
-        customSelect.after(customSelectList);
+        customSelect.appendChild(customSelectList);
 
+        // создаем пункты списка под каждый OPTION и подставляем их названия
         for (let j = 0; j < selectOptions.length; j++) {
-          var customSelectOption = document.createElement("li");
+          const customSelectOption = document.createElement("li");
           customSelectOption.className = "custom-select__option";
-          customSelectOption.insertAdjacentHTML("afterbegin", "<span>" + selectOptions[j].textContent + "</span>");
+
+          if (selectOptions[j].hasAttribute("selected")) {
+            customSelectOption.classList.add("_active");
+            customSelectOption.classList.add("_focus");
+          }
+
+          if (selectOptions[j].hasAttribute("disabled")) {
+            customSelectOption.classList.add("_disabled");
+          } else {
+            customSelectOption.setAttribute("tabindex", "-1");
+          }
+
+          customSelectOption.setAttribute("role", "option");
           customSelectOption.dataset.value = selectOptions[j].value;
+          customSelectOption.textContent = selectOptions[j].textContent;
           customSelectList.appendChild(customSelectOption);
         }
 
+        // сворачиваем кастомный список
         customSelectList.style.height = 0;
       }
     }
 
     function customSelectOpen(customSelect) {
-      const currentCustomSelectList = customSelect.parentElement.querySelector(".custom-select__list");
-      customSelect.classList.add("on");
-      currentCustomSelectList.style.height = currentCustomSelectList.scrollHeight + "px";
+      const currentCustomSelectList = customSelect.querySelector(".custom-select__list");
+      const currentCustomSelectListHeight = currentCustomSelectList.scrollHeight;
+
+      currentCustomSelectList.classList.remove("_toTop");
+      let currentCustomSelectListMaxHeight = window.innerHeight - currentCustomSelectList.getBoundingClientRect().top - 15;
+
+      customSelect.classList.add("is-open");
+
+      if (currentCustomSelectListMaxHeight < 100) {
+        currentCustomSelectList.classList.add("_toTop");
+        currentCustomSelectListMaxHeight = currentCustomSelectList.getBoundingClientRect().top - 15;
+      }
+
+      if (currentCustomSelectListHeight <= currentCustomSelectListMaxHeight) {
+        currentCustomSelectList.style.height = currentCustomSelectListHeight + "px";
+      } else {
+        currentCustomSelectList.style.height = currentCustomSelectListMaxHeight + "px";
+      }
     }
 
     function customSelectClose(customSelect) {
-      const currentCustomSelectList = customSelect.parentElement.querySelector(".custom-select__list");
-      customSelect.classList.remove("on");
+      const currentCustomSelectList = customSelect.querySelector(".custom-select__list");
+      customSelect.classList.remove("is-open");
       currentCustomSelectList.style.height = 0;
+      setTimeout(() => {
+        customSelect.querySelector(".custom-select__label").focus();
+      }, 0);
     }
 
     // DYNAMIC ADAPTIVE ===============================================================================

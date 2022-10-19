@@ -1467,12 +1467,18 @@ input:focus {
 .custom-select {
   padding: 0px 15px 0px 0px;
   position: relative;
+}
+
+.custom-select__label {
+  padding: 0;
+  display: block;
+  width: 100%;
   color: #5652ff;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.custom-select::after {
+.custom-select__label::after {
   content: ">";
   margin: 0px 0px 0px 8px;
   position: absolute;
@@ -1483,7 +1489,7 @@ input:focus {
   transition: transform 0.3s ease;
 }
 
-.custom-select.on::after {
+.custom-select.is-open .custom-select__label::after {
   transform: rotate(-90deg);
 }
 
@@ -1505,6 +1511,19 @@ input:focus {
 .custom-select__option {
   padding: 4px 0;
   display: block;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-select__option:focus {
+  background-color: rgba(106, 106, 109, 0.2);
+  outline: none;
+}
+
+.custom-select__option._active {
+  color: #5652ff;
 }
 
 .custom-select__option:first-child {
@@ -1517,13 +1536,6 @@ input:focus {
 
 .custom-select__option:not(:last-child) {
   border-bottom: 1px solid #414145;
-}
-
-.custom-select__option > span {
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .calc-counter {
@@ -5976,7 +5988,7 @@ input:focus {
   }
 }
 
-@media (any-hover: hover) {
+@media (pointer: fine) {
   .header-nav__list > li > a:hover {
     color: #5652ff;
   }
@@ -6002,8 +6014,8 @@ input:focus {
     color: #fff;
   }
 
-  .custom-select__option > span:hover {
-    color: #5652ff;
+  .custom-select__option:hover {
+    background-color: rgba(106, 106, 109, 0.2);
   }
 }
 
