@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="_dark-theme">
+
+<head>
+  <!-- TITLE & ICON ===== -->
+  <title>Igor Khoruzhenko - Front-End Developer</title>
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../assets/images/favicon.svg" sizes="any" type="image/svg+xml" />
+
+  <!-- META ===== -->
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- STYLES ===== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- HEADER ===== -->
+    <header class="header">
+      <div class="header-logo">IK<span>Coding</span></div>
+
+      <div class="header-contacts">
+        <a href="https://t.me/ig_khoruzhenko" target="_blank" rel="noreferrer" aria-label="Go to Telegram">
+          <span>
+            <svg>
+              <use xlink:href="../assets/images/icons/sprite.svg#telegram"></use>
+            </svg>
+          </span>
+          <span>@ig_khoruzhenko</span>
+        </a>
+
+        <a href="mailto:ig.khoruzhenko@gmail.com" aria-label="Write an email">
+          <span>
+            <svg>
+              <use xlink:href="../assets/images/icons/sprite.svg#email"></use>
+            </svg>
+          </span>
+          <span>ig.khoruzhenko@gmail.com</span>
+        </a>
+      </div>
+
+      <div class="header-language">
+        <button class="header-language__trigger" type="button" aria-label="Open site languages list">
+          <svg>
+            <use xlink:href="../assets/images/icons/sprite.svg#globe"></use>
+          </svg>
+        </button>
+        <ul class="header-language__list">
+          <li><a href="/" aria-label="Go to ukrainian version">Ua</a></li>
+          <li><a href="/ru" aria-label="Go to russian version">Ru</a></li>
+        </ul>
+      </div>
+
+      <button class="header-theme__trigger" type="button" aria-label="Change theme">
+        <span>
+          <svg>
+            <use xlink:href="../assets/images/icons/sprite.svg#moon"></use>
+          </svg>
+        </span>
+        <span>
+          <svg>
+            <use xlink:href="../assets/images/icons/sprite.svg#sun"></use>
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <main class="main">
+      <!-- CONSTRUCTION-Section ===== -->
+      <section class="section construction">
+        <div class="construction-bg section-bg__img"></div>
+
+        <div class="container">
+          <div class="construction-title">Page is&nbsp;under construction</div>
+
+          <div class="construction-text">But you can contact me&nbsp;in&nbsp;the following way:</div>
+
+          <div class="construction-contacts">
+            <a href="https://t.me/ig_khoruzhenko" target="_blank" rel="noreferrer" aria-label="Go to Telegram">
+              <svg width="782" height="782" viewBox="0 0 782 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="391" cy="391" r="376" stroke="currentColor" stroke-width="30" />
+                <path fill="currentColor"
+                  d="M579.152 247.863L516.173 544.872C511.421 565.835 499.03 571.052 481.422 561.176L385.462 490.464L339.16 534.997C334.035 540.121 329.75 544.407 319.874 544.407L326.769 446.677L504.62 285.967C512.353 279.073 502.943 275.253 492.602 282.148L272.733 420.591L178.077 390.964C157.488 384.536 157.115 370.375 182.363 360.499L552.6 217.864C569.743 211.435 584.742 221.684 579.152 247.863Z" />
+              </svg>
+            </a>
+            <a href="mailto:ig.khoruzhenko@gmail.com" aria-label="Write an email">
+              <svg width="782" height="782" viewBox="0 0 782 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="391" cy="391" r="376" fill="none" stroke="currentColor" stroke-width="30" />
+                <path fill="currentColor"
+                  d="M206.5 221C183.036 221 164 240.036 164 263.5C164 276.87 170.286 289.443 181 297.5L373.667 442C383.76 449.526 397.573 449.526 407.667 442L600.333 297.5C611.047 289.443 617.333 276.87 617.333 263.5C617.333 240.036 598.297 221 574.833 221H206.5ZM164 320.167V504.333C164 535.589 189.411 561 220.667 561H560.667C591.922 561 617.333 535.589 617.333 504.333V320.167L424.667 464.667C404.479 479.807 376.854 479.807 356.667 464.667L164 320.167Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTS-Section ===== -->
+      <section class="section contacts">
+        <div class="contacts-bg section-bg__img"></div>
+
+        <div class="container">
+          <div class="section-inner">
+            <h2 class="contacts-title title">Contact me</h2>
+
+            <form class="contacts-form">
+              <input type="hidden" name="form-id" value="EN-версия" />
+              <div class="form-loading">
+                <svg>
+                  <use xlink:href="../assets/images/icons/sprite.svg#loading"></use>
+                </svg>
+              </div>
+
+              <div class="contacts-form__item">
+                <input type="text" class="contacts-form__input _req" name="name" autocomplete="off"
+                  aria-label="Enter name" />
+                <label class="contacts-form__label">Name</label>
+              </div>
+
+              <div class="contacts-form__item">
+                <input type="text" class="contacts-form__input _req" name="email" autocomplete="off"
+                  aria-label="Enter E-Mail" />
+                <label class="contacts-form__label">E-Mail</label>
+              </div>
+
+              <div class="contacts-form__item contacts-form__item--big">
+                <textarea class="contacts-form__textarea" autocomplete="off" name="message"
+                  aria-label="Enter message"></textarea>
+                <label class="contacts-form__label">Additional information</label>
+              </div>
+
+              <div class="contacts-form__item contacts-form__item--big">
+                <button type="submit" class="contacts-form__btn" aria-label="Send form">Send</button>
+              </div>
+            </form>
+
+            <div class="contacts-form__error-msg">Please fill in&nbsp;all required fields correctly.</div>
+
+            <div class="contacts-rights">©2023 All rights reserved.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Popup-Thanks ===== -->
+    <div id="popup-thanks" class="popup">
+      <div class="popup-body">
+        <div class="popup-content">
+          <button class="popup-close" data-popup-close aria-label="Close pop-up">
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="popup-content__message">
+            <div class="popup-content__title">Thank you!</div>
+            <div class="popup-content__text">
+              Data sent successfully.<br />
+              I&nbsp;will contact you in&nbsp;the near future.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup-Error ===== -->
+    <div id="popup-error" class="popup">
+      <div class="popup-body">
+        <div class="popup-content">
+          <button class="popup-close" data-popup-close aria-label="Close pop-up">
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="popup-content__message">
+            <div class="popup-content__title">Error!</div>
+            <div class="popup-content__text">Unfortunately, an&nbsp;error occurred while sending the data. Please, try
+              again later.</div>
+            <div class="popup-content__text">You can also contact me&nbsp;in&nbsp;another way:</div>
+            <div class="popup-content__contacts">
+              <a href="https://t.me/ig_khoruzhenko" target="_blank" rel="noreferrer" aria-label="Go to Telegram">
+                <svg width="782" height="782" viewBox="0 0 782 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="391" cy="391" r="376" stroke="currentColor" stroke-width="30" />
+                  <path fill="currentColor"
+                    d="M579.152 247.863L516.173 544.872C511.421 565.835 499.03 571.052 481.422 561.176L385.462 490.464L339.16 534.997C334.035 540.121 329.75 544.407 319.874 544.407L326.769 446.677L504.62 285.967C512.353 279.073 502.943 275.253 492.602 282.148L272.733 420.591L178.077 390.964C157.488 384.536 157.115 370.375 182.363 360.499L552.6 217.864C569.743 211.435 584.742 221.684 579.152 247.863Z" />
+                </svg>
+              </a>
+              <a href="mailto:ig.khoruzhenko@gmail.com" aria-label="Write an email">
+                <svg width="782" height="782" viewBox="0 0 782 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="391" cy="391" r="376" fill="none" stroke="currentColor" stroke-width="30" />
+                  <path fill="currentColor"
+                    d="M206.5 221C183.036 221 164 240.036 164 263.5C164 276.87 170.286 289.443 181 297.5L373.667 442C383.76 449.526 397.573 449.526 407.667 442L600.333 297.5C611.047 289.443 617.333 276.87 617.333 263.5C617.333 240.036 598.297 221 574.833 221H206.5ZM164 320.167V504.333C164 535.589 189.411 561 220.667 561H560.667C591.922 561 617.333 535.589 617.333 504.333V320.167L424.667 464.667C404.479 479.807 376.854 479.807 356.667 464.667L164 320.167Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
