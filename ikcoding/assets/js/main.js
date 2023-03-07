@@ -569,7 +569,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadJQuery() {
     const jq = document.createElement("script");
-    jq.src = "/assets/js/jquery-3.6.0.min.js";
+    jq.src = "./assets/js/jquery-3.6.0.min.js";
     jq.onload = loadFullPage;
     document.body.appendChild(jq);
   }
@@ -577,9 +577,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function loadFullPage() {
     const fpStyles = document.createElement("link");
     fpStyles.rel = "stylesheet";
-    fpStyles.href = "/assets/css/vendor/jquery.fullpage.min.css";
+    fpStyles.href = "./assets/css/vendor/jquery.fullpage.min.css";
     const fpScript = document.createElement("script");
-    fpScript.src = "/assets/js/vendor/jquery.fullpage.min.js";
+    fpScript.src = "./assets/js/vendor/jquery.fullpage.min.js";
     fpScript.onload = initFullPage;
     document.body.appendChild(fpStyles);
     document.body.appendChild(fpScript);
