@@ -663,16 +663,24 @@ function bodyUnlockPopup() {
 // GSAP ANIMATION =================================================================================
 // HEADER
 window.onload = function() {
-  $('.preloader').addClass('hidden');
+  setTimeout(function() {
+    $('.preloader').addClass('hidden');
+  }, 2000);
 
   var headerTimeline = gsap.timeline({
-    delay: 1,
+    delay: 1.5,
     onComplete: headerMapDotsPulse,
+  });
+  headerTimeline.to(".preloader", {
+    autoAlpha: 0,
+    duration: 0.5,
+    ease: "none",
   });
   headerTimeline.from(".header-title", {
     x: -100,
     opacity: 0,
     duration: 0.5,
+    delay: 1,
     ease: "none",
   });
   headerTimeline.from(".header-txt", {
@@ -699,7 +707,6 @@ window.onload = function() {
     stagger: 0.3,
     ease: "none",
   });
-  
 }
 
 function headerMapDotsPulse() {
@@ -766,7 +773,7 @@ function addGoogleMap() {
     console.log("Activate GoogleMap");
 
     map.html(
-      '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ROv8xZa2KuXdzcUvP8y7UOJVhSbaSJ9c"></iframe>'
+      '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81729.70608935713!2d14.664099615734601!3d50.1975343521142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bf1b1862b292b%3A0x3cb61d126d9b9bd!2zU3RhcsOhIEJvbGVzbGF2LCAyNTAgMDEg0JHRgNCw0L3QtNC40YEt0L3QsNC0LdCb0LDQsdC10Lwt0KHRgtCw0YDQsC3QkdC-0LvQtdGB0LvQsNCyLCDQp9C10YXQuNGP!5e0!3m2!1sru!2sua!4v1679920821392!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     );
   }, 1000);
 }
