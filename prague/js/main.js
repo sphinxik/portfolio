@@ -16,13 +16,7 @@ var isMobile = {
     return navigator.userAgent.match(/IEMobile/i);
   },
   any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
+    return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
   },
 };
 
@@ -31,7 +25,6 @@ if (isMobile.any()) {
 } else {
   document.body.classList.add("_desktop");
 }
-//=================================================================================================
 
 //WEBP checkbrowser ===============================================================================
 function testWebP(callback) {
@@ -39,8 +32,7 @@ function testWebP(callback) {
   webP.onload = webP.onerror = function () {
     callback(webP.height == 2);
   };
-  webP.src =
-    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+  webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 }
 
 testWebP(function (support) {
@@ -50,9 +42,8 @@ testWebP(function (support) {
     document.querySelector("body").classList.add("no-webp");
   }
 });
-//=================================================================================================
 
-// DEBOUNCE (фильтр множественного вызова функции при частом повторении события) ================
+// DEBOUNCE =======================================================================================
 function debounce(func, time) {
   var timeout;
 
@@ -68,7 +59,6 @@ function debounce(func, time) {
     }, time);
   };
 }
-//=================================================================================================
 
 // WINDOW EVENTS ==================================================================================
 var winWidth = $(window).outerWidth();
@@ -83,7 +73,6 @@ function _onResizeWindow() {
   creditShowMore(winWidth);
   googleMap(winWidth);
 }
-//=================================================================================================
 
 // BLOCKS TRANSFER (adaptive) =====================================================================
 var headerContacts = $(".header-contacts");
@@ -115,16 +104,10 @@ blocksTransfer(winWidth);
 function appartmentsItemElementsTransfer(winWidth) {
   $(".apartments-item").each(function () {
     var apartmentsItemPrice = $(this).find(".apartments-item__price");
-    var apartmentsItemBottomLeft = $(this).find(
-      ".apartments-item__bottom-left"
-    );
+    var apartmentsItemBottomLeft = $(this).find(".apartments-item__bottom-left");
 
-    var apartmentsItemInfoWrapper = $(this).find(
-      ".apartments-item__info-wrapper"
-    );
-    var apartmentsItemInfoMobileWrapper = $(this).find(
-      ".apartments-item__info-mobile-wrapper"
-    );
+    var apartmentsItemInfoWrapper = $(this).find(".apartments-item__info-wrapper");
+    var apartmentsItemInfoMobileWrapper = $(this).find(".apartments-item__info-mobile-wrapper");
     var apartmentsItemTop = $(this).find(".apartments-item__top");
 
     if (winWidth <= 1400) {
@@ -140,7 +123,6 @@ function appartmentsItemElementsTransfer(winWidth) {
     }
   });
 }
-//=================================================================================================
 
 // MENU BURGER ====================================================================================
 var menuBurger = $(".menu-burger");
@@ -163,7 +145,6 @@ sidemenuCloseBtn.on("click", function () {
   sidemenu.removeClass("is-open");
   $("body").removeClass("menu-lock");
 });
-//=================================================================================================
 
 // GO TO ANCHOR ===================================================================================
 $(".goto, .menu-list a").on("click", function () {
@@ -176,10 +157,8 @@ $(".goto, .menu-list a").on("click", function () {
     $("body").removeClass("menu-lock");
   }
 });
-//=================================================================================================
 
 // YOUTUBE VIDEO ==================================================================================
-// находим все блоки с классом видео
 function findVideos() {
   var videos = document.querySelectorAll(".video");
 
@@ -188,7 +167,6 @@ function findVideos() {
   }
 }
 
-// настройки видео
 function setupVideo(video) {
   var links = video.querySelectorAll(".video-link");
   var videoPlayer = video.querySelector(".video-player");
@@ -206,7 +184,6 @@ function setupVideo(video) {
   }
 }
 
-// получаем ID нужного видео из атрибута HREF элемента с классом .video-link
 function parseVideoURL(link) {
   var regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/i;
   var url = link.href;
@@ -215,7 +192,6 @@ function parseVideoURL(link) {
   return match[1];
 }
 
-// создаем iFrame с опеределенными атрибутами
 function createIframe(id) {
   var iframe = document.createElement("iframe");
 
@@ -227,45 +203,37 @@ function createIframe(id) {
   return iframe;
 }
 
-// создаем ссылку на определенное видео для iFrame
 function generateURL(id) {
   var query = "?rel=0&showinfo=0&autoplay=1";
 
   return "https://www.youtube.com/embed/" + id + query;
 }
 findVideos();
-//=================================================================================================
 
 // CREDIT NOUISLIDER ==============================================================================
-var totalCostSlider = document.querySelector(
-  '.credit-controls__item-rangeslider[data-credit-control-id="total-cost"]'
-);
-var firstPaymentSlider = document.querySelector(
-  '.credit-controls__item-rangeslider[data-credit-control-id="first-payment"]'
-);
-var creditTermSlider = document.querySelector(
-  '.credit-controls__item-rangeslider[data-credit-control-id="credit-term"]'
-);
+var totalCostSlider = document.querySelector('.credit-controls__item-rangeslider[data-credit-control-id="total-cost"]');
+var firstPaymentSlider = document.querySelector('.credit-controls__item-rangeslider[data-credit-control-id="first-payment"]');
+var creditTermSlider = document.querySelector('.credit-controls__item-rangeslider[data-credit-control-id="credit-term"]');
 
 var totalCostSettings = {
-  start: 100000000,
-  step: 50000000,
+  start: 75000000,
+  step: 25000000,
   connect: [true, false],
   tooltips: false,
   range: {
-    min: 50000000,
-    max: 250000000,
+    min: 25000000,
+    max: 150000000,
   },
 };
 
 var firstPaymentSettings = {
-  start: 50000000,
-  step: 50000000,
+  start: 30000000,
+  step: 10000000,
   connect: [true, false],
   tooltips: false,
   range: {
-    min: 50000000,
-    max: 200000000,
+    min: 10000000,
+    max: 100000000,
   },
 };
 
@@ -284,32 +252,25 @@ noUiSlider.create(totalCostSlider, totalCostSettings);
 noUiSlider.create(firstPaymentSlider, firstPaymentSettings);
 noUiSlider.create(creditTermSlider, creditTermSettings);
 
-totalCostSlider.noUiSlider.on("change", creditSlidersOnChangeEvents);
-firstPaymentSlider.noUiSlider.on("change", creditSlidersOnChangeEvents);
-creditTermSlider.noUiSlider.on("change", creditSlidersOnChangeEvents);
+totalCostSlider.noUiSlider.on("update", creditSlidersOnChangeEvents);
+firstPaymentSlider.noUiSlider.on("update", creditSlidersOnChangeEvents);
+creditTermSlider.noUiSlider.on("update", creditSlidersOnChangeEvents);
 
 function creditSlidersOnChangeEvents(values) {
   var currentSlider = this.target;
   var currentSliderParent = currentSlider.parentNode;
-  var currentSliderValueBlock = currentSliderParent.querySelector(
-    ".credit-controls__item-value > span"
-  );
+  var currentSliderValueBlock = currentSliderParent.querySelector(".credit-controls__item-value > span");
 
   currentSliderValueBlock.innerText = priceWithSpaces(parseInt(values));
 }
 
-// PRICE WITH SPACES
 function priceWithSpaces(price) {
   return String(price).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
 }
-//=================================================================================================
 
 // CREDIT OFFERS SHOW MORE + COUNTER ==============================================================
 function creditShowMore(winWidth) {
-  if (
-    winWidth >= 993 &&
-    !$(".credit-content__showmore").hasClass("initialized")
-  ) {
+  if (winWidth >= 993 && !$(".credit-content__showmore").hasClass("initialized")) {
     var creditContentShowmoreBtn = $(".credit-content__showmore");
     var creditOffer = $(".credit-offer");
     var creditOffersTotalQuantity = creditOffer.length;
@@ -332,9 +293,7 @@ function creditShowMore(winWidth) {
       var creditOfferAddedQuantity = creditOfferAdded.length;
       if (creditOfferAdded.length) {
         creditOfferAdded.slideUp(400);
-        $(".credit-offers__visible-quantity").text(
-          creditOffersTotalQuantity - creditOfferAddedQuantity
-        );
+        $(".credit-offers__visible-quantity").text(creditOffersTotalQuantity - creditOfferAddedQuantity);
       }
     });
 
@@ -349,7 +308,6 @@ function creditShowMore(winWidth) {
   }
 }
 creditShowMore(winWidth);
-// ================================================================================================
 
 // SLIDERS ========================================================================================
 var sliderArrrowPrev = `
@@ -364,7 +322,7 @@ var sliderArrrowNext = `
 	</svg>
 `;
 
-// GALLERY SLIDER	====================================
+// GALLERY SLIDER
 sliderCounter($(".gallery-slider"));
 
 $(".gallery-slider").owlCarousel({
@@ -396,9 +354,8 @@ $(".gallery-slider").owlCarousel({
     },
   },
 });
-// ===================================================
 
-// CREDIT SLIDER =====================================
+// CREDIT SLIDER
 var creditSlider = $(".credit-slider");
 var creditSliderSettings = {
   lazyLoad: false,
@@ -438,9 +395,8 @@ function creditSliderStartOrDestroy(winWidth) {
   }
 }
 creditSliderStartOrDestroy(winWidth);
-// ===================================================
 
-// POPUP-DETAILS SLIDER ==============================
+// POPUP-DETAILS SLIDER
 var popupDetailsSlider = $(".popup-details__slider");
 
 popupDetailsSlider.owlCarousel({
@@ -460,7 +416,6 @@ popupDetailsSlider.owlCarousel({
   responsiveRefreshRate: 800,
 });
 
-// отслеживаем перелистывание главного слайдера и меняем активный слайд в навигационном слайдере
 popupDetailsSlider.on("changed.owl.carousel", function (event) {
   var currentIndex = event.property.value;
 
@@ -473,9 +428,8 @@ popupDetailsSlider.on("changed.owl.carousel", function (event) {
   });
   popupDetailsSliderNav.trigger("to.owl.carousel", [currentIndex, 300]);
 });
-// ===================================================
 
-// POPUP-DETAILS NAVIGATION SLIDER ===================
+// POPUP-DETAILS NAVIGATION SLIDER
 var popupDetailsSliderNav = $(".popup-details__slider-nav");
 
 popupDetailsSliderNav.owlCarousel({
@@ -507,10 +461,8 @@ popupDetailsSliderNav.owlCarousel({
   },
 });
 
-// выделяем 1й слайд
 $(".popup-details__slider-nav .owl-item:first").addClass("choosen");
 
-// отслеживаем клик по слайдам и перелистываем главный слайдер
 $(".popup-details__slider-nav .owl-item").each(function () {
   var currentIndex = $(this).index();
 
@@ -520,9 +472,8 @@ $(".popup-details__slider-nav .owl-item").each(function () {
     popupDetailsSlider.trigger("to.owl.carousel", [currentIndex, 300]);
   });
 });
-// ===================================================
 
-// СЧЕТЧИК КОЛИЧЕСТВА СЛАЙДОВ ========================
+// СЧЕТЧИК КОЛИЧЕСТВА СЛАЙДОВ
 function sliderCounter(slider) {
   slider.on("initialized.owl.carousel", function (event) {
     var totalSlidesCounter = $(this).parent().find(".slider-counter__total");
@@ -547,17 +498,14 @@ function sliderCounter(slider) {
     }
   });
 }
-//=================================================================================================
 
 // GALLERY ========================================================================================
 baguetteBox.run(".baguettebox-gallery");
-//=================================================================================================
 
 // PHONE INPUT MASK (maskedinput) =================================================================
 $.each($('input[type="tel"]'), function () {
-  $(this).mask("+7(999) 999-99-99");
+  $(this).mask("+38 (999) 999-99-99");
 });
-//=================================================================================================
 
 // POPUPs =========================================================================================
 var body = $("body");
@@ -567,7 +515,6 @@ var popupStartBtn = $(".popup-start-btn");
 var timeout = 400; // должен совпадать с длительностью анимации закрытия/открытия поп-апап в CSS
 var unlock = true;
 
-// отслеживаем клик по ссылке
 popupStartBtn.on("click", function (e) {
   e.preventDefault();
   var currentPopup = "#" + $(this).data("popup-id");
@@ -575,42 +522,34 @@ popupStartBtn.on("click", function (e) {
   popupOpen(currentPopup);
 });
 
-// открываем поп-ап
 function popupOpen(currentPopup) {
   if ($(currentPopup).length && unlock) {
-    $(".popup.is-open").removeClass("is-open"); // если поп-ап в поп-апе - закрываем 1й
+    $(".popup.is-open").removeClass("is-open");
 
     $(currentPopup).addClass("is-open");
     bodyLockPopup();
   }
 }
 
-// закрываем при клике по документу
 $(".popup").on("mouseup", function (e) {
   var popupContent = $(this).find(".popup-content");
 
-  if (
-    !$(e.target).is(popupContent) &&
-    popupContent.has(e.target).length === 0
-  ) {
+  if (!$(e.target).is(popupContent) && popupContent.has(e.target).length === 0) {
     popupClose();
   }
 });
 
-// закрываем при клике на крестик
 $(".popup-close").on("click", function (e) {
   e.preventDefault();
   popupClose();
 });
 
-// закрываем при клике на ESC
 $(document).on("keydown", function (e) {
   if (e.which == 27) {
     popupClose();
   }
 });
 
-// функция закрытия поп-апа
 function popupClose() {
   if (unlock) {
     $(".popup.is-open").removeClass("is-open");
@@ -618,7 +557,6 @@ function popupClose() {
   }
 }
 
-//===============================================
 function bodyLockPopup() {
   var lockPaddingValue = $(window).outerWidth() - $(".wrapper").width() + "px";
 
@@ -653,34 +591,22 @@ function bodyUnlockPopup() {
 
     unlock = true;
   }, timeout);
-  $("html, body").animate(
-    { scrollTop: parseInt(body.attr("data-scroll")) },
-    10
-  );
+  $("html, body").animate({ scrollTop: parseInt(body.attr("data-scroll")) }, 10);
 }
-// ================================================================================================
 
 // GSAP ANIMATION =================================================================================
 // HEADER
-window.onload = function() {
-  setTimeout(function() {
-    $('.preloader').addClass('hidden');
-  }, 2000);
+window.onload = function () {
+  $(".preloader").addClass("hidden");
 
   var headerTimeline = gsap.timeline({
-    delay: 1.5,
+    delay: 1,
     onComplete: headerMapDotsPulse,
-  });
-  headerTimeline.to(".preloader", {
-    autoAlpha: 0,
-    duration: 0.5,
-    ease: "none",
   });
   headerTimeline.from(".header-title", {
     x: -100,
     opacity: 0,
     duration: 0.5,
-    delay: 1,
     ease: "none",
   });
   headerTimeline.from(".header-txt", {
@@ -695,11 +621,7 @@ window.onload = function() {
     duration: 0.5,
     ease: "none",
   });
-  headerTimeline.from(
-    ".header-bottom",
-    { y: 100, opacity: 0, duration: 0.5, ease: "none" },
-    1.0
-  );
+  headerTimeline.from(".header-bottom", { y: 100, opacity: 0, duration: 0.5, ease: "none" }, 1.0);
   headerTimeline.from(".header-map__mark", {
     scale: 0,
     opacity: 0,
@@ -707,7 +629,7 @@ window.onload = function() {
     stagger: 0.3,
     ease: "none",
   });
-}
+};
 
 function headerMapDotsPulse() {
   $(".header-map__mark .dot").each(function () {
@@ -745,9 +667,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// ================================================================================================
 
-// GOOGLE MAP ADD/REMOVE ==========================================================================
+// GOOGLE MAP ====================================================================================
 var map = $(".map");
 var googleMapActivated = false;
 
@@ -781,4 +702,3 @@ function addGoogleMap() {
 function removeGoogleMap() {
   map.html("");
 }
-// ================================================================================================

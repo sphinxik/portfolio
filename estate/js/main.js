@@ -16,7 +16,6 @@ testWebP(function (support) {
     ibg();
   }
 });
-//=================================================================================================
 
 // IBG ============================================================================================
 function ibg() {
@@ -34,7 +33,6 @@ function ibgWebp() {
     }
   });
 }
-//=================================================================================================
 
 // YOUTUBE VIDEO ==================================================================================
 function findVideos() {
@@ -90,13 +88,11 @@ function generateURL(id) {
 }
 
 findVideos();
-//=================================================================================================
 
 //MASKS maskedinput plugin ========================================================================
 $.each($('input[name="phone"]'), function () {
-  $(this).mask("+7(999) 999-99-99");
+  $(this).mask("+38 (999) 999-99-99");
 });
-//=================================================================================================
 
 // CALCULATOR =====================================================================================
 var calcSteps = $(".calc-step");
@@ -125,7 +121,6 @@ nextStepBtn.on("click", function () {
   progressBar();
 });
 
-// questions left
 function questionsLeft() {
   var stepsLeft = totalSteps - $(".calc-step--current").index() + 1;
 
@@ -139,7 +134,6 @@ function questionsLeft() {
 }
 questionsLeft();
 
-// progressBar
 function progressBar() {
   var currentStepNumber = $(".calc-step--current").index();
   var currentProgressBarStep = (currentStepNumber / calcSteps.length) * 100;
@@ -147,7 +141,6 @@ function progressBar() {
   $(".calc-progressbar__line").css("width", currentProgressBarStep + "%");
 }
 progressBar();
-//=================================================================================================
 
 // POPUP ==========================================================================================
 var body = $("body");
@@ -237,30 +230,28 @@ function bodyUnlockPopup() {
   }, timeout);
   $("html, body").animate({ scrollTop: parseInt(body.attr("data-scroll")) }, 10);
 }
-//=================================================================================================
 
-// DOCUMENT READY =================================================================================
-$(document).ready(function () {
-  //SLICK SLIDER ====================================================================================
-  $(".about-slider").slick({
-    lazyload: "ondemand",
-    arrows: true,
-    appendArrows: $(".about-slider__navigation"),
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 577,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+//SLICK SLIDER ====================================================================================
+$(".about-slider").slick({
+  lazyload: "ondemand",
+  arrows: true,
+  appendArrows: $(".about-slider__navigation"),
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 577,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
-  });
+    },
+  ],
+});
 
-  // GSAP ===========================================================================================
+// GSAP ===========================================================================================
+window.onload = function () {
   const gsapAnimateElements = document.querySelectorAll("._gsap-animate");
   gsapAnimateElements.forEach((el) => {
     el.classList.add("_visible");
@@ -355,7 +346,7 @@ $(document).ready(function () {
                 trigger: element,
                 start: "top 75%",
                 end: "center 70%",
-                scrub: 1.4, // поэтапная анимация, зависит от прокручивания скролла
+                scrub: 1.4,
               },
             }
           );
@@ -411,4 +402,4 @@ $(document).ready(function () {
       });
     }
   }
-});
+};

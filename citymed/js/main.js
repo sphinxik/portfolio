@@ -30,7 +30,6 @@
   } else {
     document.body.classList.add("_desktop");
   }
-  //=================================================================================================
 
   // WEBP checkbrowser ==============================================================================
   function testWebP(callback) {
@@ -50,12 +49,50 @@
   });
 
   document.addEventListener("DOMContentLoaded", function () {
+    // IMAGES LAZY-LOAD ===============================================================================
+    const windowHeight = document.documentElement.clientHeight;
+    const lazyImages = document.querySelectorAll("img[data-src], source[data-srcset]");
+    let lazyImagesPositions = [];
+
+    if (lazyImages.length > 0) {
+      lazyImages.forEach((img) => {
+        if (img.dataset.src || img.dataset.srcset) {
+          lazyImagesPositions.push(img.getBoundingClientRect().top + window.pageYOffset);
+          lazyScrollCheck();
+        }
+      });
+    }
+
+    function lazyScroll() {
+      if (lazyImages) {
+        lazyScrollCheck();
+      }
+    }
+
+    function lazyScrollCheck() {
+      let imgIndex = lazyImagesPositions.findIndex((item) => window.pageYOffset > item - windowHeight);
+
+      if (imgIndex >= 0) {
+        if (lazyImages[imgIndex].dataset.src) {
+          lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
+          lazyImages[imgIndex].removeAttribute("data-src");
+        } else if (lazyImages[imgIndex].dataset.srcset) {
+          lazyImages[imgIndex].srcset = lazyImages[imgIndex].dataset.srcset;
+          lazyImages[imgIndex].removeAttribute("data-srcset");
+        }
+      }
+
+      delete lazyImagesPositions[imgIndex];
+    }
+
     // WINDOW SCROLL ================================================================================
     const header = document.querySelector(".header");
     const socialsSidebar = document.querySelector(".socials-sidebar");
     const goTopBtn = document.querySelector(".go-top-btn");
 
     window.addEventListener("scroll", function () {
+      lazyScroll();
+
       if (window.scrollY > 0 && !header.classList.contains("is-scrolled")) {
         header.classList.add("is-scrolled");
       } else if (window.scrollY <= 0 && header.classList.contains("is-scrolled")) {
@@ -84,7 +121,7 @@
 
     phoneInputs.forEach(function (el) {
       IMask(el, {
-        mask: "+7 (000) 000-00-00",
+        mask: "+38 (000) 000-00-00",
         lazy: false,
       });
     });
@@ -131,7 +168,6 @@
 
       promoItem.querySelector(".promotion-item__term-txt").textContent = finalString;
     }
-    //=================================================================================================
 
     // STAR RATING ==================================================================================
     const starRating = document.querySelectorAll(".star-rating");
@@ -376,8 +412,7 @@
     }
 
     // SWIPER SLIDER ==================================================================================
-
-    // BRANCHES slider =====
+    // BRANCHES slider
     const branchesSliderPrevBtn = document.querySelector(".branches-slider__btn-prev");
     const branchesSliderNextBtn = document.querySelector(".branches-slider__btn-next");
 
@@ -385,7 +420,11 @@
       observer: true,
       observerParents: true,
       watchOverflow: true,
-      lazy: false,
+      preloadImages: false,
+      lazy: {
+        enabled: true,
+        loadOnTransitionStart: true,
+      },
       slidesPerView: 1,
       spaceBetween: 60,
       speed: 800,
@@ -413,7 +452,7 @@
       },
     });
 
-    // HELP slider =====
+    // HELP slider
     const helpSliderPrevBtn = document.querySelector(".help-slider__btn-prev");
     const helpSliderNextBtn = document.querySelector(".help-slider__btn-next");
 
@@ -454,7 +493,7 @@
       },
     });
 
-    // LICENSES slider =====
+    // LICENSES slider
     const licensesSliderPrevBtn = document.querySelector(".licenses-slider__btn-prev");
     const licensesSliderNextBtn = document.querySelector(".licenses-slider__btn-next");
 
@@ -462,7 +501,11 @@
       observer: true,
       observerParents: true,
       watchOverflow: true,
-      lazy: false,
+      preloadImages: false,
+      lazy: {
+        enabled: true,
+        loadOnTransitionStart: true,
+      },
       slidesPerView: 3,
       spaceBetween: 52,
       speed: 800,
@@ -633,11 +676,11 @@
 
     // FORMS ==========================================================================================
     // ON SUBMIT validation
-    // const forms = document.querySelectorAll("form");
+    const forms = document.querySelectorAll("form");
 
-    // for (let i = 0; i < forms.length; i++) {
-    //   forms[i].addEventListener("submit", formSend);
-    // }
+    for (let i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", formSend);
+    }
 
     // FETCH
     async function formSend(e) {
@@ -650,16 +693,21 @@
       if (error === 0) {
         this.classList.add("is-sending");
 
-        const response = await fetch("mail/mail.php", {
-          method: "POST",
-          body: formData,
+        // const response = await fetch("mail/mail.php", {
+        //   method: "POST",
+        //   body: formData,
+        // });
+
+        //for test
+        const response = await new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve({ ok: true });
+          }, 300);
         });
 
         if (response.ok) {
-          const result = await response.json();
           this.reset();
           this.classList.remove("is-sending");
-
           popupOpen(popupThanks);
         } else {
           popupOpen(popupError);
@@ -706,248 +754,115 @@
     }
 
     // MAPS =============================================================================================
-    const specialistsMapBlock = document.querySelector("#specialists-map");
-    const contactsMapBlock = document.querySelector("#map");
-
     if (window.scrollY > 300) {
-      createYandexMapScript();
+      createLeafletMapScript();
     } else {
-      window.addEventListener("scroll", loadYandexMap);
+      window.addEventListener("scroll", loadLeafletMap);
     }
 
-    function loadYandexMap() {
-      window.removeEventListener("scroll", loadYandexMap);
-      createYandexMapScript();
+    function loadLeafletMap() {
+      window.removeEventListener("scroll", loadLeafletMap);
+      createLeafletMapScript();
     }
 
-    function createYandexMapScript() {
-      console.log("loading YandexMap");
+    function createLeafletMapScript() {
+      console.log("loading LeafletMap");
+
+      const styles = document.createElement("link");
+      styles.rel = "stylesheet";
+      styles.href = "leaflet/leaflet.min.css";
+      document.body.appendChild(styles);
 
       const script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = "https://api-maps.yandex.ru/2.1/?apikey=СЮДА_ВСТАВЛЯЕМ_СВОЙ_API_КЛЮЧ&lang=ru_RU"; // <<< СЮДА ВСТАВИТЬ СВОЙ КЛЮЧ !!!
-      script.onload = yandexMapSettings;
+      script.src = "leaflet/leaflet.min.js";
+      script.onload = leafletMapSettings;
       document.body.appendChild(script);
     }
 
-    function yandexMapSettings() {
-      ymaps.ready(function () {
-        if (specialistsMapBlock) {
-          const mapSpecialistsCoordsList = document.querySelector(".specialists-map__coords");
-          const mapSpecialistsCoordsListItems = mapSpecialistsCoordsList.querySelectorAll("li");
-          const mapSpecialistsCenterCoords = mapSpecialistsCoordsList.dataset.mapCenter.split(",");
-          const mapSpecialistsCenterCircle = mapSpecialistsCoordsList.dataset.mapCenterCircle;
-          const mapSpecialistsCoords = [];
-          const mapSpecialistsCircles = [];
-          const mapSpecialistsZoom = mapSpecialistsCoordsList.dataset.mapZoom;
-
-          if (!mapSpecialistsCenterCircle) {
-            mapSpecialistsCenterCircle = 0;
-          }
-
-          for (var i = 0; i < mapSpecialistsCoordsListItems.length; i++) {
-            const currentCoords = mapSpecialistsCoordsListItems[i].innerText.split(",");
-            const currentCircle = mapSpecialistsCoordsListItems[i].dataset.mapMarkerCircle;
-
-            mapSpecialistsCoords.push(currentCoords);
-
-            if (currentCircle) {
-              mapSpecialistsCircles.push(currentCircle);
-            } else {
-              mapSpecialistsCircles.push(0);
-            }
-          }
-
-          const specialistsMap = new ymaps.Map(specialistsMapBlock, {
-            controls: [],
-            center: mapSpecialistsCenterCoords,
-            zoom: mapSpecialistsZoom,
-          });
-
-          const fsControl1 = new ymaps.control.FullscreenControl({
-            options: {
-              size: "large",
-              position: {
-                right: 10,
-                top: 20,
-              },
-            },
-          });
-
-          const zoomControl1 = new ymaps.control.ZoomControl({
-            options: {
-              size: "large",
-              position: {
-                right: 10,
-                top: 70,
-              },
-            },
-          });
-
-          const myPlacemark1 = new ymaps.Placemark(
-            specialistsMap.getCenter(),
-            {
-              iconContent: "",
-            },
-            {
-              iconLayout: "default#image",
-              iconImageHref: "images/icons/marker.svg",
-              iconImageSize: [50, 65],
-              iconImageOffset: [-25, -65],
-              iconContentOffset: [15, 15],
-            }
-          );
-
-          const myPlacemark1Circle = new ymaps.Circle(
-            [mapSpecialistsCenterCoords, mapSpecialistsCenterCircle],
-            {},
-            {
-              outline: false,
-              strokeColor: "#15CE8C",
-              fillColor: "#15CE8C",
-              fillOpacity: 0.4,
-            }
-          );
-
-          const baloonsCollection = new ymaps.GeoObjectCollection();
-          for (var i = 0; i < mapSpecialistsCoords.length; i++) {
-            baloonsCollection.add(
-              new ymaps.Placemark(
-                mapSpecialistsCoords[i],
-                {
-                  balloonContent: "",
-                },
-                {
-                  iconLayout: "default#image",
-                  iconImageHref: "images/icons/marker.svg",
-                  iconImageSize: [50, 65],
-                  iconImageOffset: [-25, -65],
-                  iconContentOffset: [15, 15],
-                }
-              )
-            );
-          }
-
-          const circlesCollection = new ymaps.GeoObjectCollection();
-          for (let i = 0; i < mapSpecialistsCoords.length; i++) {
-            circlesCollection.add(
-              new ymaps.Circle(
-                [mapSpecialistsCoords[i], mapSpecialistsCircles[i]],
-                {},
-                {
-                  outline: false,
-                  strokeColor: "#15CE8C",
-                  fillColor: "#15CE8C",
-                  fillOpacity: 0.4,
-                }
-              )
-            );
-          }
-
-          specialistsMap.geoObjects.add(myPlacemark1).add(myPlacemark1Circle).add(baloonsCollection).add(circlesCollection);
-          specialistsMap.controls.add(fsControl1);
-          specialistsMap.controls.add(zoomControl1);
-          specialistsMap.behaviors.disable("scrollZoom");
-        }
-
-        //=========================================================
-        if (contactsMapBlock) {
-          const contactsMapCenterCoords = contactsMapBlock.dataset.mapCoords.split(",");
-          const contactsMapZoom = contactsMapBlock.dataset.mapZoom;
-
-          const contactsMap = new ymaps.Map(
-            contactsMapBlock,
-            {
-              controls: [],
-              center: contactsMapCenterCoords,
-              zoom: contactsMapZoom,
-            },
-            {
-              searchControlProvider: "yandex#search",
-            }
-          );
-
-          const fsControl2 = new ymaps.control.FullscreenControl({
-            options: {
-              size: "large",
-              position: {
-                right: 10,
-                top: 20,
-              },
-            },
-          });
-
-          const zoomControl2 = new ymaps.control.ZoomControl({
-            options: {
-              size: "large",
-              position: {
-                right: 10,
-                top: 70,
-              },
-            },
-          });
-
-          const myPlacemark2 = new ymaps.Placemark(
-            contactsMap.getCenter(),
-            {
-              iconContent: "",
-            },
-            {
-              iconLayout: "default#image",
-              iconImageHref: "images/icons/marker.svg",
-              iconImageSize: [50, 65],
-              iconImageOffset: [-25, -65],
-              iconContentOffset: [15, 15],
-            }
-          );
-
-          contactsMap.geoObjects.add(myPlacemark2);
-          contactsMap.controls.add(fsControl2);
-          contactsMap.controls.add(zoomControl2);
-          contactsMap.behaviors.disable("scrollZoom");
-        }
+    function leafletMapSettings() {
+      const mapMarkerIcon = L.icon({
+        iconUrl: "./leaflet/marker.svg",
+        iconSize: [44, 56],
+        iconAnchor: [22, 55],
       });
+
+      const specialistsMapBlock = document.querySelector("#specialists-map");
+      if (specialistsMapBlock) {
+        const mapSpecialistsCoordsList = document.querySelector(".specialists-map__coords");
+        const mapSpecialistsCenterCoords = mapSpecialistsCoordsList.dataset.mapCenter.split(",");
+        const mapSpecialistsCenterCircle = mapSpecialistsCoordsList.dataset.mapCenterCircle;
+        const mapSpecialistsZoom = mapSpecialistsCoordsList.dataset.mapZoom;
+        const mapSpecialistsCoordsListItems = mapSpecialistsCoordsList.querySelectorAll("li");
+
+        const specialistsMap = L.map(specialistsMapBlock, {
+          center: mapSpecialistsCenterCoords,
+          zoom: mapSpecialistsZoom,
+          scrollWheelZoom: false,
+        });
+
+        specialistsMap.zoomControl.setPosition("topright");
+
+        const specialistsMapTiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }).addTo(specialistsMap);
+
+        // Center marker
+        if (!mapSpecialistsCenterCircle) {
+          mapSpecialistsCenterCircle = 0;
+        }
+
+        L.marker(mapSpecialistsCenterCoords, { icon: mapMarkerIcon }).addTo(specialistsMap);
+
+        L.circle(mapSpecialistsCenterCoords, {
+          color: "transparent",
+          fillColor: "#15CE8C",
+          fillOpacity: 0.4,
+          radius: mapSpecialistsCenterCircle,
+        }).addTo(specialistsMap);
+
+        // Other markers
+        for (let i = 0; i < mapSpecialistsCoordsListItems.length; i++) {
+          const currentCoords = mapSpecialistsCoordsListItems[i].innerText.split(",");
+          const currentCircle = mapSpecialistsCoordsListItems[i].dataset.mapMarkerCircle;
+
+          L.marker(currentCoords, { icon: mapMarkerIcon }).addTo(specialistsMap);
+
+          if (currentCircle) {
+            L.circle(currentCoords, {
+              color: "transparent",
+              fillColor: "#15CE8C",
+              fillOpacity: 0.25,
+              radius: currentCircle,
+            }).addTo(specialistsMap);
+          }
+        }
+      }
+
+      const contactsMapBlock = document.querySelector("#map");
+      if (contactsMapBlock) {
+        const contactsMapCenterCoords = contactsMapBlock.dataset.mapCoords.split(",");
+        const contactsMapZoom = contactsMapBlock.dataset.mapZoom;
+
+        const contactsMap = L.map(contactsMapBlock, {
+          center: contactsMapCenterCoords,
+          zoom: contactsMapZoom,
+          scrollWheelZoom: false,
+          fullscreenControl: true,
+        });
+
+        contactsMap.zoomControl.setPosition("topright");
+
+        const contactsMapTiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }).addTo(contactsMap);
+
+        L.marker(contactsMapCenterCoords, { icon: mapMarkerIcon }).addTo(contactsMap);
+      }
     }
   });
-
-  // IMAGES LAZY-LOAD ===============================================================================
-  const windowHeight = document.documentElement.clientHeight;
-  window.addEventListener('scroll', lazyScroll);
-
-  const lazyImages = document.querySelectorAll('img[data-src], source[data-srcset]');
-  let lazyImagesPositions = [];
-
-  if (lazyImages.length > 0) {
-    lazyImages.forEach(img => {
-      if (img.dataset.src || img.dataset.srcset) {
-        lazyImagesPositions.push(img.getBoundingClientRect().top + window.pageYOffset);
-        lazyScrollCheck();
-      }
-    });
-  }
-
-  function lazyScroll() {
-    if (document.querySelectorAll('img[data-src], source[data-srcset]').length > 0) {
-      lazyScrollCheck();
-    }
-  }
-
-  function lazyScrollCheck() {
-    let imgIndex = lazyImagesPositions.findIndex(item => window.pageYOffset > item - windowHeight);
-
-    if (imgIndex >= 0) {
-      if (lazyImages[imgIndex].dataset.src) {
-        lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
-        lazyImages[imgIndex].removeAttribute('data-src');
-      } else if (lazyImages[imgIndex].dataset.srcset) {
-        lazyImages[imgIndex].srcset = lazyImages[imgIndex].dataset.srcset;
-        lazyImages[imgIndex].removeAttribute('data-srcset');
-      }
-    }
-
-    delete lazyImagesPositions[imgIndex];
-  }
-
 
   // SLIDE - down, up, toggle =======================================================================
   function slideUp(target) {
