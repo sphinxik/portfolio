@@ -216,24 +216,24 @@ var firstPaymentSlider = document.querySelector('.credit-controls__item-rangesli
 var creditTermSlider = document.querySelector('.credit-controls__item-rangeslider[data-credit-control-id="credit-term"]');
 
 var totalCostSettings = {
-  start: 75000000,
-  step: 25000000,
+  start: 15000000,
+  step: 5000000,
   connect: [true, false],
   tooltips: false,
   range: {
-    min: 25000000,
-    max: 150000000,
+    min: 5000000,
+    max: 40000000,
   },
 };
 
 var firstPaymentSettings = {
-  start: 30000000,
-  step: 10000000,
+  start: 10000000,
+  step: 5000000,
   connect: [true, false],
   tooltips: false,
   range: {
-    min: 10000000,
-    max: 100000000,
+    min: 5000000,
+    max: 30000000,
   },
 };
 

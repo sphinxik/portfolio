@@ -3229,10 +3229,8 @@ body._desktop .clinic-photo:hover {
   padding: 30px 20px 20px;
   margin: -10px 0 0;
   line-height: 1.45;
-  background: var(--gradientGrey);
+  background: var(--colorWhite);
   border-radius: 0 0 10px 10px;
-  -webkit-box-shadow: var(--shadowGrey);
-          box-shadow: var(--shadowGrey);
 }
 
 .accordeon-content > p:not(:last-child) {

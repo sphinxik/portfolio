@@ -390,7 +390,6 @@
 
           if (!accordeon.querySelectorAll(".is-sliding").length) {
             if (oneItemActive && !accordeonTitle.classList.contains("is-active")) {
-              console.log(oneItemActive);
               hideAccordeonContent(accordeon);
             }
             accordeonTitle.classList.toggle("is-active");
