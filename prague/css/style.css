@@ -262,29 +262,29 @@ body.lock {
 .gs-animate-footer {
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translate(0, 120px);
-      -ms-transform: translate(0, 120px);
-          transform: translate(0, 120px);
+  -webkit-transform: translate(0, 160px);
+      -ms-transform: translate(0, 160px);
+          transform: translate(0, 160px);
   will-change: transform, opacity, visibility;
-  -webkit-transition: opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.5s linear;
-  -o-transition: transform 0.5s linear, opacity 0.5s linear, visibility 0.5s linear;
-  transition: transform 0.5s linear, opacity 0.5s linear, visibility 0.5s linear;
-  transition: transform 0.5s linear, opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition: opacity 0.8s ease, visibility 0.8s ease, -webkit-transform 0.8s ease;
+  transition: opacity 0.8s ease, visibility 0.8s ease, -webkit-transform 0.8s ease;
+  -o-transition: transform 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease, visibility 0.8s ease, -webkit-transform 0.8s ease;
 }
 
 .gs-animate--fromRight,
 .gs-animate-footer--fromRight {
-  -webkit-transform: translate(120px, 0);
-      -ms-transform: translate(120px, 0);
-          transform: translate(120px, 0);
+  -webkit-transform: translate(160px, 0);
+      -ms-transform: translate(160px, 0);
+          transform: translate(160px, 0);
 }
 
 .gs-animate--fromLeft,
 .gs-animate-footer--fromLeft {
-  -webkit-transform: translate(-120px, 0);
-      -ms-transform: translate(-120px, 0);
-          transform: translate(-120px, 0);
+  -webkit-transform: translate(-160px, 0);
+      -ms-transform: translate(-160px, 0);
+          transform: translate(-160px, 0);
 }
 
 .gs-animate.is-active,

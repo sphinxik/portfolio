@@ -606,26 +606,26 @@ window.onload = function () {
   headerTimeline.from(".header-title", {
     x: -100,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.6,
     ease: "none",
   });
   headerTimeline.from(".header-txt", {
     x: -100,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.6,
     ease: "none",
   });
   headerTimeline.from(".header-top", {
     y: -100,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.6,
     ease: "none",
   });
-  headerTimeline.from(".header-bottom", { y: 100, opacity: 0, duration: 0.5, ease: "none" }, 1.0);
+  headerTimeline.from(".header-bottom", { y: 100, opacity: 0, duration: 0.6, ease: "none" }, 1.2);
   headerTimeline.from(".header-map__mark", {
     scale: 0,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.6,
     stagger: 0.3,
     ease: "none",
   });
