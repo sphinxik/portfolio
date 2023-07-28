@@ -603,31 +603,36 @@ window.onload = function () {
     delay: 1,
     onComplete: headerMapDotsPulse,
   });
+  headerTimeline.from(".header-top", {
+    y: -100,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+  });
+  headerTimeline.from(".header-bottom", { 
+    y: 100, 
+    opacity: 0, 
+    duration: 0.8, 
+    ease: "power2.out",
+  }, 0);
   headerTimeline.from(".header-title", {
     x: -100,
     opacity: 0,
-    duration: 0.6,
-    ease: "none",
+    duration: 0.8,
+    ease: "power2.out",
   });
   headerTimeline.from(".header-txt", {
     x: -100,
     opacity: 0,
-    duration: 0.6,
-    ease: "none",
-  });
-  headerTimeline.from(".header-top", {
-    y: -100,
-    opacity: 0,
-    duration: 0.6,
-    ease: "none",
-  });
-  headerTimeline.from(".header-bottom", { y: 100, opacity: 0, duration: 0.6, ease: "none" }, 1.2);
+    duration: 0.8,
+    ease: "power2.out",
+  }, 1.2);
   headerTimeline.from(".header-map__mark", {
     scale: 0,
     opacity: 0,
-    duration: 0.6,
+    duration: 0.8,
     stagger: 0.3,
-    ease: "none",
+    ease: "power2.out",
   });
 };
 
