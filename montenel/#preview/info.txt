@@ -1,0 +1,3 @@
+Technologies: HTML, CSS/SCSS, Javascript, Gulp, GitHub.
+Montenel (link) - hotel business card website
+Functionality: WEBP support, Lazyload images, Lazyload YouTube video, Scroll animation (AOS), Popups, Phone mask (maska.js), Input-calendar (flatpickr), Spoilers, Popup gallery (baguetteBox), Sliders (Splide), Form-validation, Form-sending (Fetch + PHP script), Interactive map.
