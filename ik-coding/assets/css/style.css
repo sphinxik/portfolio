@@ -339,7 +339,7 @@ body.is-locked {
 }
 
 body._desktop .btn:hover,
-body._desktop .btn:focus {
+body._desktop .btn:focus-visible {
   background-color: var(--color-bg-inverse);
 }
 
@@ -387,12 +387,12 @@ html._light-theme .swiper-btn__next {
 }
 
 body._desktop .swiper-btn__prev:not(.swiper-button-disabled):hover,
-body._desktop .swiper-btn__prev:not(.swiper-button-disabled):focus {
+body._desktop .swiper-btn__prev:not(.swiper-button-disabled):focus-visible {
   animation: arrow-leftright 0.5s linear infinite alternate;
 }
 
 body._desktop .swiper-btn__next:not(.swiper-button-disabled):hover,
-body._desktop .swiper-btn__next:not(.swiper-button-disabled):focus {
+body._desktop .swiper-btn__next:not(.swiper-button-disabled):focus-visible {
   animation: arrow-rightleft 0.5s linear infinite alternate;
 }
 
@@ -541,7 +541,7 @@ body._desktop .swiper-btn__next:not(.swiper-button-disabled):focus {
 }
 
 body._desktop .popup-close:hover span,
-body._desktop .popup-close:focus span {
+body._desktop .popup-close:focus-visible span {
   background-color: #fafafa;
 }
 
@@ -686,7 +686,7 @@ body._desktop .popup-content__contacts > a:hover {
 }
 
 body._desktop .header-contacts > a:hover > span:last-child:before,
-body._desktop .header-contacts > a:focus > span:last-child:before {
+body._desktop .header-contacts > a:focus-visible > span:last-child:before {
   width: 100%;
   left: 0;
 }
@@ -716,7 +716,7 @@ body._desktop .header-contacts > a:focus > span:last-child:before {
 }
 
 .header-language__trigger:hover,
-.header-language__trigger:focus {
+.header-language__trigger:focus-visible {
   color: var(--color-main);
 }
 
@@ -761,7 +761,7 @@ body._desktop .header-contacts > a:focus > span:last-child:before {
 }
 
 body._desktop .header-language__list > li > a:hover,
-body._desktop .header-language__list > li > a:focus {
+body._desktop .header-language__list > li > a:focus-visible {
   color: var(--color-text-inverse);
   background-color: var(--color-main);
 }
@@ -819,7 +819,7 @@ body._desktop .header-language__list > li > a:focus {
 }
 
 body._desktop .header-theme__trigger:hover,
-body._desktop .header-theme__trigger:focus {
+body._desktop .header-theme__trigger:focus-visible {
   color: var(--color-main);
 }
 
@@ -878,14 +878,14 @@ body._desktop .header-theme__trigger:focus {
 }
 
 body._desktop .burger:hover > span,
-body._desktop .burger:focus > span {
+body._desktop .burger:focus-visible > span {
   background-color: var(--color-main);
 }
 
 body._desktop .burger:hover > span:first-child,
 body._desktop .burger:hover > span:last-child,
-body._desktop .burger:focus > span:first-child,
-body._desktop .burger:focus > span:last-child {
+body._desktop .burger:focus-visible > span:first-child,
+body._desktop .burger:focus-visible > span:last-child {
   left: 20%;
 }
 
@@ -977,12 +977,12 @@ body._desktop .menu-list > li > a:hover:not(.active) {
   transform: translateX(5px);
 }
 
-body._desktop .menu-list > li > a:focus {
+body._desktop .menu-list > li > a:focus-visible {
   opacity: 0.7;
 }
 
 body._desktop .menu-btn.btn:hover,
-body._desktop .menu-btn.btn:focus {
+body._desktop .menu-btn.btn:focus-visible {
   color: var(--color-text);
   background-color: var(--color-bg);
 }
@@ -1029,7 +1029,7 @@ body._desktop .menu-btn.btn:focus {
 }
 
 body._desktop .menu-contacts > li > a:hover svg circle,
-body._desktop .menu-contacts > li > a:focus svg circle {
+body._desktop .menu-contacts > li > a:focus-visible svg circle {
   stroke-opacity: 1;
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 0.3s ease, stroke-opacity 0s ease;
@@ -1394,7 +1394,7 @@ html._light-theme .webp .result-bg.section-bg__img::before {
 }
 
 body._desktop .result-slider__nav-item:not(.is-active):hover .result-slider__nav-item-side svg,
-body._desktop .result-slider__nav-item:not(.is-active):focus .result-slider__nav-item-side svg {
+body._desktop .result-slider__nav-item:not(.is-active):focus-visible .result-slider__nav-item-side svg {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
@@ -1781,7 +1781,7 @@ body._touchscreen .portfolio-slider__slide-link {
 }
 
 body._desktop .portfolio-slider__nav-slide:not(.active):hover::after,
-body._desktop .portfolio-slider__nav-slide:not(.active):focus::after {
+body._desktop .portfolio-slider__nav-slide:not(.active):focus-visible::after {
   width: 100%;
 }
 
@@ -2251,9 +2251,9 @@ html._light-theme .webp .contacts-bg.section-bg__img::before {
   transition: top 0.3s ease, font-size 0.3s ease, opacity 0.3s ease;
 }
 
-.contacts-form__input:focus ~ .contacts-form__label,
+.contacts-form__input:focus-visible ~ .contacts-form__label,
 .contacts-form__input.is-valid ~ .contacts-form__label,
-.contacts-form__textarea:focus ~ .contacts-form__label,
+.contacts-form__textarea:focus-visible ~ .contacts-form__label,
 .contacts-form__textarea.is-valid ~ .contacts-form__label {
   top: -16px;
   font-size: 12px;
@@ -2280,7 +2280,7 @@ html._light-theme .webp .contacts-bg.section-bg__img::before {
 
 @supports (-webkit-text-stroke: 1px var(--color-text)) {
   body._desktop .contacts-form__btn:hover,
-  body._desktop .contacts-form__btn:focus {
+  body._desktop .contacts-form__btn:focus-visible {
     color: var(--color-main);
     -webkit-text-stroke: 1px transparent;
   }
@@ -2678,9 +2678,9 @@ html._light-theme .webp .contacts-bg.section-bg__img::before {
     font-size: 14px;
   }
 
-  .contacts-form__input:focus ~ .contacts-form__label,
+  .contacts-form__input:focus-visible ~ .contacts-form__label,
   .contacts-form__input.is-valid ~ .contacts-form__label,
-  .contacts-form__textarea:focus ~ .contacts-form__label,
+  .contacts-form__textarea:focus-visible ~ .contacts-form__label,
   .contacts-form__textarea.is-valid ~ .contacts-form__label {
     font-size: 11px;
   }
