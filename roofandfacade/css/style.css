@@ -4547,8 +4547,8 @@ input::-webkit-search-results-decoration {
 }
 
 .cart-form__item-label {
+  margin: 22px 0 0 0;
   font-size: 18px;
-  line-height: 70px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -5830,7 +5830,6 @@ input::-webkit-search-results-decoration {
   }
   .cart-form__item-label {
     margin: 0px 0px 10px 0px;
-    line-height: 18px;
   }
   .cart-check__wrapper {
     margin: 15px 0px 0px 0px;
