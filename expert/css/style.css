@@ -7803,10 +7803,6 @@ select[data-custom-select] option:checked {
     font-size: 18px;
   }
 
-  .section-2sliders__item:not(:last-child) {
-    margin-bottom: 0;
-  }
-
   .swiper-header-nav {
     bottom: calc(100% + 3px);
     width: 160px;
