@@ -1,0 +1,25 @@
+.actor-filmography.table {
+  th {
+    &:first-child {
+      text-align: center;
+    }
+  }
+
+  td {
+    &:first-child {
+      font-weight: 700;
+      text-align: center;
+      color: #e94057;
+
+      @supports ((-webkit-background-clip: text) and (-webkit-text-fill-color: transparent)) {
+        background: linear-gradient(-30deg, #8a2387, #e94057, #f27121);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &:nth-child(2) {
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.random-games {
+  padding: 120px 0;
+
+  &__title {
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .random-games {
+    padding: 80px 0;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .random-games {
+    padding: 60px 0;
+  }
+}

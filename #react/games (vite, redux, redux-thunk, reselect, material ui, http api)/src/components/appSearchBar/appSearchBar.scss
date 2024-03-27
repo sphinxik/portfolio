@@ -1,0 +1,33 @@
+.search-bar__form {
+  position: relative;
+
+  &-input {
+    position: relative;
+    width: 220px;
+    z-index: 1;
+  }
+
+  &-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 2;
+    color: #ffffff;
+    background-color: transparent;
+    transition: color 0.2s ease;
+
+    @media (pointer: fine){
+      &:hover{
+        color: #FB7500;
+      }
+    }
+
+    svg {
+      width: 40%;
+      height: 40%;
+      object-fit: contain;
+    }
+  }
+}

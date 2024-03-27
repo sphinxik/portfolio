@@ -1,0 +1,17 @@
+.cities__list {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .cities__list {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cities__list {
+    width: 100%;
+  }
+}

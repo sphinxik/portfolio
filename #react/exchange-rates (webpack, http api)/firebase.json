@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "ikc-exchange-rates",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }]
+  }
+}

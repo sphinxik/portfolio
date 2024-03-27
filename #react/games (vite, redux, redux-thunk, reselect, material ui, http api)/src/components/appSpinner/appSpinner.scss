@@ -1,0 +1,15 @@
+.spinner {
+  margin: 20px auto;
+  align-self: center;
+  justify-self: center;
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  color: #fa5c00;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,223 @@
+.game-card {
+  position: relative;
+  grid-column: 1 span;
+
+  &::before {
+    padding-bottom: 40%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 0;
+    z-index: 1;
+    background: url('../../assets/img/spinner.svg') center / contain no-repeat;
+    pointer-events: none;
+    animation: fadeOut 0.2s ease 0.3s forwards;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::after,
+  &__front,
+  &__back,
+  &__favorite-btn {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 0.4s ease 0.3s forwards;
+  }
+
+  &__favorite-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    z-index: 4;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+
+    &._active {
+      svg {
+        > path.stroke {
+          fill: transparent;
+        }
+  
+        > path.fill {
+          fill: #fb7500;
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 60%;
+
+      > path.stroke {
+        fill: #fb7500;
+        transition: fill 0.2s ease;
+      }
+
+      > path.fill {
+        fill: transparent;
+        transition: fill 0.2s ease;
+      }
+    }
+  }
+
+  &__front {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    padding-bottom: 66%;
+    position: relative;
+    width: 100%;
+    height: 0;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #eeeeee;
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  &__back {
+    position: relative;
+    z-index: 2;
+    color: #eeeeee;
+  }
+
+  &__item {
+    font-size: 14px;
+    > span {
+      &:first-child{
+        margin-bottom: 4px;
+        font-weight: 800;
+        display: block;
+      }
+      &:last-child{
+        line-height: 1.4;
+      }
+    }
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      .game-card__front {
+        transform: perspective(800px) rotateY(-180deg);
+      }
+
+      .game-card__back {
+        transform: perspective(800px) rotateY(0deg);
+      }
+    }
+
+    &__front,
+    &__back {
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform;
+      transition: transform 0.6s ease;
+    }
+
+    &__front {
+      height: 100%;
+    }
+  
+    &__title {
+      padding: 20px 12px;
+      background: linear-gradient(-35deg, #fd9c00, #fa5c00);
+    }
+
+    &__back {
+      padding: 20px 16px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-35deg, #fd9c00, #fa5c00);
+      transform: perspective(800px) rotateY(180deg);
+    }
+
+    &__link {
+      display: block !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (pointer: coarse){
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      background: linear-gradient(-35deg, #fd9c00, #fa5c00);
+    }
+
+    &__link {
+      display: none;
+    }
+
+    &__front {
+      flex: 1 1 auto;
+    }
+
+    &__title {
+      padding: 16px 12px 8px;
+    }
+
+    &__back {
+      padding: 8px 16px 16px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

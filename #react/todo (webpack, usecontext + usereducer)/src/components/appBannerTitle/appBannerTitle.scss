@@ -1,0 +1,50 @@
+.app-banner__title {
+  margin-top: -340px;
+  position: relative;
+  height: 340px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.app-banner__title-text {
+  padding-bottom: 0.5em;
+  color: var(--color-white);
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 1200px) {
+  .app-banner__title-text {
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .app-banner__title-text {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .app-banner__title {
+    margin-top: -360px;
+    height: 360px;
+  }
+
+  .app-banner__title-text {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .app-banner__title-text {
+    font-size: 30px;
+  }
+}

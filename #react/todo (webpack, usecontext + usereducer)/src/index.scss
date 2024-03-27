@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+}
+body {
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+  font-family: Rubik, sans-serif;
+  font-size: inherit;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+a {
+  color: inherit;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html {
+  --color-white: #f8f8f8;
+  --text-color: #f8f8f8;
+  --bg-color: #181824;
+  --bg-color2: #25273c;
+  --hover-color: #aa1d9c;
+  --input-bg: #444658;
+  --input-border: #8c8d98;
+  --shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+
+  &[data-theme="light"] {
+    --text-color: #181824;
+    --bg-color: #f8f8f8;
+    --bg-color2: #fefefe;
+    --input-bg: #f2f2f3;
+    --input-border: #bbbbbb;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translate3d(0, 80px, 0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+body {
+  color: var(--text-color);
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  background-color: var(--bg-color);
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.main {
+  padding-top: 70px;
+  flex: 1 1 auto;
+}
+
+@media screen and (max-width: 767.98px) {
+  .main {
+    padding-top: 50px;
+  }
+}

@@ -1,0 +1,146 @@
+.tasks-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: padding-left 0.2s ease;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-color);
+    opacity: 0.25;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &._checked {
+    .tasks-item__check {
+      opacity: 1;
+      background-color: var(--hover-color);
+      border: var(--hover-color);
+
+      svg {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .tasks-item__title {
+      text-decoration: line-through;
+      opacity: 0.4;
+    }
+  }
+
+  &._hold {
+    opacity: 0.25;
+  }
+
+  &._hovered:not(._hold) {
+    padding-left: 10px;
+  }
+}
+
+.tasks-item__check {
+  margin-right: 16px;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffffff;
+  font-size: 24px;
+
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  opacity: 0.25;
+  transition: opacity 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+  @media (pointer: fine) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.tasks-item__title {
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 1.4;
+  transition: opacity 0.2s ease;
+}
+
+@media (pointer: fine) {
+  a.tasks-item__title:hover {
+    opacity: 0.7;
+  }
+}
+
+.tasks-item__btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: var(--text-color);
+  font-size: 24px;
+  transition: color 0.2s ease;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .tasks-item:not(:last-child) {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tasks-item__check {
+    margin-right: 12px;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+  }
+
+  .tasks-item__btn {
+    width: 26px;
+    height: 26px;
+    font-size: 20px;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}

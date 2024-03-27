@@ -1,0 +1,325 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+}
+body {
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: inherit;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+a {
+  color: inherit;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+//выключает стандартный крестик-clear у поиска
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { 
+  display: none; 
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+body {
+  position: relative;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: #161318; //#0E0B1D
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #161318;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(-35deg, #fd9c00, #fa5c00);
+}
+
+* {
+  scrollbar-width: thin;  // thin, auto
+  scrollbar-color: #FB7500 #161318; // бегунок полоса
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.main {
+  padding-top: 80px;
+  position: relative;
+  flex: 1 1 auto;
+  opacity: 0;
+  animation: fadeIn 0.6s ease 0s forwards;
+
+  &.main-enter-active {
+    ~ .footer {
+      animation: fadeIn 0.6s ease 0s forwards;
+    }
+  }
+
+  &.main-exit-active {
+  }
+
+  &.main-enter-done {
+    ~ .footer {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.main-exit {
+    display: none;
+  }
+}
+
+.page-section {
+  padding: 80px 0 120px;
+}
+
+.title {
+  margin-bottom: 60px;
+
+  color: #fc7f00;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+
+  @supports ((-webkit-background-clip: text) and (-webkit-text-fill-color: transparent)) {
+    background: linear-gradient(-35deg, #fd9c00, #fa5c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.btn {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  width: 240px;
+  height: 52px;
+
+  color: #eeeeee;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(-35deg, #fd9c00, #fa5c00);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  transition: color 0.2s ease;
+
+  @media (pointer: fine) {
+    &:hover {
+      color: #fc7f00;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    z-index: -1;
+    background-color: #161318;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  }
+
+  span {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.form-input {
+  padding: 0 12px;
+  width: 100%;
+  height: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #FB7500;
+  outline: none;
+}
+
+.check-input,
+.radio-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.radio-custom,
+.check-custom {
+  margin-right: 12px;
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: #161318;
+  border: 1px solid #FB7500;
+  transition: background 0.2s ease;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+
+    background: url('assets/img/check.svg') center / contain no-repeat;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+  }
+}
+
+.radio-txt,
+.check-txt {
+  position: relative;
+  color: #eeeeee;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.radio-input:checked + .radio-custom,
+.check-input:checked + .check-custom {
+  background: linear-gradient(-35deg, #fd9c00, #fa5c00);
+}
+
+.radio-input:checked + .radio-custom:after,
+.check-input:checked + .check-custom:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.games__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+@media screen and (max-width: 1100px) {
+  .page-section {
+    padding: 60px 0 80px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .title {
+    margin-bottom: 48px;
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .main {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 485px){
+  .title {
+    margin-bottom: 32px;
+    font-size: 32px;
+  }
+
+  .page-section {
+    padding: 44px 0 60px;
+  }
+}

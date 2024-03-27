@@ -1,0 +1,81 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url('../../resources/img/bg-mob.jpg') center / cover no-repeat;
+
+  @media screen and (min-width: 768px) {
+    background: url('../../resources/img/bg.jpg') center / cover no-repeat;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #134e5e;
+    background: -webkit-linear-gradient(120deg, #71b280, #134e5e);
+    background: linear-gradient(120deg, #71b280, #134e5e);
+    opacity: 0.9;
+  }
+}
+
+.App-main {
+  padding: 80px 15px;
+  position: relative;
+  z-index: 3;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-body {
+  width: 100%;
+}
+
+.App-title {
+  margin-bottom: 2rem;
+  color: #fafafa;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.App-loading {
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0;
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.App-error {
+  color: #5e2525;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .App-main {
+    padding: 60px 15px;
+  }
+
+  .App-title {
+    font-size: 1.8rem;
+  }
+}
