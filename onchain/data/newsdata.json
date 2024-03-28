@@ -1,0 +1,68 @@
+[
+  {
+    "id": 222,
+    "filters": ["trending", "crypto"],
+    "link": "#",
+    "title": "State Senate Passes Bill to Strengthen Cybersecurity",
+    "image": "img/news/01.jpg",
+    "date": "January 15, 2024",
+    "author": "Jason Echo",
+    "authorPhoto": "img/news/author.jpg",
+    "description": "['trending', 'crypto'] The State Senate has passed a bill aimed at improving cybersecurity infrastructure, ollowing the rising threats to digital security."
+  },
+  {
+    "id": 333,
+    "filters": ["trending", "markets"],
+    "link": "#",
+    "title": "State Senate Passes Bill to Strengthen Cybersecurity",
+    "image": "img/news/02.jpg",
+    "date": "January 17, 2024",
+    "author": "Jason Echo",
+    "authorPhoto": "img/news/author.jpg",
+    "description": "['trending', 'markets'] Country R and Country C have joined hands to form a new economic partnership aimed at strengthening trade ties and promoting economic growth between the two nations."
+  },
+  {
+    "id": 444,
+    "filters": ["trending", "tech"],
+    "link": "#",
+    "title": "State Senate Passes Bill to Strengthen Cybersecurity",
+    "image": "img/news/03.jpg",
+    "date": "January 22, 2024",
+    "author": "Jason Echo",
+    "authorPhoto": "img/news/author.jpg",
+    "description": "['trending', 'tech'] The State Senate has passed a bill aimed at improving cybersecurity infrastructure, following the rising threats to digital security."
+  },
+  {
+    "id": 555,
+    "filters": ["crypto"],
+    "link": "#",
+    "title": "State Senate Passes Bill to Strengthen Cybersecurity",
+    "image": "img/news/04.jpg",
+    "date": "January 25, 2024",
+    "author": "Jason Echo",
+    "authorPhoto": "img/news/author.jpg",
+    "description": "['crypto'] The State Senate has passed a bill aimed at improving cybersecurity infrastructure, ollowing the rising threats to digital security."
+  },
+  {
+    "id": 666,
+    "filters": ["markets"],
+    "link": "#",
+    "title": "State Senate Passes Bill to Strengthen Cybersecurity",
+    "image": "img/news/05.jpg",
+    "date": "January 26, 2024",
+    "author": "Jason Echo",
+    "authorPhoto": "img/news/author.jpg",
+    "description": "['markets'] The State Senate has passed a bill aimed at improving cybersecurity infrastructure, ollowing the rising threats to digital security."
+  },
+  {
+    "id": 777,
+    "filters": ["tech"],
+    "link": "#",
+    "title": "State Senate Passes Bill to Strengthen Cybersecurity",
+    "image": "img/news/06.jpg",
+    "date": "January 28, 2024",
+    "author": "Jason Echo",
+    "authorPhoto": "img/news/author.jpg",
+    "description": "['tech'] Country R and Country C have joined hands to form a new economic partnership aimed at strengthening trade ties and promoting economic growth between the two nations."
+  }
+]

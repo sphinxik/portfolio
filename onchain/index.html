@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>On Chain</title>
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/libs.min.css?_v=20240328173239" type="text/css" />
+  <link rel="stylesheet" href="css/style.css?_v=20240328173239" type="text/css" />
+</head>
+
+<body class="font-grotesk text-white text-base leading-none bg-mainBgColor">
+  <div id="wrapper" class="wrapper min-h-screen flex flex-col overflow-x-hidden" data-padding-fix>
+    <div class="fixed top-0 left-0 w-full h-full z-1 opacity-50 tab:hidden">
+      <div class="absolute pointer-events-none top-[12%] left-[10%] w-24" data-prlx-mouse="2">
+        <picture>
+          <source srcset="img/bg-coins/cb1.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cb1.png" alt="#" />
+        </picture>
+      </div>
+      <div class="absolute pointer-events-none top-[83%] left-[24%] w-16" data-prlx-mouse="8">
+        <picture>
+          <source srcset="img/bg-coins/cb2.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cb2.png" alt="#" />
+        </picture>
+      </div>
+      <div class="absolute pointer-events-none top-[29%] left-[93%] w-16" data-prlx-mouse="9">
+        <picture>
+          <source srcset="img/bg-coins/cb3.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cb3.png" alt="#" />
+        </picture>
+      </div>
+      <div class="absolute pointer-events-none top-[62%] left-[65%] w-[90px]" data-prlx-mouse="4">
+        <picture>
+          <source srcset="img/bg-coins/cb4.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cb4.png" alt="#" />
+        </picture>
+      </div>
+      <div class="absolute pointer-events-none top-[40%] left-[38%] w-8" data-prlx-mouse="8">
+        <picture>
+          <source srcset="img/bg-coins/cf1.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cf1.png" alt="#" />
+        </picture>
+      </div>
+      <div class="absolute pointer-events-none top-[60%] left-[6%] w-10" data-prlx-mouse="-4">
+        <picture>
+          <source srcset="img/bg-coins/cf2.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cf2.png" alt="#" />
+        </picture>
+      </div>
+      <div class="absolute pointer-events-none top-[80%] left-[89%] w-10" data-prlx-mouse="-2.5">
+        <picture>
+          <source srcset="img/bg-coins/cf3.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cf3.png" alt="#" />
+        </picture>
+      </div>
+      <div class="absolute pointer-events-none top-[11%] left-[60%] w-10" data-prlx-mouse="-6">
+        <picture>
+          <source srcset="img/bg-coins/cf4.webp" type="image/webp" />
+          <img class="w-full h-auto object-contain" src="img/bg-coins/cf4.png" alt="#" />
+        </picture>
+      </div>
+    </div>
+
+    <div class="content relative z-2">
+      <header class="header relative z-50 sm:fixed sm:top-0 sm:left-0 sm:w-full sm:bg-mainBgColor" data-gsap-onload>
+        <div class="container">
+          <div class="relative h-32 lg:h-24 sm:h-16 flex items-end sm:justify-between">
+            <a href="#" class="btn mb-3 px-2 hidden sm:flex h-8">Sub</a>
+
+            <div class="w-32 lg:w-24 sm:w-16 h-32 lg:h-24 sm:h-16 absolute top-0 left-1/2 -translate-x-1/2">
+              <picture>
+                <source srcset="img/logo.webp" type="image/webp" />
+                <img class="w-full h-full object-contain" src="img/logo.png" alt="logo" />
+              </picture>
+            </div>
+
+            <div
+              class="header-menu w-full mb-9 lg:mb-7 sm:fixed sm:top-0 sm:right-0 sm:w-full sm:h-screen sm:z-50 sm:overflow-x-hidden sm:overflow-y-auto sm:bg-mainBgColor sm:will-change-transform sm:transition-all sm:duration-700">
+              <button
+                class="header-menu__close-btn btn-close hidden sm:block absolute top-5 right-4 -translate-y-16 bg-transparent border border-white opacity-0 invisible transition-opvitr duration-700"
+                aria-label="Close menu"></button>
+
+              <nav class="flex sm:block justify-center gap-60 lg:gap-48 sm:py-24 sm:px-10">
+                <ul class="flex sm:block flex-1 items-center justify-end flex-wrap gap-x-10 lg:gap-x-8 gap-y-2">
+                  <li
+                    class="sm:block sm:mb-[8vw] sm:opacity-0 sm:invisible sm:-translate-x-10 transition-opvitr duration-700 ease-out">
+                    <a class="_active text-white text-xl lg:text-base sm:text-[9vw] leading-none hover:text-mainColor transition-colors sm:font-bold"
+                      href="#wrapper" aria-label="Scroll to first screen">Home</a>
+                  </li>
+                  <li
+                    class="sm:block sm:mb-[8vw] sm:opacity-0 sm:invisible sm:-translate-x-10 transition-opvitr duration-700 ease-out">
+                    <a class="text-white text-xl lg:text-base sm:text-[9vw] leading-none hover:text-mainColor transition-colors sm:font-bold"
+                      href="#insights" data-goto="#insights" aria-label="Scroll to insights section">Insights</a>
+                  </li>
+                  <li
+                    class="sm:block sm:mb-[8vw] sm:opacity-0 sm:invisible sm:-translate-x-10 transition-opvitr duration-700 ease-out">
+                    <a class="text-white text-xl lg:text-base sm:text-[9vw] leading-none hover:text-mainColor transition-colors sm:font-bold"
+                      href="#news" data-goto="#news" aria-label="Scroll to news section">News</a>
+                  </li>
+                </ul>
+
+                <ul class="flex sm:block flex-1 items-center flex-wrap gap-x-10 lg:gap-x-8 gap-y-2">
+                  <li
+                    class="sm:block sm:mb-[8vw] sm:opacity-0 sm:invisible sm:-translate-x-10 transition-opvitr duration-700 ease-out">
+                    <a class="text-white text-xl lg:text-base sm:text-[9vw] leading-none hover:text-mainColor transition-colors sm:font-bold"
+                      href="#blog" data-goto="#blog" aria-label="Scroll to blog section">Blog</a>
+                  </li>
+                  <li
+                    class="sm:block sm:mb-[8vw] sm:opacity-0 sm:invisible sm:-translate-x-10 transition-opvitr duration-700 ease-out">
+                    <a class="text-white text-xl lg:text-base sm:text-[9vw] leading-none hover:text-mainColor transition-colors sm:font-bold"
+                      href="#videos" data-goto="#videos" aria-label="Scroll to videos section">Must-Watch</a>
+                  </li>
+                  <li
+                    class="sm:block sm:mb-[8vw] sm:opacity-0 sm:invisible sm:-translate-x-10 transition-opvitr duration-700 ease-out">
+                    <a class="text-white text-xl lg:text-base sm:text-[9vw] leading-none hover:text-mainColor transition-colors sm:font-bold"
+                      href="#contacts" data-goto="#contacts" aria-label="Scroll to contacts section">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <button class="header-burger mb-3 hidden sm:flex items-center justify-center w-8 h-8" type="button"
+              aria-label="Open menu">
+              <svg class="text-white w-6 h-6 object-contain">
+                <use xlink:href="img/icons/sprite.svg#burger"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="header-ticker mt-5 sm:mt-2 h-9 relative flex items-center border-y border-solid border-greyDark transition-all duration-500 overflow-hidden"
+          data-ticker data-ticker-animation-time-oneitem="2.5">
+          <div class="flex will-change-transform" data-ticker-body>
+            <div class="mr-5 flex items-center text-xs leading-none whitespace-nowrap" data-ticker-item>
+              <div class="mr-2 font-bold after:content-['\25BE'] after:ml-2 after:text-red-500">Bitcoin</div>
+              <div class="px-2 py-1 bg-tickerRed">
+                <span>$26,923.71</span>
+                <span>-0.10%</span>
+              </div>
+            </div>
+
+            <div class="mr-5 flex items-center text-xs leading-none whitespace-nowrap" data-ticker-item>
+              <div class="mr-2 font-bold after:content-['\25B4'] after:ml-2 after:text-green-500">Ethereum</div>
+              <div class="px-2 py-1 bg-tickerGreen">
+                <span>$1,670.67</span>
+                <span>+1.16%</span>
+              </div>
+            </div>
+
+            <div class="mr-5 flex items-center text-xs leading-none whitespace-nowrap" data-ticker-item>
+              <div class="mr-2 font-bold after:content-['\25BE'] after:ml-2 after:text-red-500">Binance Coin</div>
+              <div class="px-2 py-1 bg-tickerRed">
+                <span>$214.65</span>
+                <span>-0.09%</span>
+              </div>
+            </div>
+
+            <div class="mr-5 flex items-center text-xs leading-none whitespace-nowrap" data-ticker-item>
+              <div class="mr-2 font-bold after:content-['\25B4'] after:ml-2 after:text-green-500">XRP</div>
+              <div class="px-2 py-1 bg-tickerGreen">
+                <span>$0.51705571</span>
+                <span>+1.16%</span>
+              </div>
+            </div>
+
+            <div class="mr-5 flex items-center text-xs leading-none whitespace-nowrap" data-ticker-item>
+              <div class="mr-2 font-bold after:content-['\25B4'] after:ml-2 after:text-green-500">Cardano</div>
+              <div class="px-2 py-1 bg-tickerGreen">
+                <span>$0.25121959</span>
+                <span>+1.16%</span>
+              </div>
+            </div>
+
+            <div class="mr-5 flex items-center text-xs leading-none whitespace-nowrap" data-ticker-item>
+              <div class="mr-2 font-bold after:content-['\25BE'] after:ml-2 after:text-red-500">Litecoin</div>
+              <div class="px-2 py-1 bg-tickerRed">
+                <span>$214.65</span>
+                <span>-0.09%</span>
+              </div>
+            </div>
+
+            <div class="mr-5 flex items-center text-xs leading-none whitespace-nowrap" data-ticker-item>
+              <div class="mr-2 font-bold after:content-['\25B4'] after:ml-2 after:text-green-500">Cronos</div>
+              <div class="px-2 py-1 bg-tickerGreen">
+                <span>$0.25121959</span>
+                <span>+1.16%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main flex-auto sm:pt-28">
+        <section class="section intro mt-6 sm:mt-5">
+          <div class="container">
+            <div class="flex justify-between gap-7 md:flex-wrap">
+              <div class="intro-sidebar relative mt-6 flex-shrink-0 w-96 lg:w-72 md:w-full md:order-2" data-gsap-onload>
+                <div class="intro-tabs absolute w-full h-full flex flex-col md:relative md:max-h-96" data-tabs>
+                  <nav class="flex border-b-[5px] border-mainColor">
+                    <button
+                      class="intro-tabs__btn inline-block px-1 w-1/2 h-9 font-neue font-bold text-base leading-none bg-white text-mainColor transition-colors duration-200"
+                      type="button" data-tabs-btn>
+                      Latest News
+                    </button>
+                    <button
+                      class="intro-tabs__btn inline-block px-1 w-1/2 h-9 font-neue font-bold text-base leading-none bg-white text-mainColor transition-colors duration-200"
+                      type="button" data-tabs-btn>
+                      Most Talked About
+                    </button>
+                  </nav>
+
+                  <div class="flex-auto overflow-y-auto _custom-scrollbar">
+                    <div class="hidden opacity-0" data-tabs-item>
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank"> Sam Bankman-Fried Won’t Get a 115-Year Prison </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec neque, mauris eu quis ultricies viverra</div>
+                        <div class="text-sm">Margaux Kit <span class="text-mainColor">| March 15, 2024 · 2 min
+                            ago</span></div>
+                      </div>
+
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank">
+                          Ethereum Wallet Tied to Sinaloa Cartel Sanctioned by U.S.
+                        </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec neque, mauris eu quis ultricies viverra</div>
+                        <div class="text-sm">Josh Zek <span class="text-mainColor">| March 15, 2024 · 2 min ago</span>
+                        </div>
+                      </div>
+
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank">
+                          FTX estate stakes $122 million of Solana, on-chain data shows
+                        </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec...</div>
+                        <div class="text-sm">Josh Zek <span class="text-mainColor">| March 13, 2024</span></div>
+                      </div>
+
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank">
+                          Ethereum Wallet Tied to Sinaloa Cartel Sanctioned by U.S.
+                        </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec neque, mauris eu quis ultricies viverra</div>
+                        <div class="text-sm">Josh Zek <span class="text-mainColor">| March 15, 2024 · 2 min ago</span>
+                        </div>
+                      </div>
+
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank">
+                          FTX estate stakes $122 million of Solana, on-chain data shows
+                        </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec...</div>
+                        <div class="text-sm">Josh Zek <span class="text-mainColor">| March 13, 2024</span></div>
+                      </div>
+                    </div>
+
+                    <div class="hidden opacity-0" data-tabs-item>
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank">
+                          Ethereum Wallet Tied to Sinaloa Cartel Sanctioned by U.S.
+                        </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec neque, mauris eu quis ultricies viverra</div>
+                        <div class="text-sm">Josh Zek <span class="text-mainColor">| March 15, 2024 · 2 min ago</span>
+                        </div>
+                      </div>
+
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank">
+                          FTX estate stakes $122 million of Solana, on-chain data shows
+                        </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec...</div>
+                        <div class="text-sm">Josh Zek <span class="text-mainColor">| March 13, 2024</span></div>
+                      </div>
+
+                      <div class="py-4">
+                        <a href="#"
+                          class="mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors"
+                          target="_blank">
+                          FTX estate stakes $122 million of Solana, on-chain data shows
+                        </a>
+                        <div class="mb-4 text-grey text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Donec...</div>
+                        <div class="text-sm">Josh Zek <span class="text-mainColor">| March 13, 2024</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="intro-content flex-auto md:order-1" data-gsap-onload>
+                <h1 class="section-title mb-3">US House Lawmakers Push SEC’s Gensler to Bitcoin</h1>
+                <div class="mb-6 md:mb-3 text-mainColor text-sm">March 15, 2024 | Spotlight</div>
+
+                <div>
+                  <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                    class="image-link video-btn mb-9 md:mb-5 xs:mb-3 pb-[56%] h-0" target="_blank"
+                    data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                    <picture>
+                      <source srcset="img/intro/main.webp" type="image/webp" />
+                      <img src="img/intro/main.jpg" alt="video preview" />
+                    </picture>
+                    <!-- //img.youtube.com/vi/EKJftwUIC0w/maxresdefault.jpg -->
+                  </a>
+
+                  <div class="flex justify-between gap-9 sm:block">
+                    <div class="flex-auto text-xl sm:text-lg sm:mb-4">
+                      A major cyber attack has disrupted global financial networks, causing chaos and uncertainty in the
+                      world's financial markets.
+                    </div>
+
+                    <div class="flex-shrink-0 w-60">
+                      <div class="mb-6 flex items-center gap-4 sm:mb-3">
+                        <div class="flex-shrink-0 w-18">
+                          <picture>
+                            <source srcset="img/intro/avatars.webp" type="image/webp" />
+                            <img class="w-full h-full object-contain object-left" src="img/intro/avatars.png"
+                              alt="user avatars" />
+                          </picture>
+                        </div>
+                        <div class="text-grey text-sm leading-none">1,245+ people see this</div>
+                      </div>
+                      <a href="#" class="btn flex w-full" target="_blank" data-goto="#contacts">Discover More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="section banner">
+          <div class="container">
+            <a href="#" class="image-link mx-auto pb-[31%] md:pb-[38%] xs:pb-[41%] w-3/4 md:w-11/12 xs:w-full h-0"
+              data-gsap="scaleIn" target="_blank">
+              <picture>
+                <source data-srcset="img/banner/01.webp"
+                  srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                  type="image/webp" />
+                <img class="lazyload" loading="lazy" data-src="img/banner/01.jpg"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                  alt="commercial banner" />
+              </picture>
+            </a>
+          </div>
+        </div>
+        <section id="insights" class="section insights">
+          <div class="container">
+            <div class="mb-8" data-gsap="fadeInRight">
+              <h2 class="section-title mb-5">Crypto Insights</h2>
+              <div>Expert viewpoints from the industry’s wide-ranging minds</div>
+            </div>
+
+            <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+              class="mb-12 relative h-[460px] sm:h-auto flex sm:block items-end" target="_blank"
+              data-popup-open="popup-video" data-video-id="EKJftwUIC0w" data-gsap="scaleIn">
+              <div class="image-link video-btn absolute sm:relative h-full sm:h-0 sm:mb-3 sm:pb-[56%]">
+                <picture>
+                  <source data-srcset="img/insights/01.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp" />
+                  <img class="lazyload" loading="lazy" data-src="img/insights/01.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="video preview" />
+                </picture>
+              </div>
+
+              <div
+                class="relative z-10 flex sm:block w-3/4 md:w-11/12 sm:w-full min-h-44 lg:min-h-8 opacity-100 visible transition-all duration-200">
+                <div
+                  class="px-10 lg:px-8 sm:px-0 py-5 sm:py-0 lg:py-3 w-1/2 sm:w-full flex items-center font-neue font-black text-4xl lg:text-3xl sm:text-2xl bg-greyDark/50 sm:bg-transparent sm:mb-3">
+                  Lorem Ipsum Neda Interview with the African CEO
+                </div>
+                <div
+                  class="px-12 lg:px-8 sm:px-0 py-10 sm:py-0 lg:py-7 w-1/2 sm:w-full flex items-center text-xl lg:text-lg sm:text-base leading-snug bg-greyDark/70 sm:bg-transparent">
+                  Lorem ipsum dolor sit amet, onsectetur adipiscing elit. Donec neque, mauris eu quis ultricies viverra
+                </div>
+              </div>
+            </a>
+
+            <div class="insights-slider__wrapper relative" data-gsap="fadeInUp">
+              <div class="insights-slider swiper mx-auto w-5/6 sm:w-full sm:overflow-visible">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mb-4 sm:mb-2 pb-[56%] h-0" target="_blank"
+                      data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/insights/02.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/insights/02.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+                    <a href="#" class="font-neue font-bold text-xl sm:text-lg hover:text-mainColor transition-colors">
+                      Lorem ipsum dolor sit amet, onsectetur adipiscing elit. </a>
+                    <div class="mt-3 text-sm">Megan Kato <span class="text-mainColor">| March 15, 2024 · 2 min ago
+                      </span></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mb-4 sm:mb-2 pb-[56%] h-0" target="_blank"
+                      data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/insights/03.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/insights/03.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+                    <a href="#" class="font-neue font-bold text-xl sm:text-lg hover:text-mainColor transition-colors">
+                      Lorem ipsum dolor sit amet, onsectetur adipiscing elit. </a>
+                    <div class="mt-3 text-sm">Megan Kato <span class="text-mainColor">| March 15, 2024 · 2 min ago
+                      </span></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mb-4 sm:mb-2 pb-[56%] h-0" target="_blank"
+                      data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/insights/04.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/insights/04.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+                    <a href="#" class="font-neue font-bold text-xl sm:text-lg hover:text-mainColor transition-colors">
+                      Lorem ipsum dolor sit amet, onsectetur adipiscing elit. </a>
+                    <div class="mt-3 text-sm">Megan Kato <span class="text-mainColor">| March 15, 2024 · 2 min ago
+                      </span></div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mb-4 sm:mb-2 pb-[56%] h-0" target="_blank"
+                      data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/insights/05.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/insights/05.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+                    <a href="#" class="font-neue font-bold text-xl sm:text-lg hover:text-mainColor transition-colors">
+                      Lorem ipsum dolor sit amet, onsectetur adipiscing elit. </a>
+                    <div class="mt-3 text-sm">Megan Kato <span class="text-mainColor">| March 15, 2024 · 2 min ago
+                      </span></div>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <button class="swiper-button-prev" type="button"></button>
+              <button class="swiper-button-next" type="button"></button>
+            </div>
+          </div>
+        </section>
+        <section id="news" class="section news mb-6">
+          <div class="container">
+            <h2 class="section-title mb-10 xs:mb-6" data-gsap="fadeInRight">Today’s Top Reads</h2>
+
+            <div>
+              <div class="mb-10 xs:mb-6 flex flex-wrap gap-x-6 gap-y-4" data-gsap="fadeInUp">
+                <button
+                  class="news-filter__btn _active px-2 h-9 font-neue font-bold text-grey text-lg border bg-transparent border-grey hover:text-white hover:border-white transition-colors"
+                  type="button" data-filter="all">
+                  All
+                </button>
+                <button
+                  class="news-filter__btn px-2 h-9 font-neue font-bold text-grey text-lg border bg-transparent border-grey hover:text-white hover:border-white transition-colors"
+                  type="button" data-filter="trending">
+                  Trending
+                </button>
+                <button
+                  class="news-filter__btn px-2 h-9 font-neue font-bold text-grey text-lg border bg-transparent border-grey hover:text-white hover:border-white transition-colors"
+                  type="button" data-filter="crypto">
+                  Crypto
+                </button>
+                <button
+                  class="news-filter__btn px-2 h-9 font-neue font-bold text-grey text-lg border bg-transparent border-grey hover:text-white hover:border-white transition-colors"
+                  type="button" data-filter="markets">
+                  Markets
+                </button>
+                <button
+                  class="news-filter__btn px-2 h-9 font-neue font-bold text-grey text-lg border bg-transparent border-grey hover:text-white hover:border-white transition-colors"
+                  type="button" data-filter="tech">
+                  Tech
+                </button>
+              </div>
+
+              <div
+                class="news-body relative min-h-72 grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-x-8 lg:gap-x-5 gap-y-14 xs:gap-y-9">
+                <div class="col-span-1 flex flex-col" data-gsap="fadeInUp">
+                  <a href="#" class="image-link mb-4 xs:mb-3 pb-[56%] h-0">
+                    <picture>
+                      <source data-srcset="img/news/01.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/news/01.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="article preview" />
+                    </picture>
+                  </a>
+
+                  <div class="mb-2 flex items-center flex-wrap text-sm">
+                    <span class="mr-2 inline-flex items-center">
+                      <span class="mr-2 flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
+                        <picture>
+                          <source srcset="img/news/author.webp" type="image/webp" />
+                          <img class="w-full h-full object-cover rounded-full" src="img/news/author.jpg"
+                            alt="author photo" />
+                        </picture>
+                      </span>
+                      Jason Echo
+                    </span>
+                    <span class="text-mainColor"> | March 15, 2024 </span>
+                  </div>
+
+                  <a href="#"
+                    class="flex-auto mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                    State Senate Passes Bill to Strengthen Cybersecurity </a>
+
+                  <div class="text-grey text-sm">The State Senate has passed a bill aimed at improving cybersecurity
+                    infrastructure, following the rising threats to digital security.</div>
+                </div>
+
+                <div class="col-span-1 flex flex-col" data-gsap="fadeInUp">
+                  <a href="#" class="image-link mb-4 xs:mb-3 pb-[56%] h-0">
+                    <picture>
+                      <source data-srcset="img/news/02.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/news/02.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="article preview" />
+                    </picture>
+                  </a>
+
+                  <div class="mb-2 flex items-center flex-wrap text-sm">
+                    <span class="mr-2 inline-flex items-center">
+                      <span class="mr-2 flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
+                        <picture>
+                          <source srcset="img/news/author.webp" type="image/webp" />
+                          <img class="w-full h-full object-cover rounded-full" src="img/news/author.jpg"
+                            alt="author photo" />
+                        </picture>
+                      </span>
+                      Jason Echo
+                    </span>
+                    <span class="text-mainColor"> | March 15, 2024 </span>
+                  </div>
+
+                  <a href="#"
+                    class="flex-auto mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                    Country R and Country C Form New Economic </a>
+
+                  <div class="text-grey text-sm">
+                    Country R and Country C have joined hands to form a new economic partnership aimed at strengthening
+                    trade ties and promoting economic growth between the two nations.
+                  </div>
+                </div>
+
+                <div class="col-span-1 flex flex-col" data-gsap="fadeInUp">
+                  <a href="#" class="image-link mb-4 xs:mb-3 pb-[56%] h-0">
+                    <picture>
+                      <source data-srcset="img/news/03.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/news/03.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="article preview" />
+                    </picture>
+                  </a>
+
+                  <div class="mb-2 flex items-center flex-wrap text-sm gap-x-2 gap-y-1">
+                    <span class="inline-flex items-center">
+                      <span class="mr-2 flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
+                        <picture>
+                          <source srcset="img/news/author.webp" type="image/webp" />
+                          <img class="w-full h-full object-cover rounded-full" src="img/news/author.jpg"
+                            alt="author photo" />
+                        </picture>
+                      </span>
+                      Serena Van Der Woodsen
+                    </span>
+                    <span class="text-mainColor"> | March 15, 2024 </span>
+                  </div>
+
+                  <a href="#"
+                    class="flex-auto mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                    State Senate Passes Bill to Strengthen Cybersecurity </a>
+
+                  <div class="text-grey text-sm">The State Senate has passed a bill aimed at improving cybersecurity
+                    infrastructure, following the rising threats to digital security.</div>
+                </div>
+
+                <div class="col-span-1 flex flex-col" data-gsap="fadeInUp">
+                  <a href="#" class="image-link mb-4 xs:mb-3 pb-[56%] h-0">
+                    <picture>
+                      <source data-srcset="img/news/04.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/news/04.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="article preview" />
+                    </picture>
+                  </a>
+
+                  <div class="mb-2 flex items-center flex-wrap text-sm">
+                    <span class="mr-2 inline-flex items-center">
+                      <span class="mr-2 flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
+                        <picture>
+                          <source srcset="img/news/author.webp" type="image/webp" />
+                          <img class="w-full h-full object-cover rounded-full" src="img/news/author.jpg"
+                            alt="author photo" />
+                        </picture>
+                      </span>
+                      Jason Echo
+                    </span>
+                    <span class="text-mainColor"> | March 15, 2024 </span>
+                  </div>
+
+                  <a href="#"
+                    class="flex-auto mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                    State Senate Passes Bill to Strengthen Cybersecurity </a>
+
+                  <div class="text-grey text-sm">The State Senate has passed a bill aimed at improving cybersecurity
+                    infrastructure, following the rising threats to digital security.</div>
+                </div>
+
+                <div class="col-span-1 flex flex-col" data-gsap="fadeInUp">
+                  <a href="#" class="image-link mb-4 xs:mb-3 pb-[56%] h-0">
+                    <picture>
+                      <source data-srcset="img/news/05.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/news/05.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="article preview" />
+                    </picture>
+                  </a>
+
+                  <div class="mb-2 flex items-center flex-wrap text-sm">
+                    <span class="mr-2 inline-flex items-center">
+                      <span class="mr-2 flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
+                        <picture>
+                          <source srcset="img/news/author.webp" type="image/webp" />
+                          <img class="w-full h-full object-cover rounded-full" src="img/news/author.jpg"
+                            alt="author photo" />
+                        </picture>
+                      </span>
+                      Jason Echo
+                    </span>
+                    <span class="text-mainColor"> | March 15, 2024 </span>
+                  </div>
+
+                  <a href="#"
+                    class="flex-auto mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                    Country R and Country C Form New Economic </a>
+
+                  <div class="text-grey text-sm">
+                    Country R and Country C have joined hands to form a new economic partnership aimed at strengthening
+                    trade ties and promoting economic growth between the two nations.
+                  </div>
+                </div>
+
+                <div class="col-span-1 flex flex-col" data-gsap="fadeInUp">
+                  <a href="#" class="image-link mb-4 pb-[56%] h-0">
+                    <picture>
+                      <source data-srcset="img/news/06.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/news/06.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="article preview" />
+                    </picture>
+                  </a>
+
+                  <div class="mb-2 flex items-center flex-wrap text-sm gap-x-2 gap-y-1">
+                    <span class="inline-flex items-center">
+                      <span class="mr-2 flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
+                        <picture>
+                          <source srcset="img/news/author.webp" type="image/webp" />
+                          <img class="w-full h-full object-cover rounded-full" src="img/news/author.jpg"
+                            alt="author photo" />
+                        </picture>
+                      </span>
+                      Serena Van Der Woodsen
+                    </span>
+                    <span class="text-mainColor"> | March 15, 2024 </span>
+                  </div>
+
+                  <a href="#"
+                    class="flex-auto mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                    State Senate Passes Bill to Strengthen Cybersecurity </a>
+
+                  <div class="text-grey text-sm">The State Senate has passed a bill aimed at improving cybersecurity
+                    infrastructure, following the rising threats to digital security.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contacts" class="contacts mt-8 sm:mt-3 relative">
+          <div class="absolute top-0 left-0 w-full h-full bg-mainBgColor overflow-hidden">
+            <picture class="spx">
+              <source data-srcset="img/contacts/01.webp"
+                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                type="image/webp" />
+              <img class="lazyload absolute top-0 left-0 w-full h-[200%] object-cover opacity-25" loading="lazy"
+                data-src="img/contacts/01.jpg"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                alt="#" data-speed="0.75" />
+            </picture>
+          </div>
+
+          <div class="container relative">
+            <div
+              class="px-12 xs:px-0 py-28 lg:py-20 xs:py-16 flex sm:block items-center justify-between gap-16 lg:gap-10">
+              <h2 class="font-neue font-black text-4xl md:text-3xl xs:text-2xl leading-snug sm:mb-8 sm:text-center"
+                data-gsap="fadeInRight">
+                Stay up-to-date with the latest news and updates from On-Chain by subscribing to our newsletter!
+              </h2>
+
+              <form class="form flex-shrink-0 w-80 lg:w-72 sm:w-full sm:max-w-96 sm:mx-auto" data-gsap="fadeInLeft">
+                <div class="form-item before:bg-[url('../img/icons/email.svg')]">
+                  <input class="form-input" type="email" name="email" placeholder="Your Email" autocomplete="off"
+                    required />
+                </div>
+                <button class="btn flex w-full" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section id="videos" class="section videos mt-6">
+          <div class="container">
+            <h2 class="section-title mb-10 sm:mb-6" data-gsap="fadeInRight">Must-Watch Episodes</h2>
+
+            <div class="mb-16 sm:mb-12 grid sm:block grid-cols-3 gap-8 lg:gap-5">
+              <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                class="image-link video-btn col-span-2 min-h-[480px] lg:min-h-[400px] sm:min-h-0 sm:mb-6 sm:pb-[56%]"
+                target="_blank" data-popup-open="popup-video" data-video-id="EKJftwUIC0w" data-gsap="fadeInRight">
+                <picture>
+                  <source data-srcset="img/videos/main.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp" />
+                  <img class="lazyload" loading="lazy" data-src="img/videos/main.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="video preview" />
+                </picture>
+              </a>
+
+              <div class="col-span-1" data-gsap="fadeInLeft">
+                <a href="https://www.youtube.com/embed/rgA1qzcazBY"
+                  class="image-link video-btn mb-6 lg:mb-4 pb-[56%] h-0" target="_blank" data-popup-open="popup-video"
+                  data-video-id="rgA1qzcazBY">
+                  <picture>
+                    <source data-srcset="img/videos/01.webp"
+                      srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      type="image/webp" />
+                    <img class="lazyload" loading="lazy" data-src="img/videos/01.jpg"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      alt="video preview" />
+                  </picture>
+                </a>
+
+                <div class="mb-3 xs:mb-2 text-sm"><span class="text-mainColor">March 15, 2024</span> by Sarah Lee</div>
+
+                <a href="#"
+                  class="mb-4 xs:mb-2 inline-block font-neue font-bold text-3xl lg:text-2xl xs:text-xl hover:text-mainColor transition-colors">
+                  Sustainable Fashion: How Designers are Embracing
+                </a>
+
+                <div class="text-grey text-xl lg:text-lg xs:text-base">In a stunning display of skill and precision,
+                  Christian Garret led his team to victory in the Champions League with a...</div>
+              </div>
+            </div>
+
+            <div class="videos-slider__wrapper relative" data-gsap="fadeInUp">
+              <div class="videos-slider swiper md:w-5/6 sm:w-full md:mx-auto sm:overflow-visible">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide col-span-1 flex md:block">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mr-6 lg:mr-4 md:mr-0 md:mb-3 flex-shrink-0 w-2/5 md:w-full h-40 md:h-0 md:pb-[56%]"
+                      target="_blank" data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/videos/02.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/videos/02.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+
+                    <div>
+                      <div class="mb-2 text-sm"><span class="text-mainColor">March 15, 2024</span> by Mark Wilson</div>
+
+                      <a href="#"
+                        class="mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                        The Power of Creativity: How to Cultivate Your Creative Spirit </a>
+
+                      <div class="text-grey text-sm">Creativity is a powerful force that can help you express yourself,
+                        solve problems, and unleash your potential. Whether you're an artist...</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide col-span-1 flex md:block">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mr-6 lg:mr-4 md:mr-0 md:mb-3 flex-shrink-0 w-2/5 md:w-full h-40 md:h-0 md:pb-[56%]"
+                      target="_blank" data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/videos/03.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/videos/03.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+
+                    <div>
+                      <div class="mb-2 text-sm"><span class="text-mainColor">March 15, 2024</span> by Mark Wilson</div>
+
+                      <a href="#"
+                        class="mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                        The Power of Creativity: How to Cultivate Your Creative Spirit </a>
+
+                      <div class="text-grey text-sm">Creativity is a powerful force that can help you express yourself,
+                        solve problems, and unleash your potential. Whether you're an artist...</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide col-span-1 flex md:block">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mr-6 lg:mr-4 md:mr-0 md:mb-3 flex-shrink-0 w-2/5 md:w-full h-40 md:h-0 md:pb-[56%]"
+                      target="_blank" data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/videos/04.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/videos/04.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+
+                    <div>
+                      <div class="mb-2 text-sm"><span class="text-mainColor">March 15, 2024</span> by Mark Wilson</div>
+
+                      <a href="#"
+                        class="mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                        The Power of Creativity: How to Cultivate Your Creative Spirit </a>
+
+                      <div class="text-grey text-sm">Creativity is a powerful force that can help you express yourself,
+                        solve problems, and unleash your potential. Whether you're an artist...</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide col-span-1 flex md:block">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mr-6 lg:mr-4 md:mr-0 md:mb-3 flex-shrink-0 w-2/5 md:w-full h-40 md:h-0 md:pb-[56%]"
+                      target="_blank" data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/videos/05.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/videos/05.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+
+                    <div>
+                      <div class="mb-2 text-sm"><span class="text-mainColor">March 15, 2024</span> by Mark Wilson</div>
+
+                      <a href="#"
+                        class="mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                        The Power of Creativity: How to Cultivate Your Creative Spirit </a>
+
+                      <div class="text-grey text-sm">Creativity is a powerful force that can help you express yourself,
+                        solve problems, and unleash your potential. Whether you're an artist...</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide col-span-1 flex md:block">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mr-6 lg:mr-4 md:mr-0 md:mb-3 flex-shrink-0 w-2/5 md:w-full h-40 md:h-0 md:pb-[56%]"
+                      target="_blank" data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/videos/06.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/videos/06.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+
+                    <div>
+                      <div class="mb-2 text-sm"><span class="text-mainColor">March 15, 2024</span> by Mark Wilson</div>
+
+                      <a href="#"
+                        class="mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                        The Power of Creativity: How to Cultivate Your Creative Spirit </a>
+
+                      <div class="text-grey text-sm">Creativity is a powerful force that can help you express yourself,
+                        solve problems, and unleash your potential. Whether you're an artist...</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide col-span-1 flex md:block">
+                    <a href="https://www.youtube.com/embed/EKJftwUIC0w"
+                      class="image-link video-btn mr-6 lg:mr-4 md:mr-0 md:mb-3 flex-shrink-0 w-2/5 md:w-full h-40 md:h-0 md:pb-[56%]"
+                      target="_blank" data-popup-open="popup-video" data-video-id="EKJftwUIC0w">
+                      <picture>
+                        <source data-srcset="img/videos/07.webp"
+                          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          type="image/webp" />
+                        <img class="lazyload" loading="lazy" data-src="img/videos/07.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+                    </a>
+
+                    <div>
+                      <div class="mb-2 text-sm"><span class="text-mainColor">March 15, 2024</span> by Mark Wilson</div>
+
+                      <a href="#"
+                        class="mb-3 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                        The Power of Creativity: How to Cultivate Your Creative Spirit </a>
+
+                      <div class="text-grey text-sm">Creativity is a powerful force that can help you express yourself,
+                        solve problems, and unleash your potential. Whether you're an artist...</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <button class="swiper-button-prev hidden md:block sm:hidden" type="button"></button>
+              <button class="swiper-button-next hidden md:block sm:hidden" type="button"></button>
+            </div>
+          </div>
+        </section>
+        <div class="section banner">
+          <div class="container">
+            <a href="#" class="image-link mx-auto pb-[31%] md:pb-[38%] xs:pb-[41%] w-3/4 md:w-11/12 xs:w-full h-0"
+              data-gsap="scaleIn" target="_blank">
+              <picture>
+                <source data-srcset="img/banner/01.webp"
+                  srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                  type="image/webp" />
+                <img class="lazyload" loading="lazy" data-src="img/banner/01.jpg"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                  alt="commercial banner" />
+              </picture>
+            </a>
+          </div>
+        </div>
+        <section id="blog" class="section blog">
+          <div class="container">
+            <div class="mb-8" data-gsap="fadeInRight">
+              <h2 class="section-title mb-5">Press Releases</h2>
+              <div class="text-xl">Stay up to date on the latest developments in the crypto industry</div>
+            </div>
+
+            <div
+              class="blog-body mb-14 md:mb-9 grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-x-8 lg:gap-x-5 gap-y-14 md:gap-y-9"
+              data-gsap="fadeInUp">
+              <div class="col-span-1 flex flex-col">
+                <a href="#" class="image-link mb-4 p-[31%] h-0">
+                  <picture>
+                    <source data-srcset="img/blog/01.webp"
+                      srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      type="image/webp" />
+                    <img class="lazyload" loading="lazy" data-src="img/blog/01.jpg"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      alt="article preview" />
+                  </picture>
+                </a>
+
+                <div class="mb-2 text-mainColor text-sm">15 January 2024</div>
+
+                <a href="#"
+                  class="flex-auto mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                  BillionAir's Pre-Sale Skyrockets Past $4.5M </a>
+
+                <div class="text-grey text-sm">
+                  A New Dawn in Blockchain Gambling with BNB Chain Partnership. BillionAir is a pioneering
+                  blockchain-powered gaming and raffle platform, set to revolutionize the online gambling and
+                  gaming industry.
+                </div>
+              </div>
+
+              <div class="col-span-1 flex flex-col">
+                <a href="#" class="image-link mb-4 p-[31%] h-0">
+                  <picture>
+                    <source data-srcset="img/blog/02.webp"
+                      srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      type="image/webp" />
+                    <img class="lazyload" loading="lazy" data-src="img/blog/02.jpg"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      alt="article preview" />
+                  </picture>
+                </a>
+
+                <div class="mb-2 text-mainColor text-sm">15 January 2024</div>
+
+                <a href="#"
+                  class="flex-auto mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                  Artfi Attracts 25,000 Plus Enthusiasts to the World of Fractionalized Art
+                </a>
+
+                <div class="text-grey text-sm">Sacha Jafri’s debut fractionalized digital art collection will showcase
+                  Artfi’s ability to bring tokenized art to the mass market.</div>
+              </div>
+
+              <div class="col-span-1 md:col-span-2 xs:col-span-1 flex flex-col">
+                <a href="#" class="image-link mb-4 p-[31%] md:p-28 xs:p-[31%] h-0">
+                  <picture>
+                    <source data-srcset="img/blog/03.webp"
+                      srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      type="image/webp" />
+                    <img class="lazyload" loading="lazy" data-src="img/blog/03.jpg"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      alt="article preview" />
+                  </picture>
+                </a>
+
+                <div class="mb-2 text-mainColor text-sm">15 January 2024</div>
+
+                <a href="#"
+                  class="flex-auto mb-2 inline-block font-neue font-bold text-xl hover:text-mainColor transition-colors">
+                  Xsolla Announces Acquisition Of Lightstream Rainmaker And Api.Stream
+                </a>
+
+                <div class="text-grey text-sm">
+                  This acquisition underscores Xsolla’s recognition of the tremendous value creators bring to the gaming
+                  ecosystem and is dedicated to building and strengthening relationships with
+                  talent agencies, creators, and their audiences.
+                </div>
+              </div>
+            </div>
+
+            <button class="blog-showmore__btn btn relative flex mx-auto w-full max-w-60" data-gsap="scaleIn"
+              type="button">Show More</button>
+          </div>
+        </section>
+        <section id="contacts" class="contacts mt-8 sm:mt-3 relative">
+          <div class="absolute top-0 left-0 w-full h-full bg-mainBgColor overflow-hidden">
+            <picture class="spx">
+              <source data-srcset="img/contacts/01.webp"
+                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                type="image/webp" />
+              <img class="lazyload absolute top-0 left-0 w-full h-[200%] object-cover opacity-25" loading="lazy"
+                data-src="img/contacts/01.jpg"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                alt="#" data-speed="0.75" />
+            </picture>
+          </div>
+
+          <div class="container relative">
+            <div
+              class="px-12 xs:px-0 py-28 lg:py-20 xs:py-16 flex sm:block items-center justify-between gap-16 lg:gap-10">
+              <h2 class="font-neue font-black text-4xl md:text-3xl xs:text-2xl leading-snug sm:mb-8 sm:text-center"
+                data-gsap="fadeInRight">
+                Stay up-to-date with the latest news and updates from On-Chain by subscribing to our newsletter!
+              </h2>
+
+              <form class="form flex-shrink-0 w-80 lg:w-72 sm:w-full sm:max-w-96 sm:mx-auto" data-gsap="fadeInLeft">
+                <div class="form-item before:bg-[url('../img/icons/email.svg')]">
+                  <input class="form-input" type="email" name="email" placeholder="Your Email" autocomplete="off"
+                    required />
+                </div>
+                <button class="btn flex w-full" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="py-12 px-12 xs:px-0 flex sm:block justify-between gap-11">
+            <div class="footer-left flex-auto sm:mb-8">
+              <div class="mb-9 sm:mb-6 font-neue font-bold text-mainColor text-xl uppercase xs:text-center">Quick Links
+              </div>
+              <nav>
+                <ul class="flex flex-wrap gap-x-8 gap-y-4 xs:flex-col xs:justify-center xs:items-center">
+                  <li>
+                    <a class="text-white text-xl lg:text-lg leading-none hover:text-mainColor transition-colors"
+                      href="#wrapper" data-goto="#wrapper" aria-label="Scroll to first screen">Home</a>
+                  </li>
+                  <li>
+                    <a class="text-white text-xl lg:text-lg leading-none hover:text-mainColor transition-colors"
+                      href="#insights" data-goto="#insights" aria-label="Scroll to insights section">Insights</a>
+                  </li>
+                  <li><a class="text-white text-xl lg:text-lg leading-none hover:text-mainColor transition-colors"
+                      href="#news" data-goto="#news" aria-label="Scroll to news section">News</a></li>
+                  <li><a class="text-white text-xl lg:text-lg leading-none hover:text-mainColor transition-colors"
+                      href="#blog" data-goto="#blog" aria-label="Scroll to blog section">Blog</a></li>
+                  <li>
+                    <a class="text-white text-xl lg:text-lg leading-none hover:text-mainColor transition-colors"
+                      href="#videos" data-goto="#videos" aria-label="Scroll to videos section">Must-Watch</a>
+                  </li>
+                  <li>
+                    <a class="text-white text-xl lg:text-lg leading-none hover:text-mainColor transition-colors"
+                      href="#contacts" data-goto="#contacts" aria-label="Scroll to contacts section">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="footer-right flex-shrink-0 w-64 sm:w-full">
+              <div class="mb-8 sm:mb-6 font-neue font-bold text-mainColor text-xl uppercase xs:text-center">FOLLOW US
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-4 xs:justify-center">
+                <a href="#" class="col-span-1 relative block w-7 h-7 text-white hover:text-mainColor transition-colors"
+                  target="_blank" aria-label="Go to the company's Facebook page">
+                  <svg class="w-full h-full object-contain">
+                    <use xlink:href="img/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="col-span-1 relative block w-7 h-7 text-white hover:text-mainColor transition-colors"
+                  target="_blank" aria-label="Go to the company's Twitter page">
+                  <svg class="w-full h-full object-contain">
+                    <use xlink:href="img/icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="col-span-1 relative block w-7 h-7 text-white hover:text-mainColor transition-colors"
+                  target="_blank" aria-label="Go to the company's GitHub page">
+                  <svg class="w-full h-full object-contain">
+                    <use xlink:href="img/icons/sprite.svg#github"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="col-span-1 relative block w-7 h-7 text-white hover:text-mainColor transition-colors"
+                  target="_blank" aria-label="Go to the company's LinkedIn page">
+                  <svg class="w-full h-full object-contain">
+                    <use xlink:href="img/icons/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="col-span-1 relative block w-7 h-7 text-white hover:text-mainColor transition-colors"
+                  target="_blank" aria-label="Go to the company's Instagram page">
+                  <svg class="w-full h-full object-contain">
+                    <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="footer-bottom px-12 xs:px-0 py-10 sm:py-6 relative text-center after:content-[''] after:block after:absolute after:top-0 after:left-1/2 after:-translate-x-1/2 after:w-10/12 after:sm:w-full after:h-px after:bg-greyDark">
+            © 2024 On-Chain. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="popup-video"
+    class="popup fixed top-0 left-0 w-full h-full z-50 overflow-x-hidden overflow-y-auto bg-black/80 opacity-0 invisible">
+    <div class="px-3 py-9 flex items-center justify-center min-h-full">
+      <div
+        class="popup-content pb-[37%] md:pb-[56%] relative w-2/3 md:w-full h-0 bg-mainBgColor opacity-0 scale-0 transition-opvitr duration-700">
+        <button class="popup-close btn-close absolute bottom-full right-0 z-10" data-popup-close></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/libs.min.js?_v=20240328173239"></script>
+  <script src="js/main.js?_v=20240328173239"></script>
+</body>
+
+</html>
