@@ -642,7 +642,7 @@
       firstScreenGSAP(animationDuration);
       onScrollAnimationGSAP(animationDuration);
       footerGSAP(animationDuration);
-      //initSmoothScrollGSAP();
+      initSmoothScrollGSAP();
     }
 
     function initSmoothScrollGSAP() {
