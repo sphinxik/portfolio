@@ -786,7 +786,7 @@ body {
   }
 
   .review-img {
-    margin: 0 auto 20px;
+    margin: 0 auto 24px;
   }
 
   .review-content {
@@ -877,7 +877,8 @@ body {
   }
 
   .review-btn.btn {
-    margin-bottom: 12px;
+    margin: 0 0 12px;
+    width: 100%;
     max-width: unset;
   }
 
