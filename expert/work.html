@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>PSK - Работа в компании</title>
+
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/libs/swiper.min.css?_v=20240627185157" />
+  <link rel="stylesheet" href="css/libs/tippy.min.css?_v=20240627185157" />
+  <link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20240627185157" />
+  <link rel="stylesheet" href="css/style.css?_v=20240627185157" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- HEADER ===== -->
+    <header class="header" data-padding-fix>
+      <div class="container">
+        <div class="header-top">
+          <div class="header-top__info">
+            <a href="mailto:info@psk.expert" class="header-top__info-link"> info@psk.expert </a>
+            <a href="tel:+74951112233" class="header-top__info-link"> +7 (495) 111-22-33 </a>
+            <span class="header-top__info-item"> Вся неделя 8.00 – 19.00 </span>
+            <a href="#" class="header-top__info-link" download>
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#download"></use>
+              </svg>
+              <span>Прайс-лист</span>
+            </a>
+          </div>
+
+          <nav class="header-menu">
+            <ul class="header-menu__list">
+              <li class="_has-child">
+                <a href="#">Компания</a>
+                <ul class="header-submenu__list">
+                  <li>
+                    <a href="#">Компания 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Компания 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Компания 3</a>
+                  </li>
+                  <li>
+                    <a href="#">Компания 4</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="_has-child">
+                <a href="#">Клиентам</a>
+                <ul class="header-submenu__list">
+                  <li>
+                    <a href="#">Клиентам 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Клиентам 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Клиентам 3</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="_has-child">
+                <a href="#">Информация</a>
+
+                <ul class="header-submenu__list">
+                  <li>
+                    <a href="#">Информация 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Информация 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Информация 3</a>
+                  </li>
+                  <li>
+                    <a href="#">Информация 4</a>
+                  </li>
+                  <li>
+                    <a href="#">Информация 5</a>
+                  </li>
+                  <li>
+                    <a href="#">Информация 6</a>
+                  </li>
+                  <li>
+                    <a href="#">Информация 7</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-bottom">
+          <button class="header-btn modal-menu__trigger" type="button">
+            <svg>
+              <use xlink:href="img/icons/sprite.svg#burger"></use>
+            </svg>
+            <span>Каталог</span>
+          </button>
+
+          <a href="/" class="header-logo">
+            <picture>
+              <source srcset="img/logo-mob.svg" media="(max-width: 991.98px)" />
+              <img src="img/logo.svg" alt="изображение" />
+            </picture>
+          </a>
+
+          <form class="header-search">
+            <input class="header-search__input form-input" type="text" placeholder="Искать" />
+            <button class="header-search__btn" type="submit">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#search"></use>
+              </svg>
+            </button>
+
+            <button class="header-search__close btn-close" type="button">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </form>
+
+          <div class="header-controls">
+            <button class="header-search__trigger">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#search"></use>
+              </svg>
+            </button>
+
+            <div class="header-controls__item header-controls__item--select" data-da="header-bottom__mobile, 1, 991.98">
+              <span class="header-controls__item-icon">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#marker"></use>
+                </svg>
+              </span>
+
+              <select class="header-controls__select select-geo" tabindex="-1" name="city" data-custom-select>
+                <option value="#" selected="selected">Москва</option>
+                <option value="https://balashikha.psk.expert/">Балашиха</option>
+                <option value="https://barnaul.psk.expert/">Барнаул</option>
+                <option value="https://vladikavkaz.psk.expert/">Владикавказ</option>
+                <option value="https://volgograd.psk.expert/">Волгоград</option>
+                <option value="https://voronezh.psk.expert/">Воронеж</option>
+                <option value="https://groznyy.psk.expert/">Грозный</option>
+                <option value="https://ekb.psk.expert/">Екатеринбург</option>
+                <option value="https://izhevsk.psk.expert/">Ижевск</option>
+                <option value="https://kzn.psk.expert/">Казань</option>
+                <option value="https://kaluga.psk.expert/">Калуга</option>
+                <option value="https://krasnodar.psk.expert/">Краснодар</option>
+                <option value="https://krasnoyarsk.psk.expert/">Красноярск</option>
+                <option value="https://mahachkala.psk.expert/">Махачкала</option>
+                <option value="https://nalchik.psk.expert/">Нальчик</option>
+                <option value="https://nn.psk.expert/">Нижний Новгород</option>
+                <option value="https://nsk.psk.expert/">Новосибирск</option>
+                <option value="https://kz.psk.expert/">Нур-Султан (Астана)</option>
+                <option value="https://omsk.psk.expert/">Омск</option>
+                <option value="https://perm.psk.expert/">Пермь</option>
+                <option value="https://rnd.psk.expert/">Ростов-на-Дону</option>
+                <option value="https://ryazan.psk.expert/">Рязань</option>
+                <option value="https://samara.psk.expert/">Самара</option>
+                <option value="https://spb.psk.expert/">Санкт-Петербург</option>
+                <option value="https://saratov.psk.expert/">Саратов</option>
+                <option value="https://stavropol.psk.expert/">Ставрополь</option>
+                <option value="https://tolyatti.psk.expert/">Тольятти</option>
+                <option value="https://tula.psk.expert/">Тула</option>
+                <option value="https://tyumen.psk.expert/">Тюмень</option>
+                <option value="https://ufa.psk.expert/">Уфа</option>
+                <option value="https://chelyabinsk.psk.expert/">Челябинск</option>
+                <option value="https://cherkessk.psk.expert/">Черкесск</option>
+                <option value="https://yaroslavl.psk.expert/">Ярославль</option>
+              </select>
+            </div>
+
+            <div class="header-controls__item">
+              <a href="#" class="header-controls__item-link">
+                <span class="header-controls__item-icon">
+                  <span class="header-controls__item-counter">0</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#compare"></use>
+                  </svg>
+                </span>
+                <span class="header-controls__item-title">Сравнение</span>
+              </a>
+            </div>
+
+            <div class="header-controls__item">
+              <a href="#" class="header-controls__item-link">
+                <span class="header-controls__item-icon">
+                  <span class="header-controls__item-counter">0</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#heart"></use>
+                  </svg>
+                </span>
+                <span class="header-controls__item-title">Избранное</span>
+              </a>
+            </div>
+
+            <div class="header-controls__item" data-da="header-bottom__mobile, 2, 991.98">
+              <a href="#" class="header-controls__item-link">
+                <span class="header-controls__item-icon">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#login"></use>
+                  </svg>
+                </span>
+                <span class="header-controls__item-title">Войти</span>
+              </a>
+            </div>
+
+            <div class="header-controls__item">
+              <button class="header-controls__item-btn">
+                <span class="header-controls__item-icon">
+                  <span class="header-controls__item-counter">0</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#cart"></use>
+                  </svg>
+                </span>
+                <span class="header-controls__item-title">Корзина</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-bottom__mobile"></div>
+      </div>
+    </header>
+
+    <div id="psk-overlay" class="psk-overlay"></div>
+
+    <div class="modal-menu" data-overlay>
+      <button class="modal-menu__back" type="button">
+        <svg>
+          <use xlink:href="img/icons/sprite.svg#arr"></use>
+        </svg>
+      </button>
+
+      <button class="modal-menu__close btn-close" type="button">
+        <svg>
+          <use xlink:href="img/icons/sprite.svg#close"></use>
+        </svg>
+      </button>
+
+      <div class="modal-menu__inner _custom-scrollbar">
+        <div class="modal-menu__sidebar">
+          <ul class="modal-menu__list">
+            <li class="_has-child">
+              <a href="#" class="_active">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-clothes"></use>
+                </svg>
+                <span>Одежда</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">Одежда</a>
+                </li>
+
+                <li>
+                  <a href="#">Одежда 1</a>
+                </li>
+
+                <li>
+                  <a href="#">Одежда 2</a>
+                </li>
+
+                <li>
+                  <a href="#">Одежда 3</a>
+                </li>
+
+                <li>
+                  <a href="#">Одежда 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-shoes"></use>
+                </svg>
+                <span>Обувь</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">По профессиям</a>
+                </li>
+
+                <li>
+                  <a href="#">Для автосервиса</a>
+                </li>
+
+                <li>
+                  <a href="#">Для водителей</a>
+                </li>
+
+                <li>
+                  <a href="#">Для врачей</a>
+                </li>
+
+                <li>
+                  <a href="#">Для горничных</a>
+                </li>
+
+                <li>
+                  <a href="#">Для грузчиков</a>
+                </li>
+
+                <li>
+                  <a href="#">Для дорожных работников</a>
+                </li>
+
+                <li>
+                  <a href="#">Для инженеров</a>
+                </li>
+
+                <li>
+                  <a href="#">Для ИТР и руководителей</a>
+                </li>
+
+                <li>
+                  <a href="#">Для кондитеров</a>
+                </li>
+
+                <li>
+                  <a href="#">Для машинистов</a>
+                </li>
+
+                <li>
+                  <a href="#">Для медсестер</a>
+                </li>
+
+                <li>
+                  <a href="#">Для монтажников</a>
+                </li>
+
+                <li>
+                  <a href="#">Для официантов</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-gloves"></use>
+                </svg>
+                <span>Перчатки</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">Перчатки</a>
+                </li>
+
+                <li>
+                  <a href="#">Перчатки 1</a>
+                </li>
+
+                <li>
+                  <a href="#">Перчатки 2</a>
+                </li>
+
+                <li>
+                  <a href="#">Перчатки 3</a>
+                </li>
+
+                <li>
+                  <a href="#">Перчатки 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-siz"></use>
+                </svg>
+                <span>СИЗ</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">СИЗ</a>
+                </li>
+
+                <li>
+                  <a href="#">СИЗ 1</a>
+                </li>
+
+                <li>
+                  <a href="#">СИЗ 2</a>
+                </li>
+
+                <li>
+                  <a href="#">СИЗ 3</a>
+                </li>
+
+                <li>
+                  <a href="#">СИЗ 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-other"></use>
+                </svg>
+                <span>Другое</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">Другое</a>
+                </li>
+
+                <li>
+                  <a href="#">Другое 1</a>
+                </li>
+
+                <li>
+                  <a href="#">Другое 2</a>
+                </li>
+
+                <li>
+                  <a href="#">Другое 3</a>
+                </li>
+
+                <li>
+                  <a href="#">Другое 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-profession"></use>
+                </svg>
+                <span>По профессиям</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">По профессиям</a>
+                </li>
+
+                <li>
+                  <a href="#">По профессиям 1</a>
+                </li>
+
+                <li>
+                  <a href="#">По профессиям 2</a>
+                </li>
+
+                <li>
+                  <a href="#">По профессиям 3</a>
+                </li>
+
+                <li>
+                  <a href="#">По профессиям 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-new"></use>
+                </svg>
+                <span>Новая коллекция</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">Новая коллекция</a>
+                </li>
+
+                <li>
+                  <a href="#">Новая коллекция 1</a>
+                </li>
+
+                <li>
+                  <a href="#">Новая коллекция 2</a>
+                </li>
+
+                <li>
+                  <a href="#">Новая коллекция 3</a>
+                </li>
+
+                <li>
+                  <a href="#">Новая коллекция 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-outlet"></use>
+                </svg>
+                <span>Аутлет</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">Аутлет</a>
+                </li>
+
+                <li>
+                  <a href="#">Аутлет 1</a>
+                </li>
+
+                <li>
+                  <a href="#">Аутлет 2</a>
+                </li>
+
+                <li>
+                  <a href="#">Аутлет 3</a>
+                </li>
+
+                <li>
+                  <a href="#">Аутлет 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-sale"></use>
+                </svg>
+                <span>Скидки</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">Скидки</a>
+                </li>
+
+                <li>
+                  <a href="#">Скидки 1</a>
+                </li>
+
+                <li>
+                  <a href="#">Скидки 2</a>
+                </li>
+
+                <li>
+                  <a href="#">Скидки 3</a>
+                </li>
+
+                <li>
+                  <a href="#">Скидки 4</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="_has-child">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#menu-activity"></use>
+                </svg>
+                <span>Актвиности</span>
+              </a>
+
+              <ul class="modal-submenu__list">
+                <li>
+                  <a href="#">Актвиности</a>
+                </li>
+
+                <li>
+                  <a href="#">Актвиности 1</a>
+                </li>
+
+                <li>
+                  <a href="#">Актвиности 2</a>
+                </li>
+
+                <li>
+                  <a href="#">Актвиности 3</a>
+                </li>
+
+                <li>
+                  <a href="#">Актвиности 4</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="modal-menu__banners-mobile"></div>
+        </div>
+
+        <div class="modal-menu__body">
+          <div class="modal-menu__banners" data-da="modal-menu__banners-mobile, 1, 991.98">
+            <a href="#" class="modal-menu__banner">
+              <picture>
+                <source srcset="img/menu-banners/01.webp" type="image/webp" />
+                <img src="img/menu-banners/01.jpg" alt="баннер" />
+              </picture>
+            </a>
+
+            <a href="#" class="modal-menu__banner">
+              <picture>
+                <source srcset="img/menu-banners/01.webp" type="image/webp" />
+                <img src="img/menu-banners/01.jpg" alt="баннер" />
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN ===== -->
+    <main class="main">
+      <!-- BREADCRUMBS ===== -->
+      <div class="breadcrumbs-wrapper">
+        <div class="container">
+          <nav class="breadcrumbs _custom-scrollbar">
+            <ul class="breadcrumbs-list">
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <span>Корзина</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- PAGE-TOP ===== -->
+      <section class="page-top">
+        <div class="container">
+          <h1 class="page-title">Работа в компании</h1>
+
+          <div class="about-page__nav page-nav__tabs tabs-slider swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="swiper-slide">Эксперт Спецодежда сегодня</a>
+              <a href="#" class="swiper-slide">Новости</a>
+              <a href="#" class="swiper-slide">Галерея</a>
+              <a href="#" class="swiper-slide">Работа в компании</a>
+              <a href="#" class="swiper-slide">Партнеры</a>
+              <a href="#" class="swiper-slide _active">Поставщикам</a>
+              <a href="#" class="swiper-slide">Благодарности</a>
+              <a href="#" class="swiper-slide">Отзывы</a>
+              <a href="#" class="swiper-slide">Политика конфеденциальности</a>
+              <a href="#" class="swiper-slide">Оферта</a>
+            </div>
+
+            <button class="swiper-button-prev" type="button">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#arr"></use>
+              </svg>
+            </button>
+            <button class="swiper-button-next" type="button">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#arr"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK ===== -->
+      <section class="work section">
+        <div class="container">
+          <div class="section-top">
+            <h2 class="section-title">Для тек, кто ищет любимую работу уникальная возможность</h2>
+          </div>
+
+          <div class="work-items">
+            <div class="work-item">
+              <div class="work-item__icon">
+                <img src="img/work/icons/01.svg" alt="иконка" />
+              </div>
+              <div class="work-item__text">
+                <span>Стать частью дружной, увлеченной команды</span>
+                со здоровыми амбициями и неуемным энтузиазмом.
+              </div>
+            </div>
+
+            <div class="work-item">
+              <div class="work-item__icon">
+                <img src="img/work/icons/02.svg" alt="иконка" />
+              </div>
+              <div class="work-item__text">
+                <span>Применять свои навыки и таланты в действительно полезном деле.</span>
+              </div>
+            </div>
+
+            <div class="work-item">
+              <div class="work-item__icon">
+                <img src="img/work/icons/03.svg" alt="иконка" />
+              </div>
+              <div class="work-item__text">
+                <span>Реализовать профессиональные стремления и потенциал.</span>
+              </div>
+            </div>
+
+            <div class="work-item">
+              <div class="work-item__icon">
+                <img src="img/work/icons/04.svg" alt="иконка" />
+              </div>
+              <div class="work-item__text">Каждый день с удовольствием ощущать, что значат <span>корпоративная забота,
+                  внимание и бережное отношение к сотрудникам.</span></div>
+            </div>
+          </div>
+
+          <ol class="work-items work-items--list">
+            <li class="work-item">
+              <span class="work-item__text"> Готовы к работе, которая будет приносить не только доход, но и радость?
+              </span>
+            </li>
+
+            <li class="work-item">
+              <span class="work-item__text"> Стойко примете испытание собеседованием и строгий отбор? </span>
+            </li>
+
+            <li class="work-item">
+              <span class="work-item__text"> Не боитесь увлечения однажды и на всю жизнь? </span>
+            </li>
+
+            <li class="work-item">
+              <span class="work-item__text"> Ждем вас в команде «Эксперт Спецодежда»! </span>
+            </li>
+          </ol>
+
+          <div class="section-top">
+            <h2 class="section-title">Открытые вакансии</h2>
+          </div>
+
+          <div class="work-vacancies">
+            <div class="work-vacancy">
+              <div class="work-vacancy__tabs">
+                <div class="work-vacancy__tab item-tab">Офис</div>
+              </div>
+
+              <div class="work-vacancy__body item-tab__body">
+                <div class="work-vacancy__body-top">
+                  <div class="work-vacancy__info">
+                    <div class="work-vacancy__info-item">
+                      <div class="work-vacancy__info-icon">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#address"></use>
+                        </svg>
+                      </div>
+                      <div class="work-vacancy__info-text">
+                        <p>Адрес:</p>
+                        <p><span>Москва, Вагоноремонтная улица, 10Ас1</span></p>
+                      </div>
+                    </div>
+
+                    <div class="work-vacancy__info-item">
+                      <div class="work-vacancy__info-icon">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#map"></use>
+                        </svg>
+                      </div>
+                      <div class="work-vacancy__info-text">
+                        Доехать до нашего офиса можно на общественном транспорте от станции метро «Алтуфьево»: автобуcы
+                        №273 или №302, остановка «Автобаза №3», З-х этажное офисное здание оранжевого
+                        цвета, наверху вывеска «ЭКСПЕРТ СПЕЦОДЕЖДА»
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-vacancy__img">
+                    <picture class="lozad" data-alt="изображение">
+                      <source srcset="img/work/vacancy/01.webp" type="image/webp" />
+                      <source srcset="img/work/vacancy/01.jpg" />
+                      <img loading="lazy"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="изображение" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="work-vacancy__list">
+                  <div class="work-vacancy__list-item">
+                    <div class="work-vacancy__list-item-title _list-marker">Швея</div>
+                    <div class="work-vacancy__list-item-salary">от 100000 руб.</div>
+                    <div class="work-vacancy__list-item-schedule">График сменный</div>
+                    <a href="#" class="work-vacancy__list-item-btn btn-v2 btn-v2--small">Подробности</a>
+                  </div>
+
+                  <div class="work-vacancy__list-item">
+                    <div class="work-vacancy__list-item-title _list-marker">Помощник бухгалтера</div>
+                    <div class="work-vacancy__list-item-salary">от 100000 руб.</div>
+                    <div class="work-vacancy__list-item-schedule">График сменный</div>
+                    <a href="#" class="work-vacancy__list-item-btn btn-v2 btn-v2--small">Подробности</a>
+                  </div>
+
+                  <div class="work-vacancy__list-item">
+                    <div class="work-vacancy__list-item-title _list-marker">Помощник маркетолога</div>
+                    <div class="work-vacancy__list-item-salary">от 100000 руб.</div>
+                    <div class="work-vacancy__list-item-schedule">График сменный</div>
+                    <a href="#" class="work-vacancy__list-item-btn btn-v2 btn-v2--small">Подробности</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="work-vacancy">
+              <div class="work-vacancy__tabs">
+                <div class="work-vacancy__tab item-tab">Склад</div>
+              </div>
+
+              <div class="work-vacancy__body item-tab__body">
+                <div class="work-vacancy__body-top">
+                  <div class="work-vacancy__info">
+                    <div class="work-vacancy__info-item">
+                      <div class="work-vacancy__info-icon">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#address"></use>
+                        </svg>
+                      </div>
+                      <div class="work-vacancy__info-text">
+                        <p>Адрес:</p>
+                        <p><span>Россия, 141401, Московская область, .г. Химки, Транспортный проезд, д.19</span></p>
+                      </div>
+                    </div>
+
+                    <div class="work-vacancy__info-item">
+                      <div class="work-vacancy__info-icon">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#map"></use>
+                        </svg>
+                      </div>
+                      <div class="work-vacancy__info-text">
+                        Доехать до нашего офиса можно на общественном транспорте от станции метро «Алтуфьево»: автобуcы
+                        №273 или №302, остановка «Автобаза №3», З-х этажное офисное здание оранжевого
+                        цвета, наверху вывеска «ЭКСПЕРТ СПЕЦОДЕЖДА»
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-vacancy__img">
+                    <picture class="lozad" data-alt="изображение">
+                      <source srcset="img/work/vacancy/02.webp" type="image/webp" />
+                      <source srcset="img/work/vacancy/02.jpg" />
+                      <img loading="lazy"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="изображение" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="work-vacancy__list">
+                  <div class="work-vacancy__list-item">
+                    <div class="work-vacancy__list-item-title _list-marker">Швея</div>
+                    <div class="work-vacancy__list-item-salary">от 100000 руб.</div>
+                    <div class="work-vacancy__list-item-schedule">График сменный</div>
+                    <a href="#" class="work-vacancy__list-item-btn btn-v2 btn-v2--small">Подробности</a>
+                  </div>
+
+                  <div class="work-vacancy__list-item">
+                    <div class="work-vacancy__list-item-title _list-marker">Помощник бухгалтера</div>
+                    <div class="work-vacancy__list-item-salary">от 100000 руб.</div>
+                    <div class="work-vacancy__list-item-schedule">График сменный</div>
+                    <a href="#" class="work-vacancy__list-item-btn btn-v2 btn-v2--small">Подробности</a>
+                  </div>
+
+                  <div class="work-vacancy__list-item">
+                    <div class="work-vacancy__list-item-title _list-marker">Помощник маркетолога</div>
+                    <div class="work-vacancy__list-item-salary">от 100000 руб.</div>
+                    <div class="work-vacancy__list-item-schedule">График сменный</div>
+                    <a href="#" class="work-vacancy__list-item-btn btn-v2 btn-v2--small">Подробности</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-bottom">
+            <div class="work-bottom__inner">
+              <div class="work-bottom__title">Для связи с отделом кадров звоните или&nbsp;пишите</div>
+              <div class="work-bottom__items">
+                <div class="work-bottom__item">
+                  <span>
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#phone"></use>
+                    </svg>
+                  </span>
+                  <span>Телефон: <a href="tel:+74951033030">+7 (495) 103-30-30</a> (многоканальный)</span>
+                </div>
+
+                <div class="work-bottom__item">
+                  <span>
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#clock"></use>
+                    </svg>
+                  </span>
+                  <span>Время: Понедельник-пятница 9.00 - 18.00</span>
+                </div>
+
+                <div class="work-bottom__item">
+                  <span>
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#email"></use>
+                    </svg>
+                  </span>
+                  <span>Почта: <a href="mailto:hr@psk.expert">hr@psk.expert</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-catalog">
+            <div class="footer-title footer-title--catalog">Каталог</div>
+
+            <div class="footer-catalog__cols" data-accordeon="767.98" data-accordeon-one-active>
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title" data-accordeon-btn>
+                  <a href="#">Одежда</a>
+                </div>
+
+                <ul class="footer-catalog__menu-list">
+                  <li><a href="#">Летняя одежда</a></li>
+                  <li><a href="#">Зимняя одежда</a></li>
+                  <li><a href="#">Сигнальная одежда</a></li>
+                  <li><a href="#">Влагозащитная одежда</a></li>
+                  <li><a href="#">Одноразовая одежда</a></li>
+                  <li><a href="#">От повышенных температур</a></li>
+                  <li><a href="#">От агрессивных сред</a></li>
+                  <li><a href="#">От электродуги</a></li>
+                  <li><a href="#">Для сферы услуг</a></li>
+                  <li><a href="#">Трикотаж и головные уборы</a></li>
+                  <li><a href="#">Мужская</a></li>
+                  <li><a href="#">Женская</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title" data-accordeon-btn>
+                  <a href="#">Обувь</a>
+                </div>
+
+                <ul class="footer-catalog__menu-list">
+                  <li><a href="#">Летняя обувь</a></li>
+                  <li><a href="#">Зимняя обувь</a></li>
+                  <li><a href="#">Повседневная обувь</a></li>
+                  <li><a href="#">Термостойкая обувь</a></li>
+                  <li><a href="#">Влагостойкая обувь</a></li>
+                  <li><a href="#">Аксессуары для обуви</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title" data-accordeon-btn>
+                  <a href="#">Перчатки</a>
+                </div>
+
+                <ul class="footer-catalog__menu-list">
+                  <li><a href="#">Перчатки трикотажные</a></li>
+                  <li><a href="#">Защита от пониженных температур</a></li>
+                  <li><a href="#">Рукавицы, вачеги</a></li>
+                  <li><a href="#">Защита от механических воздействий</a></li>
+                  <li><a href="#">Перчатки специальные</a></li>
+                  <li><a href="#">Защита от повышенных температур</a></li>
+                  <li><a href="#">Защита от порезов</a></li>
+                  <li><a href="#">Защита от химических воздействий</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title" data-accordeon-btn>
+                  <a href="#">СИЗ</a>
+                </div>
+
+                <ul class="footer-catalog__menu-list">
+                  <li><a href="#">Защита головы</a></li>
+                  <li><a href="#">Защита глаз и лица</a></li>
+                  <li><a href="#">Защита органов дыхания</a></li>
+                  <li><a href="#">Защита органов слуха</a></li>
+                  <li><a href="#">При высотных работах</a></li>
+                  <li><a href="#">Диэлектрические СИЗ</a></li>
+                  <li><a href="#">Дерматологические СИЗ</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title" data-accordeon-btn>
+                  <a href="#">Другое</a>
+                </div>
+
+                <ul class="footer-catalog__menu-list">
+                  <li><a href="#">Ограждение</a></li>
+                  <li><a href="#">Пожарное оборудование</a></li>
+                  <li><a href="#">Аптечки медицинские</a></li>
+                  <li><a href="#">Постельные принадлежности</a></li>
+                  <li><a href="#">Ткани</a></li>
+                  <li><a href="#">Хозинвентарь и бытовая химия</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title">
+                  <a href="#">New collection</a>
+                </div>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title">
+                  <a href="#">Outlet</a>
+                </div>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title">
+                  <a href="#">Discount</a>
+                </div>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title">
+                  <a href="#">Activity</a>
+                </div>
+              </nav>
+
+              <nav class="footer-catalog__menu">
+                <div class="footer-catalog__menu-title" data-accordeon-btn>
+                  <a href="#">По профессиям</a>
+                </div>
+
+                <ul class="footer-catalog__menu-list">
+                  <li><a href="#">Для автосервиса</a></li>
+                  <li><a href="#">Для водителей</a></li>
+                  <li><a href="#">Для врачей</a></li>
+                  <li><a href="#">Для горничных</a></li>
+                  <li><a href="#">Для грузчиков</a></li>
+                  <li><a href="#">Для дорожных работников</a></li>
+                  <li><a href="#">Для инженеров</a></li>
+                  <li><a href="#">Для ИТР и руководителей</a></li>
+                  <li><a href="#">Для кондитеров</a></li>
+                  <li><a href="#">Для машинистов</a></li>
+                  <li><a href="#">Для медсестер</a></li>
+                  <li><a href="#">Для монтажников</a></li>
+                  <li><a href="#">Для официантов</a></li>
+                  <li><a href="#">Для парикмахеров</a></li>
+                  <li><a href="#">Для пекарей</a></li>
+                  <li><a href="#">Для поваров</a></li>
+                  <li><a href="#">Для продавцов</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="img/logo.svg" alt="изображение" />
+            </div>
+
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Клиентам</a></li>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+
+            <div class="footer-contacts">
+              <div class="footer-contacts__col">
+                <button class="footer-contacts__btn" type="button">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#phone"></use>
+                  </svg>
+                  <span>Обратный звонок</span>
+                </button>
+
+                <button class="footer-contacts__btn" type="button">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#rocket"></use>
+                  </svg>
+                  <span>Прямая связь с руководством</span>
+                </button>
+              </div>
+
+              <div class="footer-contacts__col">
+                <div class="footer-contacts__col-top">
+                  <a href="tel:+74951112233" class="footer-contacts__link">+7 (495) 111-22-33</a>
+                  <a href="mailto:info@psk.expert" class="footer-contacts__link">info@psk.expert</a>
+                </div>
+
+                <div class="footer-contacts__address">
+                  <strong>Юридический адрес</strong>
+                  <p>Россия, 141044, Московская область, Мытищинский район, д. Грибки, ул. Ангарская вл. 8, стр. 15</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-title">Клиентам</div>
+
+            <nav class="footer-clients__menu">
+              <ul class="footer-clients__menu-list">
+                <li><a href="#">Таблицы размеров</a></li>
+                <li><a href="#">Госты</a></li>
+                <li><a href="#">Обмен и возврат</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Система скидок</a></li>
+              </ul>
+            </nav>
+
+            <form class="footer-form">
+              <div class="footer-form__title">Я хочу быть в курсе новостей</div>
+              <input class="footer-form__input form-input" type="text" name="email" placeholder="Мой e-mail"
+                autocomplete="off" />
+              <button class="footer-form__btn btn btn--y" type="submit">Подписаться</button>
+            </form>
+
+            <ul class="footer-socials">
+              <li>
+                <a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <div class="footer-copy">© 1998 – 2022 ООО «Экспертспецодежда». Все права защищены.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS ===== -->
+  <script src="js/libs/swiper.min.js?_v=20240627185157"></script>
+  <script src="js/libs/tippy.umd.min.js?_v=20240627185157"></script>
+  <script src="js/libs/clamp.min.js?_v=20240627185157"></script>
+  <script src="js/libs/fancybox.umd.min.js?_v=20240627185157"></script>
+  <script src="js/main.js?_v=20240627185157"></script>
+</body>
+
+</html>
