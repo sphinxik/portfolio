@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Adastra — Booking</title>
+  <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon" />
+  <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
+
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/libs.min.css?_v=20241030174700" type="text/css" />
+  <link rel="stylesheet" href="css/style.css?_v=20241030174700" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- HEADER ===== -->
+    <header id="header" class="header" data-aos="fade-down" data-padding-fix>
+      <div class="container">
+        <div class="header-contacts">
+          <div class="header-contacts__text">Contacts</div>
+          <ul class="header-contacts__list">
+            <li><a href="tel:+19143125666">+1-914-312-5666</a></li>
+            <li><a href="mailto:admin@adastrabooking.com">admin@adastrabooking.com</a></li>
+          </ul>
+        </div>
+
+        <div class="header-logo" data-padding-fix>
+          <div class="header-logo__img">
+            <img src="img/logo.svg" alt="logo" />
+          </div>
+        </div>
+
+        <div class="header-text">
+          <span>3 Germay Dr, Unit 4 #1099, Wilmington, DE 19804, USA</span>
+        </div>
+      </div>
+
+      <button type="button" class="header-burger__btn" data-padding-fix-pfr>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- BUREGER-MENU ===== -->
+    <div class="burger-menu">
+      <div class="burger-menu__title">Menu</div>
+
+      <div class="burger-menu__top">
+        <div class="burger-menu__logo">
+          <img src="img/logo.svg" alt="logo" />
+        </div>
+
+        <button type="button" class="burger-menu__close">
+          <span>close menu</span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="burger-menu__nav _custom-scrollbar">
+        <ul class="burger-menu__list">
+          <li><a href="#" class="_active">HOME</a></li>
+          <li><a href="#">About company</a></li>
+          <li><a href="#">Trips</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger-menu__bottom">
+        <div class="burger-menu__contacts">
+          <div class="burger-menu__bottom-item">
+            <span>Contact number:</span>
+            <a href="tel:+19143125666" class="big-text">+1-914-312-5666</a>
+          </div>
+
+          <div class="burger-menu__bottom-item burger-menu__bottom-item--email">
+            <a href="mailto:admin@adastrabooking.com">admin@adastrabooking.com</a>
+          </div>
+        </div>
+
+        <div class="burger-menu__bottom-item burger-menu__bottom-item--address">
+          <span>Location:</span>
+          <span class="big-text"> ADASTRABOOKING LLC, 3 Germay Dr, Unit 4 #1099, Wilmington, DE 19804, USA </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN ===== -->
+    <main class="main">
+      <!-- BOOKING & PAYMENT ===== -->
+      <section class="booking">
+        <div class="container container--sync">
+          <h1 class="booking-title" data-aos="flip-down">booking and payment</h1>
+
+          <div class="booking-body">
+            <div class="booking-col" data-aos="fade-right">
+              <div class="booking-selection">
+                <div class="booking-selection__title">Select trip</div>
+
+                <div class="booking-selection__body">
+                  <div class="form-item">
+                    <div class="form-label">Select or enter tour name</div>
+                    <select class="form-input form-input--select" name="question" data-custom-select>
+                      <option selected value="Planet Namibia">Planet Namibia</option>
+                      <option value="Peru and Bolivia">Peru and Bolivia</option>
+                      <option value="Patagonia with Easter Island">Patagonia with Easter Island</option>
+                      <option value="South Africa">South Africa</option>
+                      <option value="Zambia, Zimbabwe and Botswana">Zambia, Zimbabwe and Botswana</option>
+
+                      <option value="Planet Namibia 2">Planet Namibia 2</option>
+                      <option value="Peru and Bolivia 2">Peru and Bolivia 2</option>
+                      <option value="Patagonia with Easter Island 2">Patagonia with Easter Island 2</option>
+                      <option value="South Africa 2">South Africa 2</option>
+                      <option value="Zambia, Zimbabwe and Botswana 2">Zambia, Zimbabwe and Botswana 2</option>
+                    </select>
+                    <span class="form-input-error">enter a valid email</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-col" data-aos="fade-left">
+              <form class="booking-form form">
+                <div class="booking-form__item">
+                  <div class="booking-form__title">Enter payment details</div>
+                </div>
+
+                <div class="booking-form__item">
+                  <div class="booking-form__item-inner">
+                    <div class="form-row">
+                      <div class="form-item">
+                        <div class="form-label">First name</div>
+                        <input class="form-input _required" type="text" name="name" autocomplete="off"
+                          placeholder="Name here" />
+                        <span class="form-input-error">field is required</span>
+                      </div>
+
+                      <div class="form-item">
+                        <div class="form-label">Last name</div>
+                        <input class="form-input _required" type="text" name="last_name" autocomplete="off"
+                          placeholder="Name here" />
+                        <span class="form-input-error">field is required</span>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-item">
+                        <div class="form-label">Email</div>
+                        <input class="form-input form-input--email _required" type="text" name="email"
+                          autocomplete="off" placeholder="Email here" />
+                        <span class="form-input-error">enter a valid email</span>
+                      </div>
+
+                      <div class="form-item">
+                        <div class="form-label">Phone number</div>
+                        <input class="form-input form-input--phone _required" type="text" name="phone"
+                          autocomplete="off" placeholder="+1-__-__-____" />
+                        <span class="form-input-error">enter a valid phone number</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="booking-form__item">
+                  <div class="booking-form__item-title">Invoice number</div>
+
+                  <div class="booking-form__item-inner">
+                    <div class="form-item">
+                      <input class="form-input _required" type="text" name="invoice" autocomplete="off"
+                        placeholder="00-DDDDDDD" />
+                      <span class="form-input-error">field is required</span>
+                    </div>
+
+                    <div class="form-bottom">
+                      <button class="form-btn btn" type="submit">PAY</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-bg">
+        <picture>
+          <source srcset="img/footer/bg.webp" type="image/webp" />
+          <img src="img/footer/bg.jpg" alt="image" />
+        </picture>
+      </div>
+
+      <div class="container container--sync">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-top__item" data-aos="fade-right">
+              <div class="footer-top__item-title">Location</div>
+              <div class="footer-top__item-text">
+                3 Germay Dr, Unit 4 #1099,<br />
+                Wilmington, DE 19804, USA
+              </div>
+            </div>
+
+            <div class="footer-btn__back-wrapper" data-aos="fade-in">
+              <a href="#header" class="footer-btn__back" data-goto="#header">
+                <span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                  </svg>
+                </span>
+                <span>Back to top</span>
+              </a>
+            </div>
+
+            <div class="footer-top__item" data-aos="fade-left">
+              <div class="footer-top__item-title">News subscription</div>
+
+              <form class="footer-form form">
+                <div class="form-item">
+                  <input class="form-input form-input--email _required" type="email" name="email"
+                    placeholder="Email here" autocomplete="off" />
+                  <span class="form-input-error">enter a valid email</span>
+                </div>
+                <button class="form-btn btn" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer-middle">
+            <div class="footer-contacts" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+              <div class="footer-contacts__item">
+                <span>Contact number:</span>
+                <a href="tel:+19143125666" class="big-text">+1-914-312-5666</a>
+              </div>
+
+              <div class="footer-contacts__item">
+                <a href="mailto:admin@adastrabooking.com">admin@adastrabooking.com</a>
+              </div>
+            </div>
+
+            <nav class="footer-menu" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+              <ul class="footer-menu__list">
+                <li><a href="#">Main</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Trips</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-copy" data-aos="fade-right" data-aos-anchor-placement="top-bottom">@ copyright
+              adastra.com 2024. All rights reserved</div>
+
+            <ul class="footer-links" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+              <li><a href="#">Terms and conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- POPUP ===== -->
+  <div id="popup-thanks" class="popup popup-thanks">
+    <div class="popup-body">
+      <div class="popup-content">
+        <button class="popup-close btn-close" data-popup-close></button>
+
+        <div class="popup-title">Thank You!</div>
+
+        <div class="popup-text">Our manager will contact you shortly</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS ===== -->
+  <script src="js/libs.min.js?_v=20241030174700"></script>
+  <script src="js/main.js?_v=20241030174700"></script>
+</body>
+
+</html>
