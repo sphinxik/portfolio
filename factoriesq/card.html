@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Card</title>
+  <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/libs/baguettebox.min.css?_v=20240918142320" type="text/css" />
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240918142320" type="text/css" />
+  <link rel="stylesheet" href="css/style.css?_v=20240918142320" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- HEADER ===== -->
+    <header class="header">
+      <div class="container container--wide">
+        <div class="header-logo">
+          <img src="img/logo.svg" alt="logo" />
+        </div>
+
+        <nav class="header-nav">
+          <div class="header-nav__body">
+            <ul class="header-menu">
+              <li class="_active"><a href="#">Catalog</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+
+            <a href="/contacts" class="header-btn header-btn--mobile btn" data-goto="#contacts">Need it</a>
+          </div>
+
+          <div class="header-nav__footer-mobile">
+            <div class="header-nav__socials">
+              <div class="header-nav__socials-title">Social media:</div>
+
+              <ul class="header-nav__socials-list">
+                <li>
+                  <a href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header-nav__copy">
+              <span>@ copyright factoriaesQ 2024. All rights reserved</span>
+            </div>
+          </div>
+        </nav>
+
+        <div class="header-controls">
+          <a href="/contacts" class="header-btn btn" data-goto="#contacts">Need it</a>
+
+          <button class="header-burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN ===== -->
+    <main class="main">
+      <!-- CARD-TOP ===== -->
+      <section class="card-top">
+        <div class="card-top__body">
+          <div class="container">
+            <div class="card-top__img-wrapper">
+              <div class="card-top__img">
+                <picture>
+                  <source srcset="img/products/01.webp" type="image/webp" />
+                  <img src="img/products/01.png" alt="product logo" />
+                </picture>
+              </div>
+            </div>
+
+            <div class="card-top__header">
+              <h1 class="card-top__title">Fashion Supply Co.</h1>
+
+              <ul class="card-top__categories categories-list">
+                <li><a href="#">#category</a></li>
+                <li><a href="#">#category</a></li>
+                <li><a href="#">#category</a></li>
+              </ul>
+            </div>
+
+            <div class="card-top__content">
+              <div class="card-top__text section-text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Est egestas a vulputate tempor molestie curabitur suspendisse
+                  vitae. Neque pellentesque viverra mattis id pulvinar nibh. Sodales quis eget
+                  donec sit. Justo nulla morbi turpis adipiscing nunc mauris urna. Consectetur nibh pulvinar tristique
+                  purus enim id.
+                </p>
+
+                <p>
+                  Velit nulla blandit donec elementum quis consequat fames arcu ullamcorper. Accumsan amet bibendum
+                  lobortis eu. Lorem ipsum dolor sit amet consectetur. Est egestas a vulputate
+                  tempor molestie curabitur suspendisse vitae.
+                </p>
+              </div>
+
+              <div class="card-top__links">
+                <div class="card-top__contacts">
+                  <div class="card-top__contacts-item">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#phone"></use>
+                    </svg>
+
+                    <div>
+                      <a href="tel:+12341246573">+1 234 124 65 73</a>
+                      <a href="tel:+12341246573">+1 234 124 65 73</a>
+                    </div>
+                  </div>
+
+                  <div class="card-top__contacts-item">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#email"></use>
+                    </svg>
+
+                    <div>
+                      <a href="mailto:Fashion.Supply@gmail.com">Fashion.Supply@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="#" class="card-top__btn btn" target="_blank">visit site</a>
+              </div>
+
+              <div class="card-top__text section-text">
+                <p>data 1</p>
+
+                <p>data 2</p>
+
+                <p>data 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-top__nav">
+          <div class="container">
+            <div class="card-top__nav-list">
+              <a href="#card-info" class="card-top__nav-link" data-goto="#card-info"> Type of Products </a>
+              <a href="#card-photos" class="card-top__nav-link" data-goto="#card-photos"> Product photos </a>
+              <a href="#card-videos" class="card-top__nav-link" data-goto="#card-videos"> Product videos </a>
+              <a href="#card-options" class="card-top__nav-link" data-goto="#card-options"> Cooperation options </a>
+              <a href="/contacts" class="card-top__nav-link" data-goto="#contacts"> Contact us </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD-INFO ===== -->
+      <section id="card-info" class="card-info">
+        <div class="container">
+          <div class="card-info__content content-editor">
+            <h2>Fashion Supply Co.</h2>
+
+            <p>
+              leading supplier of high-quality clothing for men, women and children. We offer a wide range of products,
+              including casual wear, business suits, sportswear and accessories. Our company
+              cooperates with the best manufacturers around the world to guarantee our customers fashionable and durable
+              products.
+            </p>
+
+            <p>
+              We are proud to provide flexible terms of cooperation, including wholesale purchases, dropshipping and
+              custom orders. Our goal is to help your business grow and prosper by offering
+              competitive prices, fast delivery and excellent customer service.
+            </p>
+
+            <h3>Our advantages:</h3>
+
+            <ul>
+              <li>Wide range of products</li>
+              <li>High quality and fashion trends</li>
+              <li>Flexible terms of cooperation</li>
+              <li>Fast and reliable delivery</li>
+              <li>Individual approach to each client</li>
+            </ul>
+
+            <h3>Clothing range:</h3>
+
+            <p>
+              Casual wear: Stylish and comfortable T-shirts, jeans, sweatshirts and dresses, perfect for everyday wear.
+              Business wear: Elegant suits, shirts, blouses and skirts that will help you
+              look professional and confident at work. Sportswear: High-quality tracksuits, leggings, T-shirts and
+              shorts that provide comfort and freedom of movement during workouts. Accessories:
+              Fashionable bags, belts, hats and scarves that will complete your look and highlight your individuality.
+            </p>
+
+            <h3>
+              <i>Join «Fashion Supply Co.» and discover the world of fashion and style!</i>
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD-PHOTOS ===== -->
+      <section id="card-photos" class="card-photos">
+        <div class="container">
+          <div class="card-photos__top section-top">
+            <h2 class="card-photos__title section-title section-title--sm">product photos</h2>
+          </div>
+
+          <div class="card-photos__slider1-wrapper">
+            <div class="card-photos__slider1 swiper bb-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="img/card/slider1/01.jpg" class="card-photos__slider1-img">
+                    <picture>
+                      <source data-srcset="img/card/slider1/01.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider1/01.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider1/02.jpg" class="card-photos__slider1-img">
+                    <picture>
+                      <source data-srcset="img/card/slider1/02.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider1/02.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider1/03.jpg" class="card-photos__slider1-img">
+                    <picture>
+                      <source data-srcset="img/card/slider1/03.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider1/03.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider1/01.jpg" class="card-photos__slider1-img">
+                    <picture>
+                      <source data-srcset="img/card/slider1/01.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider1/01.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider1/02.jpg" class="card-photos__slider1-img">
+                    <picture>
+                      <source data-srcset="img/card/slider1/02.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider1/02.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider1/03.jpg" class="card-photos__slider1-img">
+                    <picture>
+                      <source data-srcset="img/card/slider1/03.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider1/03.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-photos__slider1-nav swiper-nav">
+              <button class="swiper-button-prev" type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="swiper-button-next" type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="card-photos__slider2-wrapper">
+            <div class="card-photos__slider2 swiper bb-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/01.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/01.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/01.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/02.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/02.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/02.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/03.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/03.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/03.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/04.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/04.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/04.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/05.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/05.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/05.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/06.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/06.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/06.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/07.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/07.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/07.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/08.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/08.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/08.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/09.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/09.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/09.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/06.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/06.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/06.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/07.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/07.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/07.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/08.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/08.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/08.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="img/card/slider2/09.jpg" class="card-photos__slider2-img">
+                    <picture>
+                      <source data-srcset="img/card/slider2/09.webp"
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        type="image/webp" />
+                      <img class="lazyload" loading="lazy" data-src="img/card/slider2/09.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="product photo" />
+                    </picture>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-photos__slider2-nav swiper-nav swiper-nav--fullH">
+              <button class="swiper-button-prev" type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="swiper-button-next" type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD-VIDEOS ===== -->
+      <section id="card-videos" class="card-videos">
+        <div class="container">
+          <div class="card-videos__top section-top">
+            <h2 class="card-videos__title section-title section-title--sm">product videos</h2>
+          </div>
+
+          <div class="card-videos__slider-main-wrapper">
+            <div class="card-videos__slider-main swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-video video">
+                    <a href="https://youtu.be/KJwYBJMSbPI" class="video-link" target="_blank">
+                      <picture>
+                        <img class="video-preview lazyload" loading="lazy"
+                          data-src="//img.youtube.com/vi/KJwYBJMSbPI/maxresdefault.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+
+                      <span class="video-btn">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#play"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="video-player"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-video video">
+                    <a href="https://youtu.be/obSH5F2DYvk" class="video-link" target="_blank">
+                      <picture>
+                        <img class="video-preview lazyload" loading="lazy"
+                          data-src="//img.youtube.com/vi/obSH5F2DYvk/maxresdefault.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+
+                      <span class="video-btn">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#play"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="video-player"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-video video">
+                    <a href="https://youtu.be/z2Bbm1Jr0mI" class="video-link" target="_blank">
+                      <picture>
+                        <img class="video-preview lazyload" loading="lazy"
+                          data-src="//img.youtube.com/vi/z2Bbm1Jr0mI/maxresdefault.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+
+                      <span class="video-btn">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#play"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="video-player"></div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-video video">
+                    <a href="https://youtu.be/GAhRMpxbHmY" class="video-link" target="_blank">
+                      <picture>
+                        <img class="video-preview lazyload" loading="lazy"
+                          data-src="//img.youtube.com/vi/GAhRMpxbHmY/maxresdefault.jpg"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                          alt="video preview" />
+                      </picture>
+
+                      <span class="video-btn">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#play"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="video-player"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-videos__slider-thumbs-wrapper">
+            <div class="card-videos__slider-thumbs swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-thumb">
+                    <picture>
+                      <img class="lazyload" loading="lazy" data-src="//img.youtube.com/vi/KJwYBJMSbPI/maxresdefault.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="изображение" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-thumb">
+                    <picture>
+                      <img class="lazyload" loading="lazy" data-src="//img.youtube.com/vi/obSH5F2DYvk/maxresdefault.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="изображение" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-thumb">
+                    <picture>
+                      <img class="lazyload" loading="lazy" data-src="//img.youtube.com/vi/z2Bbm1Jr0mI/maxresdefault.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="изображение" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card-videos__slider-thumb">
+                    <picture>
+                      <img class="lazyload" loading="lazy" data-src="//img.youtube.com/vi/GAhRMpxbHmY/maxresdefault.jpg"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        alt="изображение" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-photos__slider-thumbs-nav swiper-nav swiper-nav--fullH">
+              <button class="swiper-button-prev" type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="swiper-button-next" type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD-OPTIONS ===== -->
+      <section id="card-options" class="card-options">
+        <div class="container">
+          <div class="card-options__top section-top">
+            <h2 class="card-options__title section-title section-title--sm">cooperation options</h2>
+          </div>
+
+          <ol class="card-options__list num-cards__list num-cards__list--chess">
+            <li class="num-cards__item">
+              <div class="num-cards__item-count"></div>
+              <div class="num-cards__item-content">
+                <div class="num-cards__item-title">Print on Demand</div>
+                <div class="num-cards__item-text section-text">
+                  Lorem ipsum dolor sit amet consectetur. Sollicitudin et dignissim urna quis faucibus mi suspendisse
+                  tempor. Elit amet neque ultricies felis. Nunc ut maecenas laoreet fermentum
+                  scelerisque condimentum egestas semper at. Integer tempus duis dictumst suscipit mus pellentesque.
+                  A neque nisl auctor cursus eu ac neque eget nulla. Amet tristique eget adipiscing
+                  pellentesque aliquet molestie. Libero vestibulum tristique lacus et. Tellus ut arcu ornare mauris
+                  convallis. Ut non non eget posuere massa quam.
+                </div>
+
+                <div class="num-cards__item-bottom">Lorem ipsum dolor sit amet consectetur.</div>
+              </div>
+            </li>
+
+            <li class="num-cards__item">
+              <div class="num-cards__item-count"></div>
+              <div class="num-cards__item-content">
+                <div class="num-cards__item-title">Print on Demand</div>
+                <div class="num-cards__item-text section-text">
+                  Lorem ipsum dolor sit amet consectetur. Sollicitudin et dignissim urna quis faucibus mi suspendisse
+                  tempor. Elit amet neque ultricies felis. Nunc ut maecenas laoreet fermentum
+                  scelerisque condimentum egestas semper at. Integer tempus duis dictumst suscipit mus pellentesque.
+                  A neque nisl auctor cursus eu ac neque eget nulla. Amet tristique eget adipiscing
+                  pellentesque aliquet molestie. Libero vestibulum tristique lacus et. Tellus ut arcu ornare mauris
+                  convallis. Ut non non eget posuere massa quam.
+                </div>
+
+                <div class="num-cards__item-bottom">Lorem ipsum dolor sit amet consectetur.</div>
+              </div>
+            </li>
+
+            <li class="num-cards__item">
+              <div class="num-cards__item-count"></div>
+              <div class="num-cards__item-content">
+                <div class="num-cards__item-title">Print on Demand</div>
+                <div class="num-cards__item-text section-text">
+                  Lorem ipsum dolor sit amet consectetur. Sollicitudin et dignissim urna quis faucibus mi suspendisse
+                  tempor. Elit amet neque ultricies felis. Nunc ut maecenas laoreet fermentum
+                  scelerisque condimentum egestas semper at. Integer tempus duis dictumst suscipit mus pellentesque.
+                  A neque nisl auctor cursus eu ac neque eget nulla. Amet tristique eget adipiscing
+                  pellentesque aliquet molestie. Libero vestibulum tristique lacus et. Tellus ut arcu ornare mauris
+                  convallis. Ut non non eget posuere massa quam.
+                </div>
+
+                <div class="num-cards__item-bottom">Lorem ipsum dolor sit amet consectetur.</div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CONTACTS ===== -->
+      <div id="contacts" class="contacts">
+        <div class="container">
+          <div class="contacts-top section-top">
+            <h2 class="section-title">Contacts</h2>
+            <div class="section-top__text">Augue tristique pulvinar lorem euismod tincidunt enim sodales nisl. Lorem
+              odio amet lectus urna.</div>
+          </div>
+
+          <div class="contacts-body">
+            <div class="contacts-sidebar">
+              <div class="contacts-sidebar__title">Lorem ipsum dolor sit consectetur</div>
+
+              <div class="contacts-sidebar__text contacts-sidebar__text--top">Lorem ipsum dolor sit amet consectetur.
+                Tristique elementum libero magna vestibulum malesuada velit ultricies.</div>
+
+              <div class="contacts-sidebar__items">
+                <div class="contacts-sidebar__item">
+                  <div class="contacts-sidebar__item-label">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#email"></use>
+                    </svg>
+                    <span>mail</span>
+                  </div>
+
+                  <div class="contacts-sidebar__item-content">
+                    <a href="mailto:Factories.q@gmail.com">Factories.q@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contacts-sidebar__item">
+                  <div class="contacts-sidebar__item-label">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#email"></use>
+                    </svg>
+                    <span>support mail</span>
+                  </div>
+
+                  <div class="contacts-sidebar__item-content">
+                    <a href="mailto:support.factories.q@gmail.com">support.factories.q@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contacts-sidebar__item">
+                  <div class="contacts-sidebar__item-label">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#phone"></use>
+                    </svg>
+                    <span>contact phone</span>
+                  </div>
+
+                  <div class="contacts-sidebar__item-content">
+                    <a href="tel:+123456789001">+12 345 678 90 01</a>
+                    <a href="tel:+123456789001">+12 345 678 90 01</a>
+                  </div>
+                </div>
+
+                <div class="contacts-sidebar__item">
+                  <div class="contacts-sidebar__item-label">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#location"></use>
+                    </svg>
+                    <span>location</span>
+                  </div>
+
+                  <div class="contacts-sidebar__item-content">
+                    <span>QPH6+RPJ Suzhou District, Jiaxing, Zhejiang, China</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contacts-sidebar__text contacts-sidebar__text--bottom">Lorem ipsum dolor sit amet consectetur.
+                Tristique elementum libero magna vestibulum malesuada velit ultricies.</div>
+            </div>
+
+            <div class="contacts-form">
+              <div class="contacts-form__top">
+                <div class="contacts-form__title">Write to us</div>
+
+                <div class="contacts-form__text">Lorem ipsum dolor sit amet consectetur. Tristique elementum libero
+                  magna vestibulum malesuada velit</div>
+              </div>
+
+              <form class="contacts-form__body form">
+                <div class="form-grid">
+                  <div class="form-item">
+                    <label class="form-input__label">Select a question</label>
+                    <select class="form-input form-input--select" name="question" data-custom-select>
+                      <option selected value="How to cooperate">How to cooperate</option>
+                      <option value="How to cooperate 2">How to cooperate 2</option>
+                      <option value="How to cooperate 3">How to cooperate 3</option>
+                      <option value="How to cooperate 4">How to cooperate 4</option>
+                    </select>
+                    <span class="form-input__error"></span>
+                  </div>
+
+                  <div class="form-item">
+                    <label class="form-input__label">Company name</label>
+                    <input class="form-input _required" type="text" name="company" placeholder="" autocomplete="off" />
+                    <span class="form-input__error">The field is required</span>
+                  </div>
+
+                  <div class="form-item">
+                    <label class="form-input__label">Your full name</label>
+                    <input class="form-input _required" type="text" name="name" placeholder="" autocomplete="off" />
+                    <span class="form-input__error">The field is required</span>
+                  </div>
+
+                  <div class="form-item">
+                    <label class="form-input__label">Your email</label>
+                    <input class="form-input form-input--email _required" type="text" name="email" placeholder=""
+                      autocomplete="off" />
+                    <span class="form-input__error">Invalid email</span>
+                  </div>
+                </div>
+
+                <div class="form-ta__wrapper">
+                  <label class="form-input__label">Your message</label>
+                  <textarea class="form-input form-input--ta" name="message"
+                    placeholder="Enter your message / problem here" autocomplete="off"></textarea>
+                  <span class="form-input__error">The field is required</span>
+                </div>
+
+                <div class="form-check">
+                  <label class="check-label">
+                    <input class="check-input _required" type="checkbox" checked />
+                    <span class="check-custom"></span>
+                    <span class="check-txt"> Lorem ipsum dolor sit amet consectetur. Tristique elementum libero magna
+                      vestibulum malesuada velit ultricies. </span>
+                  </label>
+                </div>
+
+                <div class="form-bottom">
+                  <button class="form-btn btn" type="submit">Send message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER ===== -->
+    <footer class="footer">
+      <div class="container container--wide2">
+        <div class="footer-col">
+          <div class="footer-copy">@ copyright factoriaesQ 2024. All rights reserved</div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="img/logo.svg" alt="logo" />
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-socials">
+            <div class="footer-socials__title">Social media:</div>
+
+            <ul class="footer-socials__list">
+              <li>
+                <a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- POPUP ===== -->
+  <div id="popup-thanks" class="popup popup-thanks">
+    <div class="popup-body">
+      <div class="popup-content">
+        <button class="popup-close btn-close" data-popup-close></button>
+
+        <div class="popup-title">Thank You!</div>
+
+        <div class="popup-text">Our manager will contact you shortly</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS ===== -->
+  <script src="js/libs/baguettebox.min.js?_v=20240918142320"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20240918142320"></script>
+  <script src="js/main.js?_v=20240918142320"></script>
+</body>
+
+</html>
