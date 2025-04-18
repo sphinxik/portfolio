@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>ROYAL BARBER</title>
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/libs.min.css?_v=20250324122658" type="text/css">
+  <link rel="stylesheet" href="css/style.min.css?_v=20250324122658" type="text/css" />
+  <link rel="stylesheet" href="css/libs/baguettebox.min.css?_v=20250324122658" type="text/css" />
+  <link rel="stylesheet" href="css/style.css?_v=20250324122658" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- HEADER ===== -->
+    <header class="header " data-padding-fix>
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-inner__body">
+            <button class="header-burger" type="button">
+              <span></span>
+            </button>
+
+            <div class="header-logo">
+              <a href="#" class="header-logo__img" data-padding-fix>
+                <picture>
+                  <source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="логотип">
+                </picture>
+              </a>
+            </div>
+
+            <div class="header-menu">
+              <nav class="header-menu__nav">
+                <ul class="header-menu__list">
+                  <li><a href="#gallery" data-goto="#gallery">Фото</a></li>
+                  <li><a href="#services" data-goto="#services">Услуги и цены</a></li>
+                  <li><a href="#team" data-goto="#team">Барберы</a></li>
+                  <li><a href="#contacts" data-goto="#contacts">Контакты</a></li>
+                </ul>
+
+                <div class="header-contacts__mobile contacts-items">
+                  <ul class="contacts-list">
+                    <li>
+                      <div>Телефон</div>
+                      <div><a href="tel:+48536523876">+48 536 523 876</a></div>
+                    </li>
+                    <li>
+                      <div>Время работы</div>
+                      <div>Ежедневно с 9 до 20 часов.</div>
+                    </li>
+                    <li>
+                      <div>Адрес</div>
+                      <div>Kacpra Karlińskiego, 4, 01-262, Варшава, Польша</div>
+                    </li>
+                  </ul>
+
+                  <div class="contacs-socials socials">
+                    <a href="#" target="_blank">
+                      <img src="img/icons/socials/instagram.svg" alt="логотип">
+                    </a>
+                    <a href="#" target="_blank">
+                      <img src="img/icons/socials/facebook.svg" alt="логотип">
+                    </a>
+                  </div>
+
+                  <div class="contacs-bottom">
+                    <button class="contacs-btn btn" type="button" data-popup-open="popup-signup">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                      </svg>
+                      <span>Записаться</span>
+                    </button>
+                  </div>
+                </div>
+              </nav>
+            </div>
+
+            <div class="header-controls">
+              <div class="header-language">
+                <div class="header-language__item">PL</div>
+
+                <ul class="header-language__list">
+                  <li class="header-language__item">
+                    <a href="#">EN</a>
+                  </li>
+                  <li class="header-language__item">
+                    <a href="#">RU</a>
+                  </li>
+                </ul>
+              </div>
+
+              <button class="header-btn btn" type="button" data-popup-open="popup-signup">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                </svg>
+                <span>Записаться</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN ===== -->
+    <main class="main">
+      <!-- INTRO ===== -->
+      <section id="intro" class="intro">
+        <div class="intro-bg">
+          <picture>
+            <source srcset="img/intro/bg.webp" media="(min-width: 577px)" type="image/webp" fetchpriority="high"
+              decoding="async" loading="eager">
+            <source srcset="img/intro/bg.jpg" media="(min-width: 577px)" fetchpriority="high" decoding="async"
+              loading="eager">
+            <source srcset="img/intro/bg-mob.webp" type="image/webp" fetchpriority="high" decoding="async"
+              loading="eager">
+            <img src="img/intro/bg-mob.jpg" alt="#" fetchpriority="high" decoding="async" loading="eager">
+          </picture>
+        </div>
+
+        <div class="container">
+          <div class="intro-content">
+            <div class="intro-content__top">
+              <h1 class="intro-title">
+                Профессиональная стрижка
+              </h1>
+
+              <div class="intro-subtitle">
+                + оформление бороды
+              </div>
+
+              <div class="intro-text section-text">
+                Консультация, мытьё, стрижку и укладка с использованием профессиональных техник, средств и инструментов.
+                Придание формы и контуров бороде с помощью электробритвы или горячих и холодных полотенец и сменных
+                лезвий.
+              </div>
+
+              <div class="intro-info">
+                от 150 zł
+              </div>
+            </div>
+
+            <div class="intro-content__bottom">
+              <button class="intro-content__btn btn" type="button" data-popup-open="popup-signup">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                </svg>
+                <span>Записаться</span>
+              </button>
+
+              <div class="intro-reviews reviews-badges">
+                <a href="#" class="reviews-badge" target="_blank">
+                  <div class="reviews-badge__logo">
+                    <img src="img/intro/reviews/01.svg" alt="логотип">
+                  </div>
+
+                  <div class="reviews-badge__stars star-rating" data-rating-value="4.5">
+                    <div class="star-rating__value">4.5</div>
+                    <div class="star-rating__body">
+                      <div class="star-rating__result"></div>
+                    </div>
+                  </div>
+
+                  <div class="reviews-badge__text">На основе 79 отзывов</div>
+                </a>
+
+                <a href="#" class="reviews-badge" target="_blank">
+                  <div class="reviews-badge__logo">
+                    <img src="img/intro/reviews/02.svg" alt="логотип">
+                  </div>
+
+                  <div class="reviews-badge__stars star-rating" data-rating-value="5">
+                    <div class="star-rating__value">5.0</div>
+                    <div class="star-rating__body">
+                      <div class="star-rating__result"></div>
+                    </div>
+                  </div>
+
+                  <div class="reviews-badge__text">На основе 50 отзывов</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY ===== -->
+      <section id="gallery" class="gallery section">
+        <div class="container">
+          <div class="gallery-grid bb-gallery">
+            <div class="gallery-item gallery-item--main">
+              <div class="gallery-logo section-logo">
+                <picture>
+                  <source data-srcset="img/scissors.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/scissors.png"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="логотип">
+                </picture>
+              </div>
+
+              <h2 class="gallery-title section-title">
+                Наши работы и барбершоп
+              </h2>
+
+              <div class="gallery-text section-text">
+                <p>
+                  «Место, где рождается атмосфера 🔥
+                </p>
+                <p>
+                  Мы создаем стильные и ухоженные образы для настоящих мужчин. Добро пожаловать в Royal Barbershop».
+                </p>
+              </div>
+
+              <button class="gallery-link" type="button">
+                <span>Больше фото</span>
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/01.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/01.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/01.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/02.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/02.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/02.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/03.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/03.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/03.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/04.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/04.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/04.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/05.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/05.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/05.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/06.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/06.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/06.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/07.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/07.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/07.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+
+            <div class="gallery-item">
+              <a href="img/gallery/08.jpg" class="gallery-item__img">
+                <picture>
+                  <source data-srcset="img/gallery/thumbs/08.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/gallery/thumbs/08.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="изображение">
+                </picture>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES ===== -->
+      <section id="services" class="services section">
+        <div class="services-bg__left">
+          <picture>
+            <source data-srcset="img/services/bg-left.webp"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              type="image/webp">
+            <img class="lazyload" loading="lazy" data-src="img/services/bg-left.png"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              alt="#">
+          </picture>
+        </div>
+
+        <div class="services-bg__right">
+          <picture>
+            <source data-srcset="img/services/bg-right.webp"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              type="image/webp">
+            <img class="lazyload" loading="lazy" data-src="img/services/bg-right.png"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              alt="#">
+          </picture>
+        </div>
+
+        <div class="container">
+          <div class="services-top section-top">
+            <h2 class="services-title section-title">
+              Услуги и цены
+            </h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="services-item" data-readmore-parent>
+              <div class="services-item__top">
+                <div class="services-item__top-left">
+                  <h3 class="services-item__title">Стрижка волос</h3>
+                  <div class="services-item__subtitle">(барбер/старший барбер)</div>
+                </div>
+
+                <div class="services-item__price">90/120 zł</div>
+              </div>
+
+              <div class="services-item__body" data-readmore="3" data-readmore-adaptive="576, 7">
+                <div class="section-text" data-readmore-body>
+                  Услуга включает в себя профессиональную консультацию, мытье, стрижку и укладку волос с использованием
+                  современных методик, высококачественных средств и инструментов. Благодаря индивидуальному подходу
+                  к каждому
+                  клиенту мы обеспечиваем.
+                  <br>
+                  Услуга включает в себя профессиональную консультацию, мытье, стрижку и укладку волос с использованием
+                  современных методик, высококачественных средств и инструментов. Благодаря индивидуальному подходу
+                  к каждому
+                  клиенту мы обеспечиваем.
+                </div>
+              </div>
+
+              <div class="services-item__bottom">
+                <button class="services-item__btn btn" type="button" data-popup-open="popup-signup"
+                  data-popup-form-id="Услуга 1">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                  </svg>
+                  <span>Записаться</span>
+                </button>
+
+                <button class="services-item__readmore" type="button" data-readmore-btn>
+                  <span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#arrow2"></use>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="services-item" data-readmore-parent>
+              <div class="services-item__top">
+                <div class="services-item__top-left">
+                  <h3 class="services-item__title">Стрижка длинных волос</h3>
+                  <div class="services-item__subtitle">(барбер/старший барбер)</div>
+                </div>
+
+                <div class="services-item__price">120/150 zł</div>
+              </div>
+
+              <div class="services-item__body" data-readmore="3" data-readmore-adaptive="576, 7">
+                <div class="section-text" data-readmore-body>
+                  Длинными волосами считается прическа, которая короткая по бокам и на макушке, а длина волос по бокам
+                  составляет от 5 до 7 см. Мы рекомендуем эту услугу клиентам с капризными волосами — вьющимися, очень
+                  густыми или с необычными прическами.
+                  <br>
+                  Длинными волосами считается прическа, которая короткая по бокам и на макушке, а длина волос по бокам
+                  составляет от 5 до 7 см. Мы рекомендуем эту услугу клиентам с капризными волосами — вьющимися, очень
+                  густыми или с необычными прическами.
+                  <br>
+                  Длинными волосами считается прическа, которая короткая по бокам и на макушке, а длина волос по бокам
+                  составляет от 5 до 7 см. Мы рекомендуем эту услугу клиентам с капризными волосами — вьющимися, очень
+                  густыми или с необычными прическами.
+                  </p>
+                </div>
+              </div>
+
+              <div class="services-item__bottom">
+                <button class="services-item__btn btn" type="button" data-popup-open="popup-signup"
+                  data-popup-form-id="Услуга 2">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                  </svg>
+                  <span>Записаться</span>
+                </button>
+
+                <button class="services-item__readmore" type="button" data-readmore-btn>
+                  <span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#arrow2"></use>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="services-item" data-readmore-parent>
+              <div class="services-item__top">
+                <div class="services-item__top-left">
+                  <h3 class="services-item__title">Короткая стрижка</h3>
+                  <div class="services-item__subtitle">(барбер/старший барбер)</div>
+                </div>
+
+                <div class="services-item__price">90/120 zł</div>
+              </div>
+
+              <div class="services-item__body" data-readmore="3" data-readmore-adaptive="576, 7">
+                <div class="section-text" data-readmore-body>
+                  Стрижка «бокс» — классическая короткая стрижка, при которой волосы подстрижены равномерно по всей
+                  голове.
+                  Длина волос обычно составляет от 1 до 3 см, что обеспечивает аккуратный и простой в уходе вид. Мы
+                  рекомендуем эту услугу мужчинам.
+                  <br>
+                  Стрижка «бокс» — классическая короткая стрижка, при которой волосы подстрижены равномерно по всей
+                  голове.
+                  Длина волос обычно составляет от 1 до 3 см, что обеспечивает аккуратный и простой в уходе вид. Мы
+                  рекомендуем эту услугу мужчинам.
+                </div>
+              </div>
+
+              <div class="services-item__bottom">
+                <button class="services-item__btn btn" type="button" data-popup-open="popup-signup"
+                  data-popup-form-id="Услуга 3">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                  </svg>
+                  <span>Записаться</span>
+                </button>
+
+                <button class="services-item__readmore" type="button" data-readmore-btn>
+                  <span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#arrow2"></use>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="services-item" data-readmore-parent>
+              <div class="services-item__top">
+                <div class="services-item__top-left">
+                  <h3 class="services-item__title">Обрезать до 0 или одной длины</h3>
+                  <div class="services-item__subtitle">(барбер/старший барбер)</div>
+                </div>
+
+                <div class="services-item__price">120/150 zł</div>
+              </div>
+
+              <div class="services-item__body" data-readmore="3" data-readmore-adaptive="576, 7">
+                <div class="section-text" data-readmore-body>
+                  Стрижка «0» — это самый экстремальный вариант короткой стрижки, при котором волосы подстрижены очень
+                  коротко или под ноль. Идеально подходит для мужчин, которые предпочитают минималистичный, смелый образ
+                  или
+                  хотят максимального комфорта.
+                  <br>
+                  Стрижка «0» — это самый экстремальный вариант короткой стрижки, при котором волосы подстрижены очень
+                  коротко или под ноль. Идеально подходит для мужчин, которые предпочитают минималистичный, смелый образ
+                  или
+                  хотят максимального комфорта.
+                </div>
+              </div>
+
+              <div class="services-item__bottom">
+                <button class="services-item__btn btn" type="button" data-popup-open="popup-signup"
+                  data-popup-form-id="Услуга 4">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                  </svg>
+                  <span>Записаться</span>
+                </button>
+
+                <button class="services-item__readmore" type="button" data-readmore-btn>
+                  <span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#arrow2"></use>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="services-item" data-readmore-parent>
+              <div class="services-item__top">
+                <div class="services-item__top-left">
+                  <h3 class="services-item__title">Стрижка бороды</h3>
+                  <div class="services-item__subtitle">(барбер/старший барбер)</div>
+                </div>
+
+                <div class="services-item__price">от 60 zł</div>
+              </div>
+
+              <div class="services-item__body" data-readmore="3" data-readmore-adaptive="576, 7">
+                <div class="section-text" data-readmore-body>
+                  Стрижка бороды — это услуга, которая придаст вашей бороде аккуратный и ухоженный вид, соответствующий
+                  вашей форме лица и образу жизни. Мы предлагаем два варианта: Стрижка бороды горячим полотенцем
+                  и бритвой.
+                  Перед стрижкой кожу лица увлажняют.
+                  <br>
+                  Стрижка бороды — это услуга, которая придаст вашей бороде аккуратный и ухоженный вид, соответствующий
+                  вашей форме лица и образу жизни. Мы предлагаем два варианта: Стрижка бороды горячим полотенцем
+                  и бритвой.
+                  Перед стрижкой кожу лица увлажняют.
+                </div>
+              </div>
+
+              <div class="services-item__bottom">
+                <button class="services-item__btn btn" type="button" data-popup-open="popup-signup"
+                  data-popup-form-id="Услуга 5">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                  </svg>
+                  <span>Записаться</span>
+                </button>
+
+                <button class="services-item__readmore" type="button" data-readmore-btn>
+                  <span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#arrow2"></use>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="services-item" data-readmore-parent>
+              <div class="services-item__top">
+                <div class="services-item__top-left">
+                  <h3 class="services-item__title">Стрижка + оформление бороды</h3>
+                  <div class="services-item__subtitle">(барбер/старший барбер)</div>
+                </div>
+
+                <div class="services-item__price">от 150 zł</div>
+              </div>
+
+              <div class="services-item__body" data-readmore="3" data-readmore-adaptive="576, 7">
+                <div class="section-text" data-readmore-body>
+                  Услуга стрижки включает в себя консультацию, мытье, стрижку и укладку с использованием
+                  профессиональных
+                  техник, средств и инструментов. Придание формы и контуров бороде. Стрижку бороды можно выполнять
+                  с помощью
+                  электробритвы.
+                  <br>
+                  Услуга стрижки включает в себя консультацию, мытье, стрижку и укладку с использованием
+                  профессиональных
+                  техник, средств и инструментов. Придание формы и контуров бороде. Стрижку бороды можно выполнять
+                  с помощью
+                  электробритвы.
+                </div>
+              </div>
+
+              <div class="services-item__bottom">
+                <button class="services-item__btn btn" type="button" data-popup-open="popup-signup"
+                  data-popup-form-id="Услуга 6">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                  </svg>
+                  <span>Записаться</span>
+                </button>
+
+                <button class="services-item__readmore" type="button" data-readmore-btn>
+                  <span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#arrow2"></use>
+                  </svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM ===== -->
+      <section id="team" class="team section section--bg">
+        <div class="team-bg section-bg">
+          <picture>
+            <source data-srcset="img/team/bg.webp"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              type="image/webp">
+            <img class="lazyload" loading="lazy" data-src="img/team/bg.jpg.jpg"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              alt="#">
+          </picture>
+        </div>
+
+        <div class="container">
+          <div class="team-top section-top">
+            <h2 class="team-title section-title">
+              Наши барберы
+            </h2>
+
+            <div class="team-text section-text">
+              «Royal Barber — настоящие мастера своего дела, которые идеально подбирают стиль и доводят каждую стрижку
+              до совершенства 🔥».
+            </div>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-item">
+              <div class="team-item__img">
+                <picture>
+                  <source data-srcset="img/team/01.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/team/01.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="фото">
+                </picture>
+              </div>
+
+              <div class="team-item__content">
+                <div class="team-item__content-top">
+                  <div class="team-item__name">Владислав</div>
+                  <div class="team-item__text">старший барбер</div>
+                </div>
+
+                <div class="team-item__content-bottom">
+                  <button class="team-item__btn btn" type="button" data-popup-open="popup-signup"
+                    data-popup-form-id="Запись к барберу - Владислав">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                    </svg>
+                    <span>Записаться</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-item">
+              <div class="team-item__img">
+                <picture>
+                  <source data-srcset="img/team/02.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/team/02.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="фото">
+                </picture>
+              </div>
+
+              <div class="team-item__content">
+                <div class="team-item__content-top">
+                  <div class="team-item__name">Назар</div>
+                  <div class="team-item__text">старший барбер</div>
+                </div>
+
+                <div class="team-item__content-bottom">
+                  <button class="team-item__btn btn" type="button" data-popup-open="popup-signup"
+                    data-popup-form-id="Запись к барберу - Назар">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                    </svg>
+                    <span>Записаться</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-item">
+              <div class="team-item__img">
+                <picture>
+                  <source data-srcset="img/team/03.webp"
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    type="image/webp">
+                  <img class="lazyload" loading="lazy" data-src="img/team/03.jpg"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    alt="фото">
+                </picture>
+              </div>
+
+              <div class="team-item__content">
+                <div class="team-item__content-top">
+                  <div class="team-item__name">Илья</div>
+                  <div class="team-item__text">барбер</div>
+                </div>
+
+                <div class="team-item__content-bottom">
+                  <button class="team-item__btn btn" type="button" data-popup-open="popup-signup"
+                    data-popup-form-id="Запись к барберу - Илья">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                    </svg>
+                    <span>Записаться</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM ===== -->
+      <section id="contacts" class="contacts section">
+        <div class="container">
+          <div class="contacts-body">
+            <div class="contacts-logo section-logo">
+              <picture>
+                <source data-srcset="img/scissors.webp"
+                  srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                  type="image/webp">
+                <img class="lazyload" loading="lazy" data-src="img/scissors.png"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                  alt="логотип">
+              </picture>
+            </div>
+
+            <h2 class="contacts-title section-title">Контакты</h2>
+
+            <div class="contacts-items">
+              <ul class="contacts-list">
+                <li>
+                  <div>Телефон</div>
+                  <div><a href="tel:+48536523876">+48 536 523 876</a></div>
+                </li>
+                <li>
+                  <div>Время работы</div>
+                  <div>Ежедневно с 9 до 20 часов.</div>
+                </li>
+                <li>
+                  <div>Адрес</div>
+                  <div>Kacpra Karlińskiego, 4, 01-262, Варшава, Польша</div>
+                </li>
+              </ul>
+
+              <div class="contacs-socials socials">
+                <a href="#" target="_blank">
+                  <picture>
+                    <img class="lazyload" loading="lazy" data-src="img/icons/socials/instagram.svg"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      alt="логотип">
+                  </picture>
+                </a>
+                <a href="#" target="_blank">
+                  <picture>
+                    <img class="lazyload" loading="lazy" data-src="img/icons/socials/facebook.svg"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      alt="логотип">
+                  </picture>
+                </a>
+              </div>
+
+              <div class="contacs-bottom">
+                <button class="contacs-btn btn" type="button" data-popup-open="popup-signup">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#handshake"></use>
+                  </svg>
+                  <span>Записаться</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="contacts-map" class="contacts-map"
+            data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.1296509404096!2d20.93062197693354!3d52.22286225818588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb47678e79cb%3A0x3bd7eabf30752d6b!2zS2FjcHJhIEthcmxpxYRza2llZ28gNCwgMDEtMjYyIFdhcnN6YXdhLCDQn9C-0LvRjNGI0LA!5e0!3m2!1sru!2sua!4v1742406811311!5m2!1sru!2sua">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER ===== -->
+    <footer class="footer">
+      <div class='container'>
+        <div class="footer-logo">
+          <picture>
+            <source data-srcset="img/logo.webp"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              type="image/webp">
+            <img class="lazyload" loading="lazy" data-src="img/logo.png"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              alt="логотип">
+          </picture>
+        </div>
+
+        <div class="footer-copy">2025, Royal Barber</div>
+
+        <ul class="footer-menu">
+          <li><a href="#">Booksy</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+
+        <div class="footer-dev">
+          <span>Разработка и поддержка:</span>
+          <a href="#" target="_blank">
+            <picture>
+              <img class="lazyload" loading="lazy" data-src="img/promicom.svg"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                alt="логотип">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- COOKIES ===== -->
+    <div class="cookies" data-padding-fix>
+      <div class="cookies-inner">
+        <div class="cookies-content">
+          <div class="cookies-title">Правила обработки персональных данных</div>
+          <div class="cookies-text section-text">
+            Пожалуйста, примите правила обработки персональных данных. Хотите больше узнать о том, как мы обрабатываем
+            ваши данные? Ознакомьтесь с нашей <a href="#" target="_blank">политикой конфиденциальности</a>.
+          </div>
+        </div>
+        <div class="cookies-btns">
+          <button class="cookies-btn btn" type="button">Принимаю</button>
+          <button class="cookies-btn btn btn--light" type="button">Отказываюсь</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN-UP MOBILE ===== -->
+    <div class="signup-mobile">
+      <button class="signup-mobile__btn btn" type="button" data-popup-open="popup-signup">
+        <svg>
+          <use xlink:href="img/icons/sprite.svg#handshake"></use>
+        </svg>
+        <span>Записаться</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- POPUP ===== -->
+  <div id="popup-signup" class="popup">
+    <div class="popup-body">
+      <div class="popup-content">
+        <button class="popup-close__btn" data-popup-close>
+          <svg>
+            <use xlink:href="img/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="popup-content__top">
+          <div class="popup-title">Контактная форма</div>
+          <div class="popup-text">Пишите, мы свяжемся с вами!</div>
+        </div>
+
+        <form class="popup-form form">
+          <input type="hidden" name="form_id" value="">
+
+          <label class="form-label">
+            <span class="form-label__title">Ваше имя</span>
+            <input class="form-input" type="text" name="name" autocomplete="off">
+          </label>
+
+          <label class="form-label">
+            <span class="form-label__title">Телефон</span>
+            <input class="form-input form-input--phone _required" type="tel" name="phone" autocomplete="off">
+          </label>
+
+          <label class="form-label">
+            <span class="form-label__title">Сообщение</span>
+            <textarea class="form-input form-input--ta" name="message" autocomplete="off"></textarea>
+          </label>
+
+          <div class="form-bottom">
+            <button class="from-btn btn" type="submit">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#handshake"></use>
+              </svg>
+              <span>Отправить</span>
+            </button>
+
+            <div class="form-bottom__text">
+              Нажимая на кнопку, вы соглашаетесь c нашей <a href="#" target="_blank">политикой конфиденциальности</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS ===== -->
+  <script src="js/main.js?_v=20250324122658"></script>
+</body>
+
+</html>
